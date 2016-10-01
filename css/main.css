@@ -1,0 +1,541 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  padding-top: 50px;
+  font-size: 16px;
+}
+
+a {
+  color: black;
+  cursor: pointer;
+}
+
+a:hover, a:focus {
+  color: black;
+  /*background-color: transparent !important;*/
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+h1, h4, p {
+  padding-left: 5%;
+}
+#intro {
+  max-width: 65%;
+}
+.section-home {
+  z-index: 1;
+}
+.bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../images/austin.jpg') center center;
+    background-repeat: no-repeat;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+}
+
+/*--------------- NAV LEFT (LOGO) ----------------*/
+
+.navbar-brand {
+  font-size: 30px;
+  position: relative;
+  margin: 0.5em;
+}
+.navbar-brand:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #20A4F3;
+  visibility: hidden;
+
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navbar-brand:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*--------------- NAV RIGHT ----------------*/
+.navbar-nav {
+  margin-top: 1em;
+}
+.nav-link {
+  margin: 1em !important;
+  position: relative;
+}
+.nav-link::before, .nav-link::after {
+  display:block !important;
+  position:absolute;
+  border-color:#000;
+  box-sizing:border-box;
+  border-style:solid;
+  width:1em;
+  height:1em;
+  transition:all 0.3s ease-in-out
+}
+.nav-link:before {
+  content: "";
+  top:-10px;
+  left:-10px;
+  border-width:2px 0 0 2px;
+}
+.nav-link:after {
+  content: "";
+  bottom:-10px;
+  right:-10px;
+  border-width:0 2px 2px 0;
+}
+.nav-link:hover:before, .nav-link:hover:after {
+  width:calc(100% + 20px);
+  height:calc(100% + 20px);
+  border-color:#20A4F3;
+}
+
+/*--------------- RESPONSIVE MENU FOR MOBILE ---------------*/
+@media screen and (min-width: 768px) {
+  .toggle {
+    display: none !important;
+  }
+  .navbar-nav a:nth-child(1) {
+    display: none;
+  }
+  .resume {
+    display: none;
+  }
+}
+.toggle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 87%;
+  margin: auto;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.toggle span {
+  position: relative;
+  align-self: center;
+  font-size: 0;
+  width: 26px;
+  height: 2px;
+  background-color: black;
+  border-radius: 100px;
+  transition: background-color 0.2s ease-out;
+}
+.toggle span::before, .toggle span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 100px;
+  transition: transform .2s ease-out;
+}
+.toggle span::before {
+  bottom: calc(100% + 6px);
+}
+.toggle span::after {
+  top: calc(100% + 6px);
+}
+.is-visible span {
+  background-color: transparent;
+}
+.is-visible span::before {
+  bottom: auto;
+  transform:
+    rotate(45deg)
+}
+.is-visible span::after {
+  top: auto;
+  transform:
+    rotate(-45deg)
+}
+/* End mobile navbar toggle */
+
+/*--------------- Scroll arrow ----------------*/
+svg:hover {
+  fill: #20A4F3;
+}
+.see-more {
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  bottom: 32px;
+  width: 100%;
+  z-index: 105;
+}
+.icon {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+/*--------------- PROJECTS ----------------*/
+
+.projects-section h1 {
+  visibility: hidden;
+}
+
+.projects {
+  clear: both;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+.projectDetail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.5em;
+}
+.image {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  border: 2px solid #000;
+}
+.image:hover {
+  border-color: #20A4F3;
+}
+.image h3 {
+  opacity: 0;
+  transition: .2s;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 2;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  line-height: 250px;
+  font-size: 2em;
+}
+.image:after, .image:before {
+  opacity: 0;
+  transition: .2s;
+  content: "";
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(90px);
+  filter: blur(10px);
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .image:after, .image:before {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.image:hover h3, .image:hover:after, .image:hover:before {
+  opacity: 1;
+}
+.hover .image h3, .hover .image:after, .hover .image:before {
+  opacity: 1;
+}
+.technologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5em;
+}
+.technologies span {
+  font-size: 0.8em;
+  background-color: #5BBA6F;
+  /*border-radius: 5px;*/
+  padding: 0 5px;
+  /*margin-left: 5%;*/
+  margin-bottom: 2%;
+  width: 175px;
+  color: white;
+}
+.technologies a {
+  background-color: #20A4F3;
+  width: 175px;
+  font-size: 0.8em;
+  color: white;
+  padding: 0 5px;
+}
+.technologies a:hover {
+  background-color: #20A4F3;
+}
+/*end projects
+
+/*--------------- ABOUT ME ---------------*/
+.about-section span {
+  color: #20A4F3;
+}
+.about-section p {
+  max-width: 80%;
+}
+
+/*--------------- RESUME ---------------*/
+.profile-card h2 {
+  font-weight: 500;
+  font-size: 24px;
+}
+.profile-card {
+  width: 550px;
+  height: 156px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 70px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  animation: init 1.5s 0.2s cubic-bezier(0.55, 0.055, 0.275, 0.19) forwards, materia 0.5s .9s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+.profile-card header {
+  width: 230px;
+  height: 280px;
+  padding: 50px 0px 10px 0px;
+  display: inline-block;
+  float: left;
+  border-right: 2px dashed #EEEEEE;
+  background: #FFFFFF;
+  margin-top: 50px;
+  opacity: 0;
+  text-align: center;
+  animation: moveIn 1s 1.5s ease forwards;
+}
+.profile-card header h2 {
+  color: #20A4F3;
+}
+.profile-card header a {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  margin: -15px 20px;
+}
+.profile-card header a > img {
+  max-width: 100%;
+}
+.profile-card header a:after {
+  position: absolute;
+  content: "$500";
+  bottom: 3px;
+  right: 3px;
+  padding: 10px 5px;
+  border: 4px solid #FFFFFF;
+  transform: scale(0);
+  background: linear-gradient(#FF5722 0%, #FF5722 50%, #FF5722 50%, #FF5722 100%);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  animation: scaleIn 1.3s 1.5s ease forwards;
+}
+.profile-card .profile-bio {
+  width: 50%;
+  height: 45%;
+  display: inline-block;
+  float: right;
+  padding: 50px 0;
+  background: #FFFFFF;
+  margin-top: 50px;
+  text-align: center;
+  opacity: 0;
+  animation: moveIn 1s 1s ease forwards;
+}
+.profile-card p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.list-unstyled {
+  margin-top: 20%;
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline li {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.social-icons .fa {
+  font-size: 1.8em;
+  line-height: 0px;
+  text-align: center;
+  color: #20A4F3;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.social-icons .fa:hover,
+.social-icons .fa:active {
+  font-size: 3em;
+  -webkit-box-shadow: 1px 1px 3px #333;
+  -moz-box-shadow: 1px 1px 3px #333;
+  box-shadow: 1px 1px 3px #333;
+}
+@keyframes init {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 36px;
+    height: 36px;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes materia {
+  0% {
+    background: #E0E0E0;
+  }
+  50% {
+    border-radius: 4px;
+  }
+  100% {
+    width: 500px;
+    height: 280px;
+    background: #FFFFFF;
+    border-radius: 4px;
+  }
+}
+@keyframes moveIn {
+  0% {
+    margin-top: 50px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -20px;
+  }
+}
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+  .section {
+    margin-top: 10px;
+  }
+  .navbar-brand {
+    margin: 0;
+  }
+  .nav {
+    background-color: white;
+    padding-left: 5%;
+    /*margin: 0;*/
+  }
+  .navbar-collapse {
+    padding: 0;
+  }
+  .navbar-nav a {
+    display: block;
+    margin-top: 5% !important;
+  }
+  .nav-link::before,
+  .nav-link::after {
+    display: none !important;
+  }
+  .projects-section h1 {
+    visibility: visible;;
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .image {
+    background-image: none !important;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 5em;
+    margin: 0;
+    overflow: visible;
+  }
+  .image h3 {
+    opacity: 1;
+    line-height: 1em;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25em;
+    color: #fff;
+    text-shadow: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: 2em;
+  }
+  .image::before,
+  .image::after {
+    display: none;
+  }
+  .technologies {
+    display: none;
+  }
+  ..image h3{
+    display: block;
+  }
+  .see-more {
+    bottom: 20px;
+  }
+  .resume {
+    padding-left: 5%;
+  }
+  .resume img {
+    border: 2px solid #000;
+    width: 80%;
+  }
+  h4:nth-child(even) {
+    color: #20A4F3;
+  }
+  .profile-card {
+    display: none;
+  }
+}
