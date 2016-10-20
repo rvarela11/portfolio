@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>Robert Varela</title>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-fixed-top" style="background-color: white;">
+      <div class="container" style="background-color: white;">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">Robert Varela</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="process fuel-process">
+
+      <div class="row project-description">
+        <div class="col-md-6">
+          <h3>Title</h3>
+          <h4>Fuel</h4>
+          <h3>Role</h3>
+          <h4>UI/ Full-stack Developer</h4>
+          <h3>Project Type</h3>
+          <h4>Personal Project</h4>
+        </div>
+        <div class="col-md-6">
+          <h3>Description:</h3>
+          <p>
+            Fuel helps you compare your goal calories vs your daily calories in three simple steps. The first step is to get your goal calories. This is calculated by collecting some general information. The second step is to get your now calories. This is calculated by searching food items and placing them in a breakfast, lunch, or dinner box. The third step will give you a breakdown.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-process">
+        <hr data-content="Process">
+
+        <div class="row">
+          <ul class="user-stories col-md-6">
+            <h3>User Stories</h3>
+            <li>User is able to click the start button</li>
+            <li>User is able to select a gender</li>
+            <li>User is able to input weight, height, and age</li>
+            <li>User is able to select active level</li>
+            <li>User is able to click the submit button</li>
+            <li>User is able to set GOAL calories</li>
+            <li>User is able to search for food item</li>
+            <li>User is able to drag and drop food item in each box (breakfast, lunch, dinner, snack)</li>
+            <li>User is able to get NOW calories</li>
+            <li>User is able to click the finish button</li>
+            <li>User is able to get NOW calories</li>
+            <li>User is able to get a breakdown comparing GOAL and NOW calories</li>
+          </ul>
+
+          <div class="col-md-6">
+            <h3>Challenge</h3>
+            <p>
+              One of the challenges was displaying the now calories number (top right) after a user had dropped a food item in the box. The challenging part was that the information provided by the API was a string that included the list item and the calories number.
+            </p>
+            <p>
+              To solve this, I added an equal sign between the food item and the calories. Next, I ran a replace method and replaced everything (including the equal sign) to the left of the equal sign with an empty string. This left me with only the number as a string. To convert it to an integer a ran it through a parse Int.
+            </p>
+            <code>var calories = parseInt(item.replace(/.*=/, ""), 10);</code>
+          </div>
+        </div>
+
+        <div class="wire-frames row">
+          <div class="row">
+            <img class="img-fluid" src="../images/Fuel-wf-1.png" alt="Fuel Wireframe" />
+            <img class="img-fluid" src="../images/fuel1.png" alt="Fuel Build" />
+          </div>
+          <div class="row">
+            <img class="img-fluid" src="../images/Fuel-wf-2.png" alt="Fuel Wireframe" />
+            <img class="img-fluid" src="../images/fuel2.png" alt="Fuel Build" />
+          </div>
+          <div class="row">
+            <img class="img-fluid" src="../images/Fuel-wf-3.png" alt="Fuel Wireframe" />
+            <img class="img-fluid" src="../images/fuel3.png" alt="Fuel Build" />
+          </div>
+        </div>
+
+      </div> <!-- Body Process -->
+
+      <hr data-content="Overall">
+      <div class="overall">
+        <h4>
+          This was my first major project since I started learning how to code. My main goals where to:
+        </h4>
+        <ul>
+          <li>Provide a smooth user experience. This was done by using jQuery methods such as hide and show.</li>
+          <li>Provide a smooth user interface. This can be found in the css techniques such as the arrow buttons.</li>
+          <li>Receive information from an API.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </body>
+</html>

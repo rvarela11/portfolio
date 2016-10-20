@@ -1,5 +1,6 @@
-
+/*------------------------------------------------------*/
 /*--------------- General Portfolio CSS ----------------*/
+/*------------------------------------------------------*/
 
 html, body {
   font-family: 'Roboto', sans-serif;
@@ -54,7 +55,9 @@ h1, h4, p {
     height: 100%;
 }
 
+/*------------------------------------------------*/
 /*--------------- NAV LEFT (LOGO) ----------------*/
+/*------------------------------------------------*/
 
 .navbar-brand {
   font-size: 30px;
@@ -91,7 +94,9 @@ h1, h4, p {
   transform: scaleX(1);
 }
 
+/*------------------------------------------*/
 /*--------------- NAV RIGHT ----------------*/
+/*------------------------------------------*/
 
 .navbar-nav {
   margin-top: 1em;
@@ -129,14 +134,12 @@ h1, h4, p {
   border-color:#20A4F3;
 }
 
+/*----------------------------------------------------------*/
 /*--------------- RESPONSIVE MENU FOR MOBILE ---------------*/
-@media screen and (min-width: 768px)
-{
+/*----------------------------------------------------------*/
+@media screen and (min-width: 768px){
   .toggle {
     display: none !important;
-  }
-  .navbar-nav a:nth-child(1) {
-    display: none;
   }
   .resume {
     display: none;
@@ -192,7 +195,9 @@ h1, h4, p {
 }
 /* End mobile navbar toggle */
 
+/*---------------------------------------------*/
 /*--------------- Scroll arrow ----------------*/
+/*---------------------------------------------*/
 svg:hover {
   fill: #20A4F3;
 }
@@ -209,8 +214,9 @@ svg:hover {
   position: absolute;
   text-align: center;
 }
-
+/*-----------------------------------------*/
 /*--------------- PROJECTS ----------------*/
+/*-----------------------------------------*/
 
 .projects-section h1 {
   visibility: hidden;
@@ -296,18 +302,18 @@ svg:hover {
   background-color: #5BBA6F;
   /*border-radius: 5px;*/
   padding: 0 5px;
-  margin-left: 1%;
-  margin-bottom: 2%;
+  margin-left: 4px;
+  margin-bottom: 9px;
   width: 175px;
   color: white;
 }
 .technologies a {
   font-size: 0.8em;
   background-color: #20A4F3;
-  /*border-radius: 5px;*/
   padding: 0 5px;
-  margin-left: 1%;
-  margin-bottom: 2%;
+  margin-left: 4px;
+  margin-bottom: 9px;
+  width: 100%;
   width: 175px;
   color: white;
 }
@@ -316,7 +322,9 @@ svg:hover {
 }
 /*end projects
 
+/*----------------------------------------*/
 /*--------------- ABOUT ME ---------------*/
+/*----------------------------------------*/
 .about-section span {
   color: #20A4F3;
 }
@@ -464,83 +472,178 @@ svg:hover {
   }
 }
 
-/* responsive */
-
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 1.5em;
-  }
-  h3 {
-    font-size: 1.2em;
-    margin-top: 0;
-  }
-  .section {
-    margin-top: 10px;
-  }
-  .navbar-brand {
-    margin: 0;
-  }
-  .nav {
-    background-color: white;
-    padding-left: 5%;
-    /*margin: 0;*/
-  }
-  .navbar-collapse {
-    padding: 0;
-  }
-  .navbar-nav a {
-    display: block;
-    margin-top: 5% !important;
-  }
-  .nav-link::before,
-  .nav-link::after {
-    display: none !important;
-  }
-  .projects-section h1 {
-    visibility: visible;;
-  }
-  .projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .image {
-    height: 7em;
-  }
-  .image::before,
-  .image::after {
-    display: none;
-  }
-  .technologies {
-    display: none;
-  }
-  ..image h3{
-    display: block;
-  }
-  .see-more {
-    bottom: 20px;
-  }
-  .resume {
-    padding-left: 5%;
-  }
-  .resume img {
-    border: 2px solid #000;
-    width: 80%;
-  }
-  h4:nth-child(even) {
-    color: #20A4F3;
-  }
-  .profile-card {
-    display: none;
-  }
-}
-
+/*------------------------------------------*/
 /*--------------- ABOUT SITE ---------------*/
+/*------------------------------------------*/
 
 .aboutSiteUL {
   padding-left: 5%;
 }
-
 .aboutSiteUL li a {
   color: #20A4F3;
+}
+
+/*------------------------------------------*/
+/*---------------- PROCESS -----------------*/
+/*------------------------------------------*/
+.process {
+  margin: 5% 15%;
+}
+.project-description {
+  /*margin: 0 15%;*/
+}
+.process h3 {
+  font-weight: 400;
+  margin-top: 5%;
+  font-size: 1em;
+}
+.process h4, .process p {
+  font-weight: 300;
+  font-size: 1em;
+  padding: 0;
+}
+hr {
+  margin-top: 8%;
+  font-size: 1.5em;
+  position: relative;
+  border: 0;
+  height: 1.5em;
+  text-align: center;
+}
+hr:before {
+  content: '';
+  background: linear-gradient(to right, transparent, #20A4F3, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+hr:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: white;
+
+  padding: 0 .5em;
+  line-height: 1.5em;
+  color: black;
+  background-color: white;
+}
+.user-stories li, .overall li {
+  list-style: circle;
+  line-height: 1.5;
+}
+.user-stories {
+  margin-bottom: 5%;
+}
+.wire-frames div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3%;
+}
+.wire-frames div img:nth-child(1) {
+  margin-right: 5%;
+}
+.wire-frames div img:nth-child(2) {
+  border: 1px solid black;
+}
+.wire-frames img {
+  width: 45%;
+  height: 292px;
+}
+.indago-process .project-process h4 {
+  text-decoration: underline;
+}
+.indago-process .project-process p {
+  font-size: .9em;
+}
+@media screen and (max-width: 1092px) {
+  .wire-frames {
+    margin-top: 5%;
+  }
+  .wire-frames div {
+    flex-direction: column;
+  }
+  .wire-frames img {
+    width: 100%;
+  }
+  .wire-frames div img:nth-child(1) {
+    margin-right: 0;
+  }
+}
+
+
+/*-----------------------------------------*/
+/*-----------RESPONSIVE GENERAL------------*/
+/*-----------------------------------------*/
+@media screen and (max-width: 768px) {
+ h1 {
+   font-size: 1.5em;
+ }
+ h3 {
+   font-size: 1.2em;
+   margin-top: 0;
+ }
+ .section {
+   margin-top: 10px;
+ }
+ .navbar-brand {
+   margin: 0;
+ }
+ .nav {
+   background-color: white;
+   padding-left: 5%;
+   /*margin: 0;*/
+ }
+ .navbar-collapse {
+   padding: 0;
+ }
+ .navbar-nav a {
+   display: block;
+   margin-top: 5% !important;
+ }
+ .nav-link::before,
+ .nav-link::after {
+   display: none !important;
+ }
+ .projects-section h1 {
+   visibility: visible;;
+ }
+ .projects {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+ .image {
+   height: 7em;
+ }
+ .image::before,
+ .image::after {
+   display: none;
+ }
+ .technologies {
+   display: none;
+ }
+ .image h3{
+   display: block;
+ }
+ .see-more {
+   bottom: 20px;
+ }
+ .resume {
+   padding-left: 5%;
+ }
+ .resume img {
+   border: 2px solid #000;
+   width: 80%;
+ }
+ h4:nth-child(even) {
+   color: #20A4F3;
+ }
+ .profile-card {
+   display: none;
+ }
 }

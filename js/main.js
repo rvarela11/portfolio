@@ -1,4 +1,5 @@
 $(function() {
+  $('.fuel-process').hide();
 
   // Fullpage anchoring
   $('#fullpage').fullpage({
@@ -25,5 +26,18 @@ $(function() {
     });
   }, 500);
 
+  // $('#fuel-process').click(function() {
+  //   $('#fullpage').hide();
+  //   $('.nav-link').hide();
+  //
+  //   $('.fuel-process').show();
+  // });
+  //
+  // $('.navbar-brand, .nav-link').click(function() {
+  //   $('#fullpage').show();
+  //   $('.nav-link').show();
+  //
+  //   $('.fuel-process').hide();
+  // });
 
 });
