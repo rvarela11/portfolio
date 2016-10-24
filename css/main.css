@@ -575,6 +575,13 @@ hr:after {
   }
 }
 
+/*-----------------------------------------*/
+/*---------------- Process ----------------*/
+/*-----------------------------------------*/
+
+.top-image-process {
+  width: 100vw;
+}
 
 /*-----------------------------------------*/
 /*-----------RESPONSIVE GENERAL------------*/
@@ -639,9 +646,6 @@ hr:after {
  .resume img {
    border: 2px solid #000;
    width: 80%;
- }
- h4:nth-child(even) {
-   color: #20A4F3;
  }
  .profile-card {
    display: none;
