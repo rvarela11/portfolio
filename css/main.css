@@ -583,6 +583,16 @@ hr:after {
   width: 100vw;
 }
 
+.links a {
+  background-color: #20A4F3;
+  padding: 0 5px;
+  width: 100%;
+  width: 100px;
+  color: white;
+  display: flex;
+  margin-bottom: 9px;
+}
+
 /*-----------------------------------------*/
 /*-----------RESPONSIVE GENERAL------------*/
 /*-----------------------------------------*/
