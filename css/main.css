@@ -1,3 +1,28 @@
+.tracker-logo-c {
+  top: 0 !important;
+  display: flex;
+  height: 100vh;
+}
+
+.tracker-logo {
+  display: flex;
+  margin: auto;
+}
+
+.tracker-logo img {
+  height: 225px;
+  width: 225px;
+}
+
+.tracker-logo h1{
+  font-family: 'Roboto', sans-serif;  display: flex;
+  font-size: 25rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
 /*------------------------------------------------------*/
 /*--------------- General Portfolio CSS ----------------*/
 /*------------------------------------------------------*/

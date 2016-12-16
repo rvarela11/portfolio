@@ -23,34 +23,37 @@
       </div>
     </nav>
 
-    <img class="top-image-process" src="../images/fuel1(laptop1).png" alt="" style="">
+    <img class="top-image-process" src="../images/tracker-laptop-2.1.png" alt="" style="">
 
     <div class="process fuel-process">
 
       <div class="row project-description">
         <div class="col-md-6">
           <h3>Title</h3>
-          <h4>Fuel</h4>
+          <h4>Tracker</h4>
           <h3>Role</h3>
           <h4>UI/ Full-stack Developer</h4>
           <h3>Project Type</h3>
           <h4>Personal Project</h4>
           <h3>Description:</h3>
           <p>
-            Fuel helps you compare your goal calories vs your daily calories in three simple steps. The first step is to get your goal calories. This is calculated by collecting some general information. The second step is to get your now calories. This is calculated by searching food items and placing them in a breakfast, lunch, or dinner box. The third step will give you a breakdown.
+            Tracker is a google chrome extension that helps a group of people focus on completing a learning objective. This is done by tracking how much time is spent on selected web sites. The idea is that the more time spent studying, the more likely the person will succeed in learning the material.
           </p>
         </div>
         <div class="col-md-6">
           <h3>Technologies:</h3>
           <ul>
-            <li>JavaScript</li>
-            <li>jQuery</li>
-            <li>NutritionX API</li>
+            <li>Angular</li>
+            <li>Express</li>
+            <li>Node.js</li>
+            <li>Knex</li>
+            <li>PostgreSQL</li>
+            <li>Google Chrome Extension</li>
           </ul>
           <h3>Links:</h3>
           <ul class="links">
-            <li><a href="https://github.com/rvarela11/fuel" target="_blank">Code</a></li>
-            <li><a href="https://rvarela11.github.io/fuel/" id="fuel-process" target="_blank">Site</a></li>
+            <li><a href="https://github.com/timothyrchew/chrome-time-tracker" target="_blank">Code</a></li>
+            <li><a href="https://rvarela11.github.io/fuel/" id="indago-process" target="_blank">Site</a></li>
           </ul>
         </div>
       </div>
@@ -61,27 +64,25 @@
         <div class="row">
           <ul class="user-stories col-md-6">
             <h3>User Stories</h3>
-            <li>User is able to click the start button</li>
-            <li>User is able to select a gender</li>
-            <li>User is able to input weight, height, and age</li>
-            <li>User is able to select active level</li>
-            <li>User is able to click the submit button</li>
-            <li>User is able to set GOAL calories</li>
-            <li>User is able to search for food item</li>
-            <li>User is able to drag and drop food item in each box (breakfast, lunch, dinner, snack)</li>
-            <li>User is able to get NOW calories</li>
-            <li>User is able to click the finish button</li>
-            <li>User is able to get NOW calories</li>
-            <li>User is able to get a breakdown comparing GOAL and NOW calories</li>
+            <li>User is able to sign up</li>
+            <li>User is able to login</li>
+            <li>User is able to create new game</li>
+            <li>User is able to join existing game</li>
+            <li>User is able to view past games</li>
+            <li>User is able to see all existing games on the home page</li>
+            <li>User is able to click on a game for more details</li>
+            <li>User is able to see a donut chart with info about websites</li>
+            <li>User is able to see a bar graph with players info</li>
+            <li>User is able to see how much time is remaining</li>
           </ul>
 
           <div class="col-md-6">
             <h3>Challenge</h3>
             <p>
-              One of the challenges was displaying the now calories number (top right) after a user had dropped a food item in the box. The challenging part was that the information provided by the API was a string that included the list item and the calories number.
+              One of the challenges was XXXX
             </p>
             <p>
-              To solve this, I added an equal sign between the food item and the calories. Next, I ran a replace method and replaced everything (including the equal sign) to the left of the equal sign with an empty string. This left me with only the number as a string. To convert it to an integer a ran it through a parse Int.
+              To solve this, XXXX
             </p>
             <code>var calories = parseInt(item.replace(/.*=/, ""), 10);</code>
           </div>
