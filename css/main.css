@@ -705,4 +705,10 @@ hr:after {
  .profile-card {
    display: none;
  }
+ .two-box-bottom-reddit {
+   height: 450px;
+ }
+ .two-box-bottom-fuel-mobile{
+   height: 700px;
+ }
 }
