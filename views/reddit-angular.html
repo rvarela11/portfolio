@@ -69,14 +69,14 @@
         <div class="col-md-6">
           <h3>Description</h3>
           <p>
-            EXPLAIN
+            This was the second version of this application. You can find the first version here ( <a href="https://github.com/rvarela11/reddit_clone_2" target="_blank">Code</a> | <a href="https://reddit-clone-2.herokuapp.com/" target="_blank">Site</a> ).
           </p>
         </div>
         <div class="col-md-6">
           <div class="overall">
             <h3>Overall</h3>
             <h4>
-              First full CRUD Angular application and second version of the reddit clone. You can find the first version here ( <a href="https://github.com/rvarela11/reddit_clone_2" target="_blank">Code</a> | <a href="https://reddit-clone-2.herokuapp.com/" target="_blank">Site</a> ).  My main goals where to:
+              Main goals:
             </h4>
             <ul>
               <li>Create a full CRUD application using Angular</li>
@@ -93,7 +93,7 @@
           <div class="two-box-top col-md-6">
             <h3>Challenge</h3>
             <h4>
-              EXPLAIN EDIT POST
+              How to successfully be able to edit a specific post. Be able to pass information from the view, to the controller, to making an HTTP request, and back with a responds to the controller.
             </h4>
           </div>
           <div class="two-box-top col-md-6">
@@ -103,16 +103,22 @@
         </div>
 
         <div class="row">
-          <div class="two-box-bottom-reddit bottom-code col-md-6">
+          <div class="two-box-bottom-reddit bottom-code col-md-6 code-words">
             <h3>Solution</h3>
             <h4>1: View</h4>
+            <h4>
+              The form tag has an <code class="code-highlight">ng-submit</code> with the function <code class="code-highlight">editPost</code>. This function will be passed on to the controller with two arguments ( <code class="code-highlight">$event</code> and  <code class="code-highlight">post.id</code>). The <code class="code-highlight">post.id</code> is the post id for that specific post.
+            </h4>
+            <h4>
+              Each input tag has an <code class="code-highlight">ng-model</code> for a specific value. These values will be passed and placed in the <code class="code-highlight">$scope.views.userForm</code> object in the controller once the submit input is clicked.
+            </h4>
           </div>
           <div class="two-box-bottom-reddit bottom-code col-md-6">
             <h3>Code</h3>
             <pre class="pre-code">
               <span class="span-code">&lt;<span class="sc-red">div</span>></span>
                 <span class="span-code"> &lt;<span class="sc-red">h3</span>>Edit Post&lt;/<span class="sc-red">h3</span>></span>
-                <span class="span-code"> &lt;<span class="sc-red">form</span> <span class="sc-purple">action</span>="<span class="sc-green">#</span>" <span class="sc-purple">name</span>="<span class="sc-green">editPostForm</span>" <span class="sc-purple">ng-submit</span>="<span class="sc-green">editPost($event, user.id)</span>" <span class="sc-purple">novalidate</span>></span>
+                <span class="span-code"> &lt;<span class="sc-red">form</span> <span class="sc-purple">action</span>="<span class="sc-green">#</span>" <span class="sc-purple">name</span>="<span class="sc-green">editPostForm</span>" <span class="sc-purple">ng-submit</span>="<span class="sc-green">editPost($event, post.id)</span>" <span class="sc-purple">novalidate</span>></span>
                   <span class="span-code">  &lt;<span class="sc-red">input </span> <span class="sc-purple">type</span>="<span class="sc-green">text</span>" <span class="sc-purple">name</span>="<span class="sc-green">title</span>" <span class="sc-purple">ng-model</span>="<span class="sc-green">views.userForm.title</span>" <span class="sc-purple">placeholder</span>="<span class="sc-green">Title</span>"/></span>
                   <span class="span-code">  &lt;<span class="sc-red">input </span> <span class="sc-purple">type</span>="<span class="sc-green">text</span>" <span class="sc-purple">name</span>="<span class="sc-green">author</span>" <span class="sc-purple">ng-model</span>="<span class="sc-green">views.userForm.author</span>" <span class="sc-purple">placeholder</span>="<span class="sc-green">Author</span>"/></span>
                   <span class="span-code">  &lt;<span class="sc-red">input </span> <span class="sc-purple">type</span>="<span class="sc-green">text</span>" <span class="sc-purple">name</span>="<span class="sc-green">description</span>" <span class="sc-purple">ng-model</span>="<span class="sc-green">views.userForm.description</span>" <span class="sc-purple">placeholder</span>="<span class="sc-green">Description</span>"/></span>
@@ -123,9 +129,15 @@
           </div>
         </div>
         <div class="row">
-          <div class="two-box-bottom-reddit bottom-code col-md-6">
+          <div class="two-box-bottom-reddit bottom-code col-md-6 code-words">
             <h3></h3>
             <h4>2: Controller</h4>
+            <h4>
+              The <code class="code-highlight">MainController</code> controller is injected with <code class="code-highlight">$scope</code> and <code class="code-highlight">firstService</code>. The <code class="code-highlight">$scope.views.userForm</code> object is created with empty values. Here is where the values from the <code class="code-highlight">editPostForm</code> form will be placed.
+            </h4>
+            <h4>
+              The function <code class="code-highlight">editPost</code> will pass the information from the <code class="code-highlight">$scope.views.userForm</code> object and the <code class="code-highlight">post.id</code> to the <code class="code-highlight">firstService</code> factory.
+            </h4>
           </div>
           <div class="two-box-bottom-reddit bottom-code col-md-6">
             <h3></h3>
@@ -140,9 +152,9 @@
               <span class="span-code">    <span class="sc-green">votes</span>: <span class="sc-orange">0</span></span>
               <span class="span-code">  };</span>
               <span class="span-code"></span>
-              <span class="span-code">  <span class="sc-orange">$scope</span>.<span class="sc-blue">editPost</span> = <span class="sc-purple">function</span>(<span class="sc-orange">event</span>, <span class="sc-orange">id</span>) {</span>
+              <span class="span-code">  <span class="sc-orange">$scope</span>.<span class="sc-blue">editPost</span> = <span class="sc-purple">function</span>(<span class="sc-orange">event</span>, <span class="sc-orange">post.id</span>) {</span>
               <span class="span-code">    event.<span class="sc-blue">preventDefault</span>();</span>
-              <span class="span-code">    firstService.<span class="sc-blue">edit</span>($scope.views.userForm, id);</span>
+              <span class="span-code">    firstService.<span class="sc-blue">edit</span>($scope.views.userForm, post.id);</span>
               <span class="span-code">  }</span>
               <span class="span-code"></span>
               <span class="span-code">}]);</span>
@@ -150,9 +162,12 @@
           </div>
         </div>
         <div class="row">
-          <div class="two-box-bottom-reddit bottom-code col-md-6">
+          <div class="two-box-bottom-reddit bottom-code col-md-6 code-words">
             <h3></h3>
             <h4>3: Factory</h4>
+            <h4>
+              The <code class="code-highlight">firstService</code> factory is injected with <code class="code-highlight">$http</code>. The edit function runs making a <code class="code-highlight">put</code> request and passing the <code class="code-highlight">userForm</code> object along with the <code class="code-highlight">post.id</code> id.
+            </h4>
           </div>
           <div class="two-box-bottom-reddit bottom-code col-md-6">
             <h3></h3>
@@ -160,17 +175,26 @@
               <span class="span-code">app.<span class="sc-blue">factory</span>('<span class="sc-green">firstService</span>', <span class="sc-purple">function</span>(<span class="sc-orange">$http</span>) {</span>
               <span class="span-code"></span>
               <span class="span-code">  <span class="sc-purple">return</span> {</span>
-              <span class="span-code">    <span class="sc-blue">edit</span>: <span class="sc-purple">function</span>(<span class="sc-orange">postEdit</span>, <span class="sc-orange">postId</span>) {</span>
-              <span class="span-code">      <span class="sc-purple">return</span> <span class="sc-orange">$http</span>.<span class="sc-blue">put</span>('<span class="sc-green">/api/posts/</span>' + postId, postEdit);</span>
+              <span class="span-code">    <span class="sc-blue">edit</span>: <span class="sc-purple">function</span>(<span class="sc-orange">userForm</span>, <span class="sc-orange">post.id</span>) {</span>
+              <span class="span-code">      <span class="sc-purple">return</span> <span class="sc-orange">$http</span>.<span class="sc-blue">put</span>('<span class="sc-green">/api/posts/</span>' + post.id, userForm);</span>
               <span class="span-code">    }</span>
               <span class="span-code">});</span>
             </pre>
           </div>
         </div>
         <div class="row">
-          <div class="two-box-bottom-reddit bottom-code col-md-6">
+          <div class="two-box-bottom-reddit bottom-code col-md-6 code-words">
             <h3></h3>
             <h4>4: Route</h4>
+            <h4>
+              <code class="code-highlight">Express</code>, <code class="code-highlight">Router</code>, and <code class="code-highlight">Knex</code> are required.
+            </h4>
+            <h4>
+              The <code class="code-highlight">put</code> request runs and a <code class="code-highlight">knex</code> call is made to select all posts from the <code class="code-highlight">posts</code> table that match the <code class="code-highlight">req.params.id</code> which in this case will be the <code class="code-highlight">post.id</code>. The <code class="code-highlight">title</code>, <code class="code-highlight">author</code>, <code class="code-highlight">description</code>, and <code class="code-highlight">votes</code> are updated with the information from the <code class="code-highlight">userForm</code> object.
+            </h4>
+            <h4>
+              Lastly, a <code class="code-highlight">res.json(msg)</code> is returned which will be passed to the <code class="code-highlight">MainController</code> controller.
+            </h4>
           </div>
           <div class="two-box-bottom-reddit bottom-code col-md-6">
             <h3></h3>
@@ -197,9 +221,15 @@
           </div>
         </div>
         <div class="row">
-          <div class="two-box-bottom-reddit bottom-code col-md-6">
+          <div class="two-box-bottom-reddit bottom-code col-md-6 code-words">
             <h3></h3>
             <h4>5: View</h4>
+            <h4>
+              The <code class="code-highlight">res.json(msg)</code> is received and passed as an argument (<code class="code-highlight">msg</code>).
+            </h4>
+            <h4>
+              The <code class="code-highlight">$scope.views.userForm</code> object is cleared out and the <code class="code-highlight">getPosts</code> function is triggered. This function will "reload" the posts so that the new edited information will show.
+            </h4>
           </div>
           <div class="two-box-bottom-reddit bottom-code col-md-6">
             <h3></h3>

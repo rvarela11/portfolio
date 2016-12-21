@@ -71,12 +71,15 @@
           <p>
             Fuel helps you compare your goal calories vs your daily calories in three simple steps. The first step is to get your goal calories. This is calculated by collecting some general information. The second step is to get your daily calories. This is calculated by searching food items and placing them in a breakfast, lunch, or dinner box. The third step will give you a breakdown.
           </p>
+          <p>
+            This was the second version of this application. You can find the first version here ( <a href="https://github.com/rvarela11/fuel" target="_blank">Code</a> | <a href="https://rvarela11.github.io/fuel/" id="indago-process" target="_blank">Site</a> ).  
+          </p>
         </div>
         <div class="col-md-6">
           <div class="overall">
             <h3>Overall</h3>
             <h4>
-              This was my first major react project and the second version of this application. You can find the first version here ( <a href="https://github.com/rvarela11/fuel" target="_blank">Code</a> | <a href="https://rvarela11.github.io/fuel/" id="indago-process" target="_blank">Site</a> ).  My main goals where to:
+              Main goals:
             </h4>
             <ul>
               <li>Provide a smooth user experience. One specific case where this is done is on the step 2 page. The option box changes views when a user clicks on the different tab buttons.</li>
@@ -94,7 +97,7 @@
           <div class="two-box-top col-md-6">
             <h3>Challenge</h3>
             <h4>
-              Pass the calories data for the specific item clicked to calculate the daily calories. On the first version, I passed the entire string then used regex to get the calories number to calculate the daily calories. This time I wanted to avoid using regex for it was an extra step.
+              Be able to pass the calories data for the specific item clicked to calculate the daily calories. On the first version, I passed the entire string then used regex to get the calories number to calculate the daily calories. This time I wanted to avoid using regex for it was an extra step.
             </h4>
           </div>
           <div class="two-box-top col-md-6">
@@ -103,7 +106,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="two-box-bottom bottom-code col-md-6">
+          <div class="two-box-bottom bottom-code col-md-6 code-words">
             <h3>Solution</h3>
             <h4>
               To solve this, I compiled the data into an array and passed the needed object on every onClick event in the results list.
@@ -160,7 +163,7 @@
         <h2 class="more-code-h2">More Code</h2>
 
         <div class="two-box-row row">
-          <div class="col-md-6">
+          <div class="col-md-6 code-words">
             <h4>This code explains how the option box changes components when a user clicks on the different tab buttons. To simplify the code, I will only be explaining the breakfast option.</h4>
             <h4>
               A class with the name of <code class="code-highlight">Step2</code> is created with an initial state value of "Breakfast, Lunch, Dinner?".

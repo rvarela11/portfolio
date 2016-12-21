@@ -18,7 +18,6 @@
 
 img.img-fluid.two-box-top-img {
   width: 100%;
-  height: 330px;
 }
 
 .bottom-code {
@@ -37,6 +36,10 @@ img.img-fluid.two-box-top-img {
   height: 345px;
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
+}
+
+.code-words h4{
+  line-height: 1.5em;
 }
 
 /*------------------------------------------------------*/
