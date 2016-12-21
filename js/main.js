@@ -19,7 +19,7 @@ $(function() {
   setTimeout(function() {
     $('#intro').typed({
       strings: [
-        "Hi! I'm Robert and currently I am studying to be a full-stack developer with a focus on front-end development."
+        "Hi! I am Robert. A full-stack developer with a focus on front-end development."
       ],
       typeSpeed: 5,
       contentType: 'html'

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>Robert Varela</title>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/laptopmockup.css">
+    <link rel="stylesheet" type="text/css" href="../css/code-snippet.css">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-fixed-top" style="background-color: white;">
+      <div class="container" style="background-color: white;">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">Robert Varela</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="css-mb with-glare">
+      <div class="mb-display-position">
+        <div class="mb-display">
+          <div class="mb-screen-position">
+            <div class="mb-screen">
+              <img src="../images/fuel-react-frontpage.png" alt="example image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-body"></div>
+      <div class="mb-bottom-cover"></div>
+    </div>
+
+    <div class="process fuel-process">
+
+      <div class="row project-description">
+        <div class="col-md-6">
+          <h3>Title</h3>
+          <h4>Fuel</h4>
+          <h3>Role</h3>
+          <h4>UI/FED</h4>
+          <h3>Project Type</h3>
+          <h4>Personal Project</h4>
+        </div>
+        <div class="col-md-6">
+          <h3>Technologies</h3>
+          <ul>
+            <li>React</li>
+            <li>Redux</li>
+            <li>JSX</li>
+            <li>nutritionix(API)</li>
+          </ul>
+          <h3>Links</h3>
+          <ul class="links">
+            <li><a href="https://github.com/rvarela11/fuel-react" target="_blank">Code</a></li>
+            <li><a href="https://fuel-react.herokuapp.com/" target="_blank">Site</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row project-description">
+        <div class="col-md-6">
+          <h3>Description</h3>
+          <p>
+            Fuel helps you compare your goal calories vs your daily calories in three simple steps. The first step is to get your goal calories. This is calculated by collecting some general information. The second step is to get your daily calories. This is calculated by searching food items and placing them in a breakfast, lunch, or dinner box. The third step will give you a breakdown.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="overall">
+            <h3>Overall</h3>
+            <h4>
+              This was my first major react project and the second version of this application. You can find the first version here ( <a href="https://github.com/rvarela11/fuel" target="_blank">Code</a> | <a href="https://rvarela11.github.io/fuel/" id="indago-process" target="_blank">Site</a> ).  My main goals where to:
+            </h4>
+            <ul>
+              <li>Provide a smooth user experience. One specific case where this is done is on the step 2 page. The option box changes views when a user clicks on the different tab buttons.</li>
+              <li>Provide a smooth user interface. This can be found on the goal and daily calories counter. When a user completes step 1 and/or 2, the counter is instantly updated. This is done through redux.</li>
+              <li>Make the application mobile friendly. </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-process">
+        <hr data-content="Process">
+
+        <div class="two-box-top-row row">
+          <div class="two-box-top col-md-6">
+            <h3>Challenge</h3>
+            <h4>
+              Pass the calories data for the specific item clicked to calculate the daily calories. On the first version, I passed the entire string then used regex to get the calories number to calculate the daily calories. This time I wanted to avoid using regex for it was an extra step.
+            </h4>
+          </div>
+          <div class="two-box-top col-md-6">
+            <h3>Site</h3>
+            <img class="img-fluid two-box-top-img" src="../images/fuel-react-step2.png" alt="Fuel Build" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="two-box-bottom bottom-code col-md-6">
+            <h3>Solution</h3>
+            <h4>
+              To solve this, I compiled the data into an array and passed the needed object on every onClick event in the results list.
+            </h4>
+            <h4>
+              The result from the API call is passed through the renderResultList function. Two map functions run to extract the data needed. This data is placed in two different constants. An empty object named <code class="code-highlight">results</code> is also created.
+            </h4>
+            <h4>
+              A map function runs through the <code class="code-highlight">itemsArray</code> array which builds the data for the <code class="code-highlight">results</code> object.
+            </h4>
+            <h4>
+              The <code class="code-highlight">results</code> object keys are placed in a constant in order to run a map function through it. This returns an array which is stored in the <code class="code-highlight">foodItems</code> constant. This array will pass the object needed on every onClick event in the results list.
+
+            </h4>
+          </div>
+          <div class="two-box-bottom bottom-code col-md-6">
+            <h3>Code</h3>
+            <pre class="pre-code">
+              <span class="span-code"><span class="sc-blue">renderResultList</span><span class="sc-white">(</span><span class="sc-orange">listData</span><span class="sc-white">)</span> <span class="sc-white">{</span></span>
+              <span class="span-code">  <span class="sc-purple">const</span> <span class="sc-white">itemsArray = listData.hits.</span><span class="sc-blue">map</span><span class="sc-white">(</span><span class="sc-orange">item</span> <span class="sc-purple">=></span> <span class="sc-white">item.fields.item_name.</span><span class="sc-blue">split</span><span class="sc-white">("</span><span class="sc-green"> - </span><span class="sc-white">")[</span><span class="sc-orange">0</span><span class="sc-white">]);</span></span>
+              <span class="span-code">  <span class="sc-purple">const</span> caloriesArray = listData.hits.<span class="sc-blue">map</span>(<span class="sc-orange">item</span> <span class="sc-purple">=></span> item.fields.nf_calories);</span>
+              <span class="span-code">  <span class="sc-purple">const</span> results = {};</span>
+              <span class="span-code"></span>
+              <span class="span-code">  itemsArray.<span class="sc-blue">map</span>((<span class="sc-orange">item</span>,<span class="sc-orange">index</span>) <span class="sc-purple"><span class="sc-purple">=></span></span> {</span>
+              <span class="span-code">    <span class="sc-purple">if</span>(results.<span class="sc-blue">hasOwnProperty</span>(item)){</span>
+              <span class="span-code">    results[item].calories.<span class="sc-blue">push</span>(caloriesArray[index]);</span>
+              <span class="span-code">    } <span class="sc-purple">else</span> {</span>
+              <span class="span-code">    results[item] = {};</span>
+              <span class="span-code">    results[item].calories = [];</span>
+              <span class="span-code">    results[item].calories.<span class="sc-blue">push</span>(caloriesArray[index]);</span>
+              <span class="span-code">    }</span>
+              <span class="span-code">  });</span>
+              <span class="span-code"></span>
+              <span class="span-code">  <span class="sc-purple">const</span> resultsNames = <span class="sc-yellow">Object</span>.<span class="sc-blue">keys</span>(results);</span>
+              <span class="span-code">  <span class="sc-purple">const</span> foodItems = resultsNames.<span class="sc-blue">map</span>((<span class="sc-orange">foodName</span>,<span class="sc-orange">index</span>) <span class="sc-purple">=></span> {</span>
+              <span class="span-code">    <span class="sc-purple">return</span> {name: foodName, calories: results[foodName].calories[<span class="sc-orange">0</span>]};</span>
+              <span class="span-code">  });</span>
+              <span class="span-code"></span>
+              <span class="span-code">  <span class="sc-purple">return</span> &lt;div></span>
+              <span class="span-code">    &lt;ul></span>
+              <span class="span-code">      {foodItems.<span class="sc-blue">map</span>((<span class="sc-orange">item</span>) <span class="sc-purple">=></span> {</span>
+              <span class="span-code">        <span class="sc-purple">const</span> displayInfo = <span class="sc-green">`</span><span class="sc-orange">${</span>item.name<span class="sc-orange">}</span> <span class="sc-green">=</span> <span class="sc-orange">${</span>item.calories<span class="sc-orange">}</span><span class="sc-green">`</span>;</span>
+              <span class="span-code">          <span class="sc-purple">return</span> &lt;li key={displayInfo} onClick={()<span class="sc-purple">=></span> <span class="sc-red">this</span>.<span class="sc-blue">handleCheckboxChange</span>(item)}></span>
+              <span class="span-code">            {displayInfo}</span>
+              <span class="span-code">          &lt;/li></span>
+              <span class="span-code">      })}</span>
+              <span class="span-code">    &lt;/ul></span>
+              <span class="span-code">  &lt;/div></span>
+              <span class="span-code">}</span>
+            </pre>
+          </div>
+        </div>
+
+        <h2 class="more-code-h2">More Code</h2>
+
+        <div class="two-box-row row">
+          <div class="col-md-6">
+            <h4>This code explains how the option box changes components when a user clicks on the different tab buttons. To simplify the code, I will only be explaining the breakfast option.</h4>
+            <h4>
+              A class with the name of <code class="code-highlight">Step2</code> is created with an initial state value of "Breakfast, Lunch, Dinner?".
+            </h4>
+            <h4>
+              Once the page loads, a button and the initial state value are displayed. The initial state value is rendered through the <code class="code-highlight">renderClickedItemDiv</code> function.
+            </h4>
+            <h4>
+              The button has an onClick event that will run the <code class="code-highlight">breakfastButton</code> function and update the initial state value. This will render a new display.
+            </h4>
+          </div>
+          <div class="col-md-6">
+            <pre class="pre-code">
+              <span class="span-code"><span class="sc-purple">import</span> <span class="sc-white">React, { Component }</span> <span class="sc-purple">from</span> <span class="sc-green">'react'</span><span class="sc-white">;</span></span>
+              <span class="span-code"></span>
+              <span class="span-code"><span class="sc-purple">class</span> <span class="sc-yellow">Step2</span> <span class="sc-purple">extends</span> <span class="sc-green">Component</span> <span class="sc-white">{</span></span>
+              <span class="span-code">  <span class="sc-blue">constructor</span> <span class="sc-white">(</span><span class="sc-orange">props</span><span class="sc-white">)</span> <span class="sc-white">{</span></span>
+              <span class="span-code">    <span class="sc-red">super</span><span class="sc-white">(props);</span></span>
+              <span class="span-code">    <span class="sc-red">this</span><span class="sc-white">.state = {</span></span>
+              <span class="span-code">      <span class="sc-white">resultsTitle:</span> <span class="sc-green">'Breakfast, Lunch, Dinner?'</span></span>
+              <span class="span-code">    <span class="sc-white">}</span></span>
+              <span class="span-code">  <span class="sc-white">}</span></span>
+              <span class="span-code"> </span>
+              <span class="span-code">  <span class="sc-blue">render</span><span class="sc-white">() {</span></span>
+              <span class="span-code">    <span class="sc-purple">return</span> <span class="sc-white">&lt;div></span></span>
+              <span class="span-code">              <span class="sc-white">&lt;button onClick={</span><span class="sc-red">this</span><span class="sc-white">.breakfastButton.</span><span class="sc-blue">bind</span><span class="sc-white">(</span><span class="sc-red">this</span><span class="sc-white">)}> Breakfast &lt;/button></span></span>
+              <span class="span-code">            <span class="sc-white">&lt;div></span></span>
+              <span class="span-code">              <span class="sc-white">{</span><span class="sc-red">this</span><span class="sc-white">.</span><span class="sc-blue">renderClickedItemDiv</span><span class="sc-white">()}</span></span>
+              <span class="span-code">            <span class="sc-white">&lt;/div></span></span>
+              <span class="span-code">          <span class="sc-white">&lt;/div></span></span>
+              <span class="span-code">  <span class="sc-white">}</span></span>
+              <span class="span-code"></span>
+              <span class="span-code">  <span class="sc-blue">renderClickedItemDiv</span><span class="sc-white">() {</span></span>
+              <span class="span-code">      <span class="sc-purple">return</span> <span class="sc-white">&lt;div></span></span>
+              <span class="span-code">              <span class="sc-white">&lt;h5> {</span><span class="sc-red">this</span><span class="sc-white">.state.resultsTitle} &lt;/h5></span></span>
+              <span class="span-code">             <span class="sc-white">&lt;/div></span></span>
+              <span class="span-code">   <span class="sc-white">}</span></span>
+              <span class="span-code"></span>
+              <span class="span-code">   <span class="sc-blue">breakfastButton</span><span class="sc-white">() {</span></span>
+              <span class="span-code">     <span class="sc-red">this</span><span class="sc-white">.</span><span class="sc-blue">setState</span><span class="sc-white">({resultsTitle:</span> <span class="sc-green">"Breakfast"</span><span class="sc-white">});</span></span>
+              <span class="span-code">   }</span>
+              <span class="span-code">}</span>
+              <span class="span-code"></span>
+              <span class="span-code"><span class="sc-purple">export</span> <span class="sc-red">default</span> <span class="sc-white">Step2;</span></span>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>Robert Varela</title>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/laptopmockup.css">
+    <link rel="stylesheet" type="text/css" href="../css/code-snippet.css">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-fixed-top" style="background-color: white;">
+      <div class="container" style="background-color: white;">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">Robert Varela</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="css-mb with-glare">
+      <div class="mb-display-position">
+        <div class="mb-display">
+          <div class="mb-screen-position">
+            <div class="mb-screen">
+              <img src="../images/reddit-angular-home.png" alt="example image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-body"></div>
+      <div class="mb-bottom-cover"></div>
+    </div>
+
+    <div class="process fuel-process">
+
+      <div class="row project-description">
+        <div class="col-md-6">
+          <h3>Title</h3>
+          <h4>Reddit Clone</h4>
+          <h3>Role</h3>
+          <h4>UI/FED</h4>
+          <h3>Project Type</h3>
+          <h4>Personal Project</h4>
+        </div>
+        <div class="col-md-6">
+          <h3>Technologies</h3>
+          <ul>
+            <li>Angular</li>
+            <li>Express</li>
+            <li>Knex</li>
+            <li>PostgreSQL</li>
+          </ul>
+          <h3>Links</h3>
+          <ul class="links">
+            <li><a href="https://github.com/rvarela11/reddit-clone-angular-CRUD" target="_blank">Code</a></li>
+            <li><a href="https://robert-angular-reddit-clone.herokuapp.com/#/" target="_blank">Site</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row project-description">
+        <div class="col-md-6">
+          <h3>Description</h3>
+          <p>
+            EXPLAIN
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="overall">
+            <h3>Overall</h3>
+            <h4>
+              First full CRUD Angular application and second version of the reddit clone. You can find the first version here ( <a href="https://github.com/rvarela11/reddit_clone_2" target="_blank">Code</a> | <a href="https://reddit-clone-2.herokuapp.com/" target="_blank">Site</a> ).  My main goals where to:
+            </h4>
+            <ul>
+              <li>Create a full CRUD application using Angular</li>
+              <li>Apply Angular directives such as ngMessages and ngAnimate.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-process">
+        <hr data-content="Process">
+
+        <div class="two-box-top-row row">
+          <div class="two-box-top col-md-6">
+            <h3>Challenge</h3>
+            <h4>
+              EXPLAIN EDIT POST
+            </h4>
+          </div>
+          <div class="two-box-top col-md-6">
+            <h3>Site</h3>
+            <img class="img-fluid two-box-top-img" src="../images/reddit-angular-edit-post.png" alt="Fuel Build" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="two-box-bottom-reddit bottom-code col-md-6">
+            <h3>Solution</h3>
+            <h4>1: View</h4>
+          </div>
+          <div class="two-box-bottom-reddit bottom-code col-md-6">
+            <h3>Code</h3>
+            <pre class="pre-code">
+              <span class="span-code">&lt;<span class="sc-red">div</span>></span>
+                <span class="span-code"> &lt;<span class="sc-red">h3</span>>Edit Post&lt;/<span class="sc-red">h3</span>></span>
+                <span class="span-code"> &lt;<span class="sc-red">form</span> <span class="sc-purple">action</span>="<span class="sc-green">#</span>" <span class="sc-purple">name</span>="<span class="sc-green">editPostForm</span>" <span class="sc-purple">ng-submit</span>="<span class="sc-green">editPost($event, user.id)</span>" <span class="sc-purple">novalidate</span>></span>
+                  <span class="span-code">  &lt;<span class="sc-red">input </span> <span class="sc-purple">type</span>="<span class="sc-green">text</span>" <span class="sc-purple">name</span>="<span class="sc-green">title</span>" <span class="sc-purple">ng-model</span>="<span class="sc-green">views.userForm.title</span>" <span class="sc-purple">placeholder</span>="<span class="sc-green">Title</span>"/></span>
+                  <span class="span-code">  &lt;<span class="sc-red">input </span> <span class="sc-purple">type</span>="<span class="sc-green">text</span>" <span class="sc-purple">name</span>="<span class="sc-green">author</span>" <span class="sc-purple">ng-model</span>="<span class="sc-green">views.userForm.author</span>" <span class="sc-purple">placeholder</span>="<span class="sc-green">Author</span>"/></span>
+                  <span class="span-code">  &lt;<span class="sc-red">input </span> <span class="sc-purple">type</span>="<span class="sc-green">text</span>" <span class="sc-purple">name</span>="<span class="sc-green">description</span>" <span class="sc-purple">ng-model</span>="<span class="sc-green">views.userForm.description</span>" <span class="sc-purple">placeholder</span>="<span class="sc-green">Description</span>"/></span>
+                  <span class="span-code">  &lt;<span class="sc-red">input </span> <span class="sc-purple">type</span>="<span class="sc-green">submit</span>" <span class="sc-purple">value</span>="<span class="sc-green">Submit</span>"/></span>
+                <span class="span-code"> &lt;/<span class="sc-red">form</span>></span>
+              <span class="span-code">&lt;/<span class="sc-red">div</span>></span>
+            </pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="two-box-bottom-reddit bottom-code col-md-6">
+            <h3></h3>
+            <h4>2: Controller</h4>
+          </div>
+          <div class="two-box-bottom-reddit bottom-code col-md-6">
+            <h3></h3>
+            <pre class="pre-code">
+              <span class="span-code">app.<span class="sc-blue">controller</span>('<span class="sc-green">MainController</span>', ['<span class="sc-green">$scope</span>', '<span class="sc-green">firstService</span>', <span class="sc-purple">function</span>(<span class="sc-orange">$scope</span>,</span>
+              <span class="span-code">  <span class="sc-orange">firstService</span>) {</span>
+              <span class="span-code">  <span class="sc-orange">$scope</span>.views = {};</span>
+              <span class="span-code">  <span class="sc-orange">$scope</span>.views.userForm = {</span>
+              <span class="span-code">    <span class="sc-green">title</span>: "",</span>
+              <span class="span-code">    <span class="sc-green">author</span>: "",</span>
+              <span class="span-code">    <span class="sc-green">description</span>: "",</span>
+              <span class="span-code">    <span class="sc-green">votes</span>: <span class="sc-orange">0</span></span>
+              <span class="span-code">  };</span>
+              <span class="span-code"></span>
+              <span class="span-code">  <span class="sc-orange">$scope</span>.<span class="sc-blue">editPost</span> = <span class="sc-purple">function</span>(<span class="sc-orange">event</span>, <span class="sc-orange">id</span>) {</span>
+              <span class="span-code">    event.<span class="sc-blue">preventDefault</span>();</span>
+              <span class="span-code">    firstService.<span class="sc-blue">edit</span>($scope.views.userForm, id);</span>
+              <span class="span-code">  }</span>
+              <span class="span-code"></span>
+              <span class="span-code">}]);</span>
+            </pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="two-box-bottom-reddit bottom-code col-md-6">
+            <h3></h3>
+            <h4>3: Factory</h4>
+          </div>
+          <div class="two-box-bottom-reddit bottom-code col-md-6">
+            <h3></h3>
+            <pre class="pre-code">
+              <span class="span-code">app.<span class="sc-blue">factory</span>('<span class="sc-green">firstService</span>', <span class="sc-purple">function</span>(<span class="sc-orange">$http</span>) {</span>
+              <span class="span-code"></span>
+              <span class="span-code">  <span class="sc-purple">return</span> {</span>
+              <span class="span-code">    <span class="sc-blue">edit</span>: <span class="sc-purple">function</span>(<span class="sc-orange">postEdit</span>, <span class="sc-orange">postId</span>) {</span>
+              <span class="span-code">      <span class="sc-purple">return</span> <span class="sc-orange">$http</span>.<span class="sc-blue">put</span>('<span class="sc-green">/api/posts/</span>' + postId, postEdit);</span>
+              <span class="span-code">    }</span>
+              <span class="span-code">});</span>
+            </pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="two-box-bottom-reddit bottom-code col-md-6">
+            <h3></h3>
+            <h4>4: Route</h4>
+          </div>
+          <div class="two-box-bottom-reddit bottom-code col-md-6">
+            <h3></h3>
+            <pre class="pre-code">
+              <span class="span-code"><span class="sc-purple">var</span> express = <span class="sc-blue">require</span>('<span class="sc-green">express</span>'),</span>
+              <span class="span-code">  router = express.<span class="sc-blue">Router</span>(),</span>
+              <span class="span-code">  knex = <span class="sc-blue">require</span>('<span class="sc-green">../db/knex</span>');</span>
+              <span class="span-code"></span>
+              <span class="span-code">router.<span class="sc-blue">put</span>('<span class="sc-green">/:id</span>', <span class="sc-purple">function</span>(<span class="sc-orange">req</span>, <span class="sc-orange">res</span>) {</span>
+              <span class="span-code">  <span class="sc-blue">knex</span>('<span class="sc-green">posts</span>').<span class="sc-blue">where</span>({</span>
+              <span class="span-code">    <span class="sc-green">id</span>: req.params.id</span>
+              <span class="span-code">  }).<span class="sc-blue">update</span>({</span>
+              <span class="span-code">    <span class="sc-green">title</span>: req.body.title,</span>
+              <span class="span-code">    <span class="sc-green">author</span>: req.body.author,</span>
+              <span class="span-code">    <span class="sc-green">description</span>: req.body.description,</span>
+              <span class="span-code">    <span class="sc-green">votes</span>: <span class="sc-orange">0</span></span>
+              <span class="span-code">  }).<span class="sc-blue">then</span>(<span class="sc-purple">function</span>(<span class="sc-orange">msg</span>) {</span>
+              <span class="span-code">    res.<span class="sc-blue">json</span>(msg);</span>
+              <span class="span-code">  });</span>
+              <span class="span-code">});</span>
+              <span class="span-code"></span>
+              <span class="span-code">module.<span class="sc-yellow">exports</span> = router;</span>
+            </pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="two-box-bottom-reddit bottom-code col-md-6">
+            <h3></h3>
+            <h4>5: View</h4>
+          </div>
+          <div class="two-box-bottom-reddit bottom-code col-md-6">
+            <h3></h3>
+            <pre class="pre-code">
+              <span class="span-code">  <span class="sc-orange">$scope</span>.<span class="sc-blue">editPost</span> = <span class="sc-purple">function</span>(<span class="sc-orange">event</span>, <span class="sc-orange">id</span>) {</span>
+              <span class="span-code">    event.<span class="sc-blue">preventDefault</span>();</span>
+              <span class="span-code">    firstService.<span class="sc-blue">edit</span>($scope.views.userForm, id).<span class="sc-blue">then</span>(<span class="sc-purple">function</span>(<span class="sc-orange">msg</span>) {</span>
+              <span class="span-code">      <span class="sc-orange">$scope</span>.views.userForm = {</span>
+              <span class="span-code">        <span class="sc-green">title</span>: "",</span>
+              <span class="span-code">        <span class="sc-green">author</span>: "",</span>
+              <span class="span-code">        <span class="sc-green">description</span>: "",</span>
+              <span class="span-code">        <span class="sc-green">votes</span>: <span class="sc-orange">0</span></span>
+              <span class="span-code">      };</span>
+              <span class="span-code">      <span class="sc-orange">$scope</span>.<span class="sc-blue">getPosts</span>();</span>
+              <span class="span-code">    });</span>
+              <span class="span-code">  }</span>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
