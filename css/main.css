@@ -1,47 +1,3 @@
-.more-code-h2 {
-  text-align: center;
-  margin-top: 2%;
-}
-
-.two-box-row {
-  margin-top: 2%;
-  margin-top: 2%;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 2%;
-}
-
-.two-box-top, .two-box-bottom {
-  border: 1px solid #ccc;
-  height: 400px;
-}
-
-img.img-fluid.two-box-top-img {
-  width: 100%;
-}
-
-.bottom-code {
-  height: 600px;
-}
-
-.code-highlight {
-  background: #f8f8ff;
-  border: 1px solid #dedede;
-  font-size: 12px;
-  padding: 0 0.2em;
-}
-
-.two-box-bottom-reddit {
-  border: 1px solid #ccc;
-  height: 345px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-}
-
-.code-words h4{
-  line-height: 1.5em;
-}
-
 /*------------------------------------------------------*/
 /*--------------- General Portfolio CSS ----------------*/
 /*------------------------------------------------------*/
@@ -641,6 +597,7 @@ hr:after {
 /*-----------------------------------------*/
 /*-----------RESPONSIVE GENERAL------------*/
 /*-----------------------------------------*/
+
 @media screen and (max-width: 768px) {
  h1 {
    font-size: 1.5em;
@@ -714,4 +671,53 @@ hr:after {
   .two-box-bottom-fuel-mobile-challenge-code {
     height: 950px;
   }
+}
+
+/*-----------------------------------------*/
+/*--------------PROCESS HTML---------------*/
+/*-----------------------------------------*/
+
+.more-code-h2 {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.two-box-row {
+  margin-top: 2%;
+  margin-top: 2%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 2%;
+}
+
+.two-box-top, .two-box-bottom {
+  border: 1px solid #ccc;
+  height: 400px;
+}
+
+img.img-fluid.two-box-top-img {
+  width: 100%;
+  height: 80%;
+}
+
+.bottom-code {
+  height: 600px;
+}
+
+.code-highlight {
+  background: #f8f8ff;
+  border: 1px solid #dedede;
+  font-size: 12px;
+  padding: 0 0.2em;
+}
+
+.two-box-bottom-reddit {
+  border: 1px solid #ccc;
+  height: 345px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.code-words h4{
+  line-height: 1.5em;
 }
