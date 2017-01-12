@@ -663,7 +663,7 @@ hr:after {
    display: none;
  }
  img.img-fluid.two-box-top-img {
-   height: 50% !important;
+   height: auto !important;
  }
  .mobile-height-0{
    height: 0% !important;
