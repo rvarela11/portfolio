@@ -669,9 +669,9 @@ hr:after {
    height: 0% !important;
    padding-bottom: 2%;
  }
- /*.mobile-height-fuel-code{
-   height: 600px !important;
- }*/
+ .mobile-height-fuel-code{
+   height: 900px !important;
+ }
  .mobile-height-reddit-code{
    height: 325px !important;
  }
