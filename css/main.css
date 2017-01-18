@@ -678,6 +678,9 @@ hr:after {
  .mobile-height-reddit-code{
    height: 100vh !important;
  }
+ .mobile-height-pbc-code{
+   height: 800px !important;
+ }
   /*.two-box-bottom-fuel-mobile-challenge-code {
     height: 0% !important;
   }*/
