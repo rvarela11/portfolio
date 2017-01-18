@@ -247,6 +247,9 @@ svg:hover {
   -webkit-backface-visibility: hidden;
   border: 2px solid #000;
 }
+.imagePBC {
+  background-size: 75%;
+}
 .image:hover {
   border-color: #20A4F3;
 }
@@ -256,7 +259,7 @@ svg:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 2;
-  color: #000;
+  color: #20A4F3;
   text-transform: uppercase;
   margin: 0;
   text-align: center;
@@ -719,13 +722,18 @@ img.img-fluid.two-box-top-img {
   padding: 0 0.2em;
 }
 
-.two-box-bottom-reddit {
+.two-box-bottom-code {
   border: 1px solid #ccc;
-  height: 345px;
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
+}
+.two-box-bottom-reddit{
+  height: 345px;
 }
 
 .code-words h4{
   line-height: 1.5em;
+}
+.code-links{
+  color: #fff;
 }

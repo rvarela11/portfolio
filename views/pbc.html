@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>Robert Varela</title>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/laptopmockup.css">
+    <link rel="stylesheet" type="text/css" href="../css/code-snippet.css">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-fixed-top" style="background-color: white;">
+      <div class="container" style="background-color: white;">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">Robert Varela</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="css-mb with-glare">
+      <div class="mb-display-position">
+        <div class="mb-display">
+          <div class="mb-screen-position">
+            <div class="mb-screen">
+              <img src="../images/pbc-screenshot.png" alt="example image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-body"></div>
+      <div class="mb-bottom-cover"></div>
+    </div>
+
+    <div class="process fuel-process">
+
+      <div class="row project-description">
+        <div class="col-md-6">
+          <h3>Title</h3>
+          <h4>Patriot Boot Camp Alumni Directory</h4>
+          <h3>Role</h3>
+          <h4>UI/FED</h4>
+          <h3>Project Type</h3>
+          <h4>Contract</h4>
+        </div>
+        <div class="col-md-6">
+          <h3>Technologies</h3>
+          <ul>
+            <li>React</li>
+            <li>Redux</li>
+            <li>JSX</li>
+            <li>Webpack</li>
+            <li>Babel</li>
+          </ul>
+          <h3>Links</h3>
+          <ul class="links">
+            <li><a href="https://github.com/PatriotBootCamp/alumni" target="_blank">Code</a></li>
+            <li><a href="http://pbcalumni.directory/" target="_blank">Site</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row project-description">
+        <div class="col-md-6">
+          <h3>Description</h3>
+          <p>
+            Alumni and company directory for Patriot Boot Camp. Patriot Boot Camp (PBC) is a nonprofit on a mission to equip active duty military members, Veterans, and their spouses with the education, resources, and community needed to be successful technology entrepreneurs.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="overall">
+            <h3>Overall</h3>
+            <h4>
+              Main goals:
+            </h4>
+            <ul>
+              <li>Create the Alumni, Company, and Admin pages.</li>
+              <li>Filter by name and other options</li>
+              <li>Make API requests and display information</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-process">
+        <hr data-content="Process">
+
+        <div class="two-box-top-row row">
+          <div class="two-box-top col-md-6">
+            <h3>Challenge</h3>
+            <h4>
+              Step 1: Collect the filter options and make a POST request.
+            </h4>
+            <h4>
+              Step 2: Receive results and properly display the information.
+            </h4>
+          </div>
+          <div class="two-box-top col-md-6">
+            <h3>Site</h3>
+            <img class="img-fluid two-box-top-img" src="../images/pbc-filters.png" alt="PBC Alumni Home Page" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="mobile-height-0 two-box-bottom-code bottom-code col-md-6 code-words">
+            <h3>Solution</h3>
+            <h4>* For display purposes, these code snippets only show partial code. For the full code please visit <a class="code-links" href="https://github.com/PatriotBootCamp/alumni" target="_blank">here</a>.</h4>
+            <h4>Step 1</h4>
+            <h4>Each filter, has an <code class="code-highlight">onChange</code> EventListener that runs the <code class="code-highlight">checkboxAnswer</code> function.  </h4>
+            <h4>The checkbox's name, value, and checked status are placed in constants. Along with the object of arrays that is set in the initial state and an array of strings that will act as the function's filters. </h4>
+            <h4>A <code class="code-highlight">forEach</code> loop runs through the <code class="code-highlight">filterProperties</code> to match the chexbox's name with the filter. If both of them match and the checked status is true, the value of the checked box will be pushed into it's array. If they both match but the checked status is false, the last value in the array will be removed. This is done so the arrays do not have any duplicates.</h4>
+            <h4>Once the user clicks the <code class="code-highlight">SEARCH</code> button, the <code class="code-highlight">dropdown_filter_arrays</code> object is passed to the back-end through a <code class="code-highlight">POST</code> request. </h4>
+          </div>
+          <div class="two-box-bottom-code mobile-height-reddit-code bottom-code col-md-6">
+            <h3>Code</h3>
+            <pre class="pre-code">
+              <span class="span-code">checkboxAnswer (<span class="sc-orange">event</span>) {</span>
+              <span class="span-code"><span class="sc-purple">const</span> <span class="sc-orange">checkboxName</span> = event.target.name;</span>
+              <span class="span-code"><span class="sc-purple">const</span> <span class="sc-orange">checkboxValue</span> = event.target.value;</span>
+              <span class="span-code"><span class="sc-purple">const</span> <span class="sc-orange">checkboxChecked</span> = event.target.checked;</span>
+              <span class="span-code"><span class="sc-purple">const</span> <span class="sc-orange">dropdown_filter_arrays</span> = <span class="sc-red">this</span>.state.dropdown_filter_arrays;</span>
+              <span class="span-code"><span class="sc-purple">const</span> <span class="sc-orange">filterProperties</span> = ["<span class="sc-green">techstars</span>"];</span>
+                <span class="span-code"> filterProperties.<span class="sc-blue">forEach</span>((<span class="sc-orange">filterBy</span>) <span class="sc-purple">=></span> {</span>
+                  <span class="span-code">  <span class="sc-purple">if</span> (<span class="sc-orange">filterBy</span> === <span class="sc-orange">checkboxName</span> && <span class="sc-orange">checkboxChecked</span>){</span>
+                    <span class="span-code">   <span class="sc-purple">if</span> (<span class="sc-orange">filterBy</span> === "<span class="sc-green">techstars</span>") {</span>
+                      <span class="span-code">    dropdown_filter_arrays.techstars.<span class="sc-blue">push</span>(<span class="sc-orange">checkboxValue</span>);</span>
+                      <span class="span-code">    <span class="sc-red">this</span>.<span class="sc-blue">setState</span>({dropdown_filter_arrays});</span>
+                    <span class="span-code">   }</span>
+                <span class="span-code"> } <span class="sc-purple">else if</span> (<span class="sc-orange">filterBy</span> === <span class="sc-orange">checkboxName</span> && !<span class="sc-orange">checkboxChecked</span>){</span>
+                  <span class="span-code">   <span class="sc-purple">if</span> (<span class="sc-orange">filterBy</span> === "<span class="sc-green">techstars</span>"){</span>
+                    <span class="span-code">    dropdown_filter_arrays.techstars.<span class="sc-blue">splice</span>(<span class="sc-orange">-1</span>,<span class="sc-orange">1</span>);</span>
+                    <span class="span-code">    <span class="sc-red">this</span>.<span class="sc-blue">setState</span>({dropdown_filter_arrays});</span>
+                  <span class="span-code">   }</span>
+                <span class="span-code">  }</span>
+                <span class="span-code"> })</span>
+              <span class="span-code">}</span>
+            </pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mobile-height-0 two-box-bottom-code bottom-code col-md-6 code-words">
+            <h3>Solution</h3>
+            <h4>Step 2</h4>
+            <h4>An object is returned with the results. A <code class="code-highlight">map</code> function runs through the object and the proper information is displayed. </h4>
+          </div>
+          <div class="two-box-bottom-code mobile-height-reddit-code bottom-code col-md-6">
+            <h3>Code</h3>
+            <pre class="pre-code">
+              <span class="span-code"><span class="sc-orange">{</span>founders.<span class="sc-blue">map</span>((<span class="sc-orange">info</span>, <span class="sc-orange">index</span>) <span class="sc-purple">=></span> {</span>
+                <span class="span-code"><span class="sc-purple"> return</span> (</span>
+                  <span class="span-code">  &lt;<span class="sc-red">div</span> <span class="sc-purple">className</span>="<span class="sc-green">col s12 m7 card-outline</span>"></span>
+                    <span class="span-code">   &lt;<span class="sc-red">div</span> <span class="sc-purple">className</span>="<span class="sc-green">card horizontal</span>"></span>
+                      <span class="span-code">    &lt;<span class="sc-red">div</span> <span class="sc-purple">className</span>="<span class="sc-green">card-image</span>"></span>
+                        <span class="span-code">     &lt;<span class="sc-red">img</span> <span class="sc-purple">src</span>="<span class="sc-green">../images/empty_avatar.jpg</span>" <span class="sc-purple">className</span>="<span class="sc-green">card-img</span>"/></span>
+                      <span class="span-code">    &lt;/<span class="sc-red">div</span>></span>
+                      <span class="span-code">     &lt;<span class="sc-red">div</span> <span class="sc-purple">className</span>="<span class="sc-green">card-stacked</span>"></span>
+                        <span class="span-code">    &lt;<span class="sc-red">div</span> <span class="sc-purple">className</span>="<span class="sc-green">card-content card-div-li</span>"></span>
+                          <span class="span-code">   &lt;<span class="sc-red">ul</span> <span class="sc-purple">className</span>="<span class="sc-green">card-ul</span>"></span>
+                            <span class="span-code">&lt;<span class="sc-red">div</span> <span class="sc-purple">className</span>="<span class="sc-green">card-div-li</span>"></span>
+                              <span class="span-code">&lt;<span class="sc-red">li</span>>&lt;<span class="sc-red">h4</span> <span class="sc-purple">className</span>="<span class="sc-green">card-h4</span>"><span class="sc-orange">{</span>info.first_name<span class="sc-orange">}</span>&lt;/<span class="sc-red">h4</span>>&lt;/<span class="sc-red">li</span>></span>
+                              <span class="span-code">&lt;<span class="sc-red">li</span>>&lt;<span class="sc-red">h4</span> <span class="sc-purple">className</span>="<span class="sc-green">card-h4 card-h4-last-name</span>"><span class="sc-orange">{</span>info.last_name<span class="sc-orange">}</span>&lt;/<span class="sc-red">h4</span>>&lt;/<span class="sc-red">li</span>></span>
+            </pre>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </body>
+</html>
