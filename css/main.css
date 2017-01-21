@@ -254,9 +254,9 @@ svg:hover {
 /*--------------- PROJECTS ----------------*/
 /*-----------------------------------------*/
 
-/*.projects-section h1 {
-  visibility: hidden;
-}*/
+.projects-section h1 {
+  display: none;
+}
 
 
 .projects {
@@ -732,8 +732,11 @@ hr:after {
    margin-bottom: 1%;
  }
  .span-word-cloud{
-   line-height: 4.5rem !important;
+   line-height: 4rem !important;
    font-size: 2.50rem !important;
+ }
+ .projects-section h1 {
+   display: block;
  }
   /*.two-box-bottom-fuel-mobile-challenge-code {
     height: 0% !important;
