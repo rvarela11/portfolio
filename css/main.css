@@ -747,7 +747,7 @@ img.img-fluid.two-box-top-img {
    height: 0% !important;
    padding-bottom: 2%;
  }
- .mobile-height-fuel-code{
+ /*.mobile-height-fuel-code{
    height: 1000px !important;
  }
  .mobile-height-reddit-code{
@@ -755,7 +755,7 @@ img.img-fluid.two-box-top-img {
  }
  .mobile-height-pbc-code{
    height: 800px !important;
- }
+ }*/
  .projects-laptop-view {
    display: none;
  }
