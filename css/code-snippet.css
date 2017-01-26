@@ -1,3 +1,8 @@
+/*------------------------------------------------------*/
+/*--------------- General Code Snippet -----------------*/
+/*------------------------------------------------------*/
+
+/*This can be found in the process page*/
 
 .pre-code {
   font-family: monospace;
@@ -10,6 +15,9 @@
   line-height: 0;
   counter-reset: line;
   overflow-x: scroll;
+
+  white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
 }
 
 .span-code {
@@ -27,7 +35,6 @@
   margin-right: .5em;
   color: #888
 }
-
 .sc-purple {
   color: #C594C5;
 }
@@ -47,6 +54,7 @@
   color: #EC5f67;
 }
 
+/*Color examples*/
 
 /*base 00: #1B2B34
 base 01: #343D46
