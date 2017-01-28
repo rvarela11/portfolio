@@ -121,7 +121,7 @@
               Each input tag has an <code class="code-highlight">ng-model</code> for a specific value. These values will be passed and placed in the <code class="code-highlight">$scope.views.userForm</code> object in the controller once the submit input is clicked.
             </h4>
           </div>
-          <div class="two-box-bottom-code two-box-bottom-reddit mobile-height-reddit-code bottom-code col-md-6">
+          <div class="two-box-bottom-code two-box-bottom-reddit bottom-code col-md-6">
             <h3>Code</h3>
             <pre class="pre-code">
               <span class="span-code">&lt;<span class="sc-red">div</span>></span>
@@ -147,7 +147,7 @@
               The function <code class="code-highlight">editPost</code> will pass the information from the <code class="code-highlight">$scope.views.userForm</code> object and the <code class="code-highlight">post.id</code> to the <code class="code-highlight">firstService</code> factory.
             </h4>
           </div>
-          <div class="two-box-bottom-code two-box-bottom-reddit mobile-height-reddit-code bottom-code col-md-6">
+          <div class="two-box-bottom-code two-box-bottom-reddit  bottom-code col-md-6">
             <h3></h3>
             <pre class="pre-code">
               <span class="span-code">app.<span class="sc-blue">controller</span>('<span class="sc-green">MainController</span>', ['<span class="sc-green">$scope</span>', '<span class="sc-green">firstService</span>', <span class="sc-purple">function</span>(<span class="sc-orange">$scope</span>,</span>
@@ -177,7 +177,7 @@
               The <code class="code-highlight">firstService</code> factory is injected with <code class="code-highlight">$http</code>. The edit function runs making a <code class="code-highlight">put</code> request and passing the <code class="code-highlight">userForm</code> object along with the <code class="code-highlight">post.id</code> id.
             </h4>
           </div>
-          <div class="two-box-bottom-code two-box-bottom-reddit mobile-height-reddit-code bottom-code col-md-6">
+          <div class="two-box-bottom-code two-box-bottom-reddit  bottom-code col-md-6">
             <h3></h3>
             <pre class="pre-code">
               <span class="span-code">app.<span class="sc-blue">factory</span>('<span class="sc-green">firstService</span>', <span class="sc-purple">function</span>(<span class="sc-orange">$http</span>) {</span>
@@ -204,7 +204,7 @@
               Lastly, a <code class="code-highlight">res.json(msg)</code> is returned which will be passed to the <code class="code-highlight">MainController</code> controller.
             </h4>
           </div>
-          <div class="two-box-bottom-code two-box-bottom-reddit mobile-height-reddit-code bottom-code col-md-6">
+          <div class="two-box-bottom-code two-box-bottom-reddit  bottom-code col-md-6">
             <h3></h3>
             <pre class="pre-code">
               <span class="span-code"><span class="sc-purple">var</span> express = <span class="sc-blue">require</span>('<span class="sc-green">express</span>'),</span>
@@ -239,7 +239,7 @@
               The <code class="code-highlight">$scope.views.userForm</code> object is cleared out and the <code class="code-highlight">getPosts</code> function is triggered. This function will "reload" the posts so that the new edited information will show.
             </h4>
           </div>
-          <div class="two-box-bottom-code two-box-bottom-reddit mobile-height-reddit-code bottom-code col-md-6">
+          <div class="two-box-bottom-code two-box-bottom-reddit  bottom-code col-md-6">
             <h3></h3>
             <pre class="pre-code">
               <span class="span-code">  <span class="sc-orange">$scope</span>.<span class="sc-blue">editPost</span> = <span class="sc-purple">function</span>(<span class="sc-orange">event</span>, <span class="sc-orange">id</span>) {</span>
