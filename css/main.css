@@ -234,17 +234,16 @@ svg:hover {
 .span-word-cloud-main {
   font-size: 5rem !important;
 }
-.span-word-cloud-js {
-  color: #333 !important;
-  line-height: 5rem !important;
-  font-size: 3rem !important;
-}
 .span-word-cloud a {
   color: #20A4F3;
+}
+.span-word-cloud a:hover {
+  color: red;
 }
 .projects-h1 {
   padding-top: 5%;
 }
+
 
 /*------------------------------------------------*/
 /*--------------- PROJECTS IMAGES ----------------*/
