@@ -243,6 +243,9 @@ svg:hover {
 .projects-h1 {
   padding-top: 5%;
 }
+.javascript-word-cloud:hover {
+  color: red !important;
+}
 
 
 /*------------------------------------------------*/
