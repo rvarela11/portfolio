@@ -619,6 +619,9 @@ hr:after {
 .projects-mobile-view{
   display: none;
 }
+.js-mobile {
+  color: #333 !important;
+}
 .more-code-h2 {
   text-align: center;
   margin-top: 2%;

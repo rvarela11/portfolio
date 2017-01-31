@@ -15,7 +15,7 @@
   line-height: 0;
   counter-reset: line;
   overflow-x: scroll;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 	-webkit-overflow-scrolling: touch;
 }
 
