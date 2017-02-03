@@ -1,29 +1,35 @@
 $(function() {
-  $('.fuel-process').hide();
 
-  // Fullpage anchoring
+  //Fullpage anchoring
   $('#fullpage').fullpage({
     anchors: ['home', 'projects', 'aboutMe', 'contact']
   });
 
-
   // Toggle menu
-  var toggle = $('.toggle');
-  var nav = $('.navbar-header');
 
-  toggle.on("click", function() {
-    nav.toggleClass('is-visible');
+  var toggle = document.querySelector(".toggle");
+  var nav = document.querySelector(".navbar-header");
+
+  toggle.addEventListener("click", function () {
+    nav.classList.toggle("is-visible");
   });
 
   // Home page type script
-  setTimeout(function() {
-    $('#intro').typed({
-      strings: [
-        "Hi! I am Robert. A full-stack developer with a focus on front-end development."
-      ],
-      typeSpeed: 5,
-      contentType: 'html'
-    });
-  }, 500);
+
+  var thing = "Hi! I am Robert. A full-stack developer with a focus on front-end development.";
+  var i = 0;
+  var timer;
+  var type_script = document.querySelector('#intro');
+
+  if(i < thing.length) {
+   timer = setInterval(function(){
+      type_script.innerHTML += thing[i];
+      i++;
+      if (i >= thing.length) {
+        clearInterval(timer);
+      }
+   }, 50);
+   return type_script;
+  }
 
 });
