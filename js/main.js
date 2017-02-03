@@ -12,6 +12,7 @@ $(function() {
 
   toggle.addEventListener("click", function () {
     nav.classList.toggle("is-visible");
+    console.log(nav);
   });
 
   // Home page type script
