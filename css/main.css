@@ -74,6 +74,8 @@ h1, h4, p {
   background-color: #20A4F3;
   visibility: hidden;
 
+
+
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -ms-transform: scaleX(0);
