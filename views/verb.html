@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>Robert Varela</title>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/laptopmockup.css">
+    <link rel="stylesheet" type="text/css" href="../css/code-snippet.css">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+
+<!-- --------------- NAV BAR ----------------- -->
+
+    <nav class="navbar navbar-fixed-top" style="background-color: white;">
+      <div class="container" style="background-color: white;">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">Robert Varela</a>
+        </div>
+      </div>
+    </nav>
+
+<!-- --------------- LAPTOP PICTURE ----------------- -->
+
+    <div class="css-mb with-glare">
+      <div class="mb-display-position">
+        <div class="mb-display">
+          <div class="mb-screen-position">
+            <div class="mb-screen">
+              <img src="../images/verb-screenshot.png" alt="example image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-body"></div>
+      <div class="mb-bottom-cover"></div>
+    </div>
+
+<!-- --------------- PROJECT DESCRIPTION ----------------- -->
+
+    <div class="process fuel-process">
+
+      <div class="row project-description">
+        <div class="col-md-6">
+          <h3>Title</h3>
+          <h4>Verb Demo</h4>
+          <h3>Role</h3>
+          <h4>UI/FED</h4>
+          <h3>Project Type</h3>
+          <h4>Personal Project</h4>
+        </div>
+        <div class="col-md-6">
+          <h3>Technologies</h3>
+          <ul>
+            <li>React</li>
+            <li>JSX</li>
+            <li>Webpack</li>
+            <li>Babel</li>
+          </ul>
+          <h3>Links</h3>
+          <ul class="links">
+            <li><a href="https://github.com/rvarela11/verb" target="_blank">Code</a></li>
+            <li><a href="https://verb-robert-varela.herokuapp.com/" target="_blank">Site</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row project-description">
+        <div class="col-md-6">
+          <h3>Description</h3>
+          <p>
+            A dashboard that allows an administrator to search for a specific user and add them to a group (IT, Sales, Support).  Also, the administrator is able to view all users in a specific group.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="overall">
+            <h3>Overall</h3>
+            <h4>
+              Main goals:
+            </h4>
+            <ul>
+              <li>View all users for a specific group</li>
+              <li>Search user by name</li>
+              <li>Add user to any group</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+<!-- --------------- PROJECT CHALLENGE & CODE SNIPPET ----------------- -->
+
+      <div class="project-process">
+        <hr data-content="Process">
+
+        <div class="two-box-top-row row">
+          <div class="two-box-top col-md-6">
+            <h3>Challenge</h3>
+            <h4>
+              Add a user to a specific group. When changed the user must only be found in the specific group. Their information must also change in the "all" group.
+            </h4>
+          </div>
+          <div class="two-box-top col-md-6">
+            <h3>Site</h3>
+            <img class="img-fluid two-box-top-img" src="../images/verb-add.png" alt="Verb add a user" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="mobile-height-0 two-box-bottom-code bottom-code col-md-6 code-words">
+            <h3>Solution</h3>
+            <h4>Each button has a click event listener that passes the user's object data.</h4>
+            <h4>The <code class="code-highlight">user.group</code> value is stored in the <code class="code-highlight">group</code> constant.</h4>
+            <h4>The correct <code class="code-highlight">group_array</code> is selected based on the <code class="code-highlight">group</code>.</h4>
+            <h4>A <code class="code-highlight">map</code> function runs through the <code class="code-highlight">group_array</code> and removes the name which matches the <code class="code-highlight">user.first_name</code>.</h4>
+            <h4>The <code class="code-highlight">user</code> is pushed into the new <code class="code-highlight">group_array</code>.</h4>
+          </div>
+          <div class="two-box-bottom-code bottom-code col-md-6">
+            <h3>Code</h3>
+            <pre class="pre-code">
+              <span class="span-code"><span class="sc-purple">const</span> group = user.group;</span>
+              <span class="span-code">let group_array;</span>
+              <span class="span-code"></span>
+              <span class="span-code">   <span class="sc-purple">if</span> (group === "<span class="sc-green">IT</span>") {</span>
+              <span class="span-code">     group_array = <span class="sc-red">this</span>.state.it;</span>
+              <span class="span-code">   } <span class="sc-purple">else if</span> (group === "<span class="sc-green">Sales</span>") {</span>
+              <span class="span-code">     group_array = <span class="sc-red">this</span>.state.sales;</span>
+              <span class="span-code">   } <span class="sc-purple">else if</span> (group === "<span class="sc-green">Support</span>") {</span>
+              <span class="span-code">     group_array = <span class="sc-red">this</span>.state.support;</span>
+              <span class="span-code">  }</span>
+              <span class="span-code"></span>
+              <span class="span-code">  group_array.<span class="sc-blue">map</span>((user_old) => {</span>
+              <span class="span-code">  <span class="sc-purple">  if</span> (user_old.first_name === user.first_name ) {</span>
+              <span class="span-code">      let user_index = group_array.<span class="sc-blue">indexOf</span>(user_old);</span>
+              <span class="span-code">      group_array.<span class="sc-blue">splice</span>(user_index,1);</span>
+              <span class="span-code">    }</span>
+              <span class="span-code">  });</span>
+            </pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
