@@ -1,5 +1,23 @@
-import '@/styles/globals.css'
+import { useCallback } from 'react';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import { particlesConfig } from '../src/config/particles-config';
+import '@/styles/globals.css';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const App = ({ Component, pageProps }) => {
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
+
+  console.log(particlesConfig);
+
+  return (
+    <>
+      <Particles id='tsparticles' init={particlesInit} options={particlesConfig} />
+      {/* <Particles width='100vw' height='100vh' options={particlesConfig} /> */}
+      <Component {...pageProps} />
+    </>
+  );
+};
+
+export default App;
