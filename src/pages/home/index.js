@@ -1,9 +1,10 @@
 import React from 'react';
+import { Typography } from '@mui/material';
 import Page from '@/src/components/shared/page';
 
 const Home = () => (
   <Page>
-    <p>Home</p>
+    <Typography variant='h1'>Roberto Varela</Typography>
   </Page>
 );
 

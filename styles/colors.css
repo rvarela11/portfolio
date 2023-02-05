@@ -4,7 +4,12 @@
   --color__white: #FFFFFF;
   
   /* Gray */
-  --color__light-gray: #ccc;
+  --color__light-gray: #b0acb0;
   --color__mid-gray: #333;
   --color__dark-gray: #141416;
+
+  /* Green */
+  --color__light-green: #85ebd9;
+  --color__mid-green: #3d898d;
+  --color__dark-green: #2f404d;
 }
