@@ -1,0 +1,10 @@
+:root {
+  /* Common */
+  --color__black: #000000;
+  --color__white: #FFFFFF;
+  
+  /* Gray */
+  --color__light-gray: #ccc;
+  --color__mid-gray: #333;
+  --color__dark-gray: #141416;
+}

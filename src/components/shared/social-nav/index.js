@@ -28,7 +28,6 @@ const SocialNav = () => (
     >
       <GitHubIcon />
     </Link>
-    {/* <li><a href='assets/resume.pdf' target='_blank' aria-label='Checkout my resume'><i class='fa fa-file-pdf-o' /></a></li> */}
   </div>
 );
 

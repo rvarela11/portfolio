@@ -1,6 +1,6 @@
 import React from 'react';
-import SocialNav from '../social-nav';
 import SEO from '../SEO';
+import SocialNav from '../social-nav';
 
 const Page = ({ children, SEOProps }) => (
   <>

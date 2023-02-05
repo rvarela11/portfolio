@@ -1,3 +1,5 @@
+@import '~/styles/colors.css';
+
 .social-nav {
   position: fixed;
   display: flex;
@@ -14,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #333;
+  background-color: var(--color__mid-gray);
   transition: all .2s linear;
 }
 
