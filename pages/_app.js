@@ -1,9 +1,13 @@
+// @vendors
 import React from 'react';
 import { CacheProvider } from '@emotion/react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import createEmotionCache from '@/utility/createEmotionCache';
-import mainTheme from '../styles/theme/main';
 
+// @utility
+import createEmotionCache from '@/utility/createEmotionCache';
+
+// @styles
+import mainTheme from '../styles/theme/main';
 import '@/styles/globals.css';
 
 const clientSideEmotionCache = createEmotionCache();

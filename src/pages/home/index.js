@@ -1,8 +1,13 @@
+// @vendors
 import React, { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { Typography } from '@mui/material';
+
+// @components
 import Page from '@/src/components/shared/page';
+
+// @public
 import PARTICLES_JSON from '@/public/assets/particles-config.json';
 
 const Home = () => {

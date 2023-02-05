@@ -1,4 +1,7 @@
+// @vendors
 import React from 'react';
+
+// @components
 import SEO from '../SEO';
 import SocialNav from '../social-nav';
 
