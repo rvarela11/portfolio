@@ -196,10 +196,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fontsource/ubuntu@^4.5.11":
+"@fontsource/orbitron@^4.5.11":
   version "4.5.11"
-  resolved "https://registry.yarnpkg.com/@fontsource/ubuntu/-/ubuntu-4.5.11.tgz#71b75fda2f4b14aa20b39a7a3c8bc34c81fde609"
-  integrity sha512-c+B8A8r31hJLk8Ek7Svoz4GwjtInhc60LFM6XTr5TKtZbcct8TPNxJuKX4+hnqoWgcvy8s0Gj4mde4TcK/SgDQ==
+  resolved "https://registry.yarnpkg.com/@fontsource/orbitron/-/orbitron-4.5.11.tgz#b5a451ee09d7f4cf8da1ece7832eef5dce71d158"
+  integrity sha512-OClxk3btSUtbvH+LKk3JSO95Ly88lJZjODRgUY2yLVOVBhR/i7u3xlj9j0SUmIYQAFn21jrMX5+zbS5IfIP9YQ==
 
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"

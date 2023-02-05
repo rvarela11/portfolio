@@ -2,11 +2,13 @@ import React from 'react';
 import SEO from '../SEO';
 import SocialNav from '../social-nav';
 
-const Page = ({ children, SEOProps }) => (
+const Page = ({ className = '', children, SEOProps = {} }) => (
   <>
     <SEO {...SEOProps} />
     <SocialNav />
-    {children}
+    <section className={`page ${className}`.trim()}>
+      {children}
+    </section>
   </>
 );
 

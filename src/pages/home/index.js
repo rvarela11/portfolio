@@ -11,9 +11,12 @@ const Home = () => {
   }, []);
 
   return (
-    <Page>
+    <Page className='home-page'>
       <Particles id='tsparticles' init={particlesInit} options={PARTICLES_JSON} />
-      <Typography variant='h1'>Roberto Varela</Typography>
+      <div className='home-page-content'>
+        <Typography className='home-page-content_name' variant='h2' variantMapping={{ h2: 'h1' }}>Roberto Varela</Typography>
+        <Typography className='home-page-content_title' paragraph>FRONT-END ENGINEER</Typography>
+      </div>
     </Page>
   );
 };

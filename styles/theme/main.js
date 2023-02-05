@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import '@fontsource/ubuntu';
 
 const mainTheme = createTheme({
   palette: {
@@ -7,7 +6,7 @@ const mainTheme = createTheme({
     text: { primary: '#e2dddf' },
   },
   typography: {
-    fontFamily: '"Ubuntu", sans-serif',
+    fontFamily: '"Helvetica Neue", sans-serif',
   },
 });
 

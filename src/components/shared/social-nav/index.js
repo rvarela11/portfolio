@@ -5,7 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { SOCIAL_LINKS } from '@/src/utils/links';
 
 const SocialNav = () => (
-  <div className='social-nav'>
+  <nav className='social-nav'>
     <Link
       aria-label='Visit my LinkedIn'
       className='social-nav__link'
@@ -28,7 +28,7 @@ const SocialNav = () => (
     >
       <GitHubIcon />
     </Link>
-  </div>
+  </nav>
 );
 
 export default SocialNav;
