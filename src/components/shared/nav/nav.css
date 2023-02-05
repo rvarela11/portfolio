@@ -1,28 +1,13 @@
+/* @styles */
 @import '~/styles/colors.css';
+
+/* @components */
+@import './nav-links/nav-links.css';
+@import './nav-mobile/nav-mobile.css';
 
 .nav {
   position: fixed;
   display: flex;
   right: 0;
   z-index: 1000;
-}
-
-.nav__link {
-  height: 2.5rem;
-  font-family: "Orbitron", sans-serif;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  background-color: var(--color__mid-gray);
-  transition: all .2s linear;
-  padding: 1rem;
-}
-
-.nav__link--selected {
-  border-bottom: 0.25rem solid var(--color__light-gray);
-}
-
-.nav__link:hover {
-  margin-top: 1rem;
-  color: var(--color__mid-green)
 }

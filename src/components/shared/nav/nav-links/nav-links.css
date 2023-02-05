@@ -1,0 +1,21 @@
+@import '~/styles/colors.css';
+
+.nav__link {
+  height: 2.5rem;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  background-color: var(--color__mid-gray);
+  transition: all .2s linear;
+  padding: 1rem;
+}
+
+.nav__link--selected {
+  color: var(--color__mid-green);
+}
+
+.nav__link:hover {
+  margin-top: 1rem;
+  color: var(--color__mid-green);
+}
