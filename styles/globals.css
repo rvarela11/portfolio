@@ -1,5 +1,5 @@
 /* @components */
-@import '~/src/components/shared/social-nav/social-nav.css';
+@import '~/src/components/shared/nav/nav.css';
 
 /* @pages */
 @import '~/src/pages/home/home.css';

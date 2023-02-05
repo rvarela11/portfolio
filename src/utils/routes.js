@@ -1,9 +1,10 @@
 export const NAV_ROUTES = {
   about: '/about',
-  projects: '/projects',
+  work: '/work',
 };
 
 export const ROUTES = {
   home: '/',
-  ...NAV_ROUTES,
+  about: '/about',
+  work: '/work',
 };
