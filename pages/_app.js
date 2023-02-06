@@ -35,7 +35,7 @@ const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }) =>
       </ThemeProvider>
     </CacheProvider>
   );
-}
+};
 
 App.defaultProps = {
   emotionCache: undefined,
