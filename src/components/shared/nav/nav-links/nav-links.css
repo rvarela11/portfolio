@@ -1,11 +1,13 @@
 @import '~/styles/colors.css';
 
 .nav__link {
+  width: 100%;
   height: 2.5rem;
   font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: var(--color__mid-gray);
   transition: all .2s linear;
   padding: 1rem;

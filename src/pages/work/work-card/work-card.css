@@ -45,7 +45,7 @@
   .work-page__project-card-content {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
   }
   .work-page__project-card-content .MuiTypography-root {
     font-size: 1.25rem;

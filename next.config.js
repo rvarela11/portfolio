@@ -1,7 +1,4 @@
 const nextConfig = {
-  images: {
-    domains: ['images.mv3.io'],
-  },
   reactStrictMode: true,
 };
 

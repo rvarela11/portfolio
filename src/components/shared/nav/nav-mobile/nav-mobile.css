@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
   background-color: var(--color__mid-gray);
   padding: 1rem;
 }
