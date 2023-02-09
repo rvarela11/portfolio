@@ -1,5 +1,8 @@
+/* @styles */
+@import '~/styles/colors.scss';
+
 .nav-mobile {
-  background-color: var(--color__mid-gray);
+  background-color: $color__mid-gray;
 }
 
 .nav-mobile__menu .MuiDrawer-paper {
@@ -7,7 +10,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  background-color: var(--color__mid-gray);
+  background-color: $color__mid-gray;
   padding: 1rem;
 }
 

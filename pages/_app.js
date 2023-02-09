@@ -16,7 +16,7 @@ import createEmotionCache from '@/utility/createEmotionCache';
 
 // @styles
 import mainTheme from '../styles/theme/main';
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 
 const clientSideEmotionCache = createEmotionCache();
 

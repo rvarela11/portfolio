@@ -1,13 +1,13 @@
 /* @components */
-@import '~/src/components/shared/nav/nav.css';
-@import '~/src/components/shared/page/page.css';
+@import '~/src/components/shared/nav/nav.scss';
+@import '~/src/components/shared/page/page.scss';
 
 /* @pages */
-@import '~/src/pages/home/home.css';
-@import '~/src/pages/work/work.css';
+@import '~/src/pages/home/home.scss';
+@import '~/src/pages/work/work.scss';
 
 /* @styles */
-@import './breakpoints.css';
+@import './breakpoints.scss';
 
 html,
 body {
@@ -33,7 +33,7 @@ section.page {
   padding-top: 3.5rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $breakpoints__sm) {
   section.page {
     padding-left: 1rem;
     padding-right: 1rem;

@@ -1,5 +1,6 @@
 /* @styles */
-@import './work-card/work-card.css';
+@import '~/styles/breakpoints.scss';
+@import './work-card/work-card.scss';
 
 .work-page-grid {
   display: grid;
@@ -11,7 +12,7 @@
   display: none; 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $breakpoints__sm) {
   .work-page-title.MuiTypography-root {
     margin-bottom: 1rem;
   }

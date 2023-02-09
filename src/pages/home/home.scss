@@ -1,6 +1,9 @@
 /* @fonts */
 @import '@fontsource/orbitron';
 
+/* @styles */
+@import '~/styles/colors.scss';
+
 .page.home-page {
   display: flex;
   align-items: center;
@@ -21,7 +24,7 @@
   margin: 0;
   font-size: 2.25rem;
   font-weight: 300;
-  color: var(--color__dark-pink);
+  color: $color__dark-pink;
 }
 
 .home-page-content_bio {

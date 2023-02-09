@@ -1,3 +1,7 @@
+/* @styles */
+@import '~/styles/breakpoints.scss';
+@import '~/styles/colors.scss';
+
 .work-page__project-card {
   position: relative;
 }
@@ -16,7 +20,7 @@
 }
 
 .work-page__project-card-content {
-  background-color: var(--color__mid-gray);
+  background-color: $color__mid-gray;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -33,18 +37,18 @@
 }
 
 .work-page__project-card-content-actions .MuiButton-root {
-  background-color: var(--color__dark-pink);
+  background-color: $color__dark-pink;
   border-radius: 0;
   box-shadow: none;
 }
 
 .work-page__project-card-content-actions .MuiButton-root:hover {
   background-color: transparent;
-  outline: 1px solid var(--color__dark-pink);
-  color: var(--color__dark-pink);
+  outline: 1px solid $color__dark-pink;
+  color: $color__dark-pink;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $breakpoints__sm) {
   .work-page__project-card-content {
     flex-direction: column;
     align-items: flex-start;
