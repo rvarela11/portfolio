@@ -9,7 +9,7 @@ import WorkCard from './work-card';
 import { PROJECTS } from './constants';
 
 const Work = () => (
-  <Page className='work-page' title='Work'>
+  <Page title='Work'>
     <div className='work-page-grid'>
       { PROJECTS.map((project, index) => (
         <WorkCard key={index} {...project} />

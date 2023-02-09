@@ -1,3 +1,6 @@
+.work-page__project-card {
+  position: relative;
+}
 
 .work-page__project-card-image {
   width: 100%;
