@@ -12,10 +12,10 @@
 }
 
 .nav__link--selected {
-  color: var(--color__mid-green);
+  color: var(--color__dark-pink);
 }
 
 .nav__link:hover {
   margin-top: 1rem;
-  color: var(--color__mid-green);
+  color: var(--color__dark-pink);
 }

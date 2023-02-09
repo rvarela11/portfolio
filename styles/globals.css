@@ -1,8 +1,13 @@
 /* @components */
 @import '~/src/components/shared/nav/nav.css';
+@import '~/src/components/shared/page/page.css';
 
 /* @pages */
 @import '~/src/pages/home/home.css';
+@import '~/src/pages/work/work.css';
+
+/* @styles */
+@import './breakpoints.css';
 
 html,
 body {
@@ -15,7 +20,8 @@ html,
 body,
 #__next,
 section.page {
-  height: 100%;
+  /* height: 100%; */
+  min-height: 100vh;
 }
 
 a {
@@ -24,5 +30,13 @@ a {
 }
 
 section.page {
-  padding: 1rem;
+  padding: 2.5rem;
+  padding-top: 3.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  section.page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

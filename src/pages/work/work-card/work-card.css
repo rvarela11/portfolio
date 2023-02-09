@@ -1,0 +1,53 @@
+
+.work-page__project-card-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.work-page__project-card-image img {
+  transition: all .3s ease;
+}
+
+.work-page__project-card-image img:hover {
+  transform: scale(1.1);
+}
+
+.work-page__project-card-content {
+  background-color: var(--color__mid-gray);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work-page__project-card-content .MuiTypography-root {
+  font-family: "Orbitron", sans-serif;
+}
+
+.work-page__project-card-content-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.work-page__project-card-content-actions .MuiButton-root {
+  background-color: var(--color__dark-pink);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.work-page__project-card-content-actions .MuiButton-root:hover {
+  background-color: transparent;
+  outline: 1px solid var(--color__dark-pink);
+  color: var(--color__dark-pink);
+}
+
+@media screen and (max-width: 600px) {
+  .work-page__project-card-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .work-page__project-card-content .MuiTypography-root {
+    font-size: 1.25rem;
+  }
+}
