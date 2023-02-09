@@ -29,8 +29,8 @@ const NavMobile = () => {
         <MenuIcon />
       </IconButton>
       <Drawer
-        className='nav-mobile__menu'
         anchor='right'
+        className='nav-mobile__menu'
         onClose={handleDrawerClose}
         open={isOpen}
         variant='temporary'
