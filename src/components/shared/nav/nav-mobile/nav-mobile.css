@@ -1,5 +1,3 @@
-@import '~/styles/colors.css';
-
 .nav-mobile {
   background-color: var(--color__mid-gray);
 }
