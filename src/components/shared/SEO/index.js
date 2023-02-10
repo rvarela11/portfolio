@@ -36,7 +36,7 @@ const SEO = ({
     <meta property='og:image:height' content='630' />
     <meta property='og:url' content={url} />
     <meta property='og:type' content={openGraphType} />
-    <meta property='og:site_name' content='MV3.io'></meta>
+    <meta property='og:site_name' content='robertvarela.com'></meta>
 
     {/*<!-- Twitter Meta Tags -->*/}
     <meta name='twitter:title' content={title} />
@@ -73,7 +73,7 @@ SEO.defaultProps = {
     twitter: '@r083121',
   },
   title: 'Robert Varela',
-  url: 'https://www.zer0.codes',
+  url: 'https://robertvarela.com',
 };
 
 export default SEO;
