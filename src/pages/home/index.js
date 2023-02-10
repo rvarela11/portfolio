@@ -8,7 +8,7 @@ import Page from '@/src/components/shared/page';
 const Home = () => (
   <Page className='home-page'>
     <div className='home-page-content'>
-      <Typography className='home-page-content_name' variant='h2' variantMapping={{ h2: 'h1' }}>Roberto Varela</Typography>
+      <Typography className='home-page-content_name' variant='h2' variantMapping={{ h2: 'h1' }}>Robert Varela</Typography>
       <Typography className='home-page-content_title' paragraph>FRONT-END ENGINEER</Typography>
       <div className='home-page-content_bio'>
         <Typography paragraph>

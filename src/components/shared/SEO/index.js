@@ -65,14 +65,14 @@ const SEO = ({
 );
 
 SEO.defaultProps = {
-  description: 'Roberto Varela portfolio',
+  description: 'Robert Varela portfolio',
   image: '/images/RV_logo_icon_transparent.png',
   openGraphType: 'website',
   schemaType: 'WebSite',
   social: {
     twitter: '@r083121',
   },
-  title: 'Roberto Varela',
+  title: 'Robert Varela',
   url: 'https://www.zer0.codes',
 };
 
