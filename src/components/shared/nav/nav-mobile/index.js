@@ -24,6 +24,7 @@ const NavMobile = () => {
     <nav className='nav nav-mobile'>
       <IconButton
         color='inherit'
+        disableRipple
         onClick={handleDrawerOpen}
       >
         <MenuIcon />
