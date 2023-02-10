@@ -37,7 +37,7 @@ export const PROJECTS = [
     image: '/images/silvercar-home-page.png',
     links: {
       code: 'https://github.com/rvarela11/silvercar',
-      site: 'http://robertvarela.com/silvercar',
+      site: 'https://rvarela11.github.io/silvercar',
     },
     tech: PROJECT_FILTERS.react,
     techs: {
@@ -51,7 +51,7 @@ export const PROJECTS = [
     image: '/images/bubblicious-home-page.png',
     links: {
       code: 'https://github.com/rvarela11/bubblicious',
-      site: 'http://robertvarela.com/bubblicious',
+      site: 'http://rvarela11.github.io/bubblicious',
     },
     tech: PROJECT_FILTERS.vanillaJS,
     techs: {
