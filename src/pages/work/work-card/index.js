@@ -1,14 +1,14 @@
 // @vendors
 import React from 'react';
-import { Button, ButtonBase, Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 // @components
 import { Card, CardContent, CardImage } from '@/src/components/shared/card';
 
-const WorkCard = ({ image = '', links = {}, title = '' }) => (
+const WorkCard = ({ image = '', links = {}, techs = {}, title = '' }) => (
   <Card key={title} className='work-page__project-card'>
-    <ButtonBase className='work-page__project-card-image' onClick={() => {}}>
+    <div className='work-page__project-card-image'>
       <CardImage
         image={{
           alt: `${title} project`,
@@ -17,9 +17,12 @@ const WorkCard = ({ image = '', links = {}, title = '' }) => (
           height: 1919,
         }}
       />
-    </ButtonBase>
+    </div>
     <CardContent className='work-page__project-card-content'>
-      <Typography>{title}</Typography>
+      <div>
+        <Typography className='work-page__project-card-content-title'>{title}</Typography>
+        <Typography className='work-page__project-card-content-tech' variant='subtitle2'>{techs.tech.join(' / ')}</Typography>
+      </div>
       <div className='work-page__project-card-content-actions'>
         {
           Object.entries(links).map(([label, link]) => (
