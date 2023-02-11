@@ -18,7 +18,9 @@
   color: $color__dark-pink;
 }
 
-.nav__link:hover {
-  margin-top: 1rem;
-  color: $color__dark-pink;
+@media(hover: hover) and (pointer: fine) {
+  .nav__link:hover {
+    margin-top: 1rem;
+    color: $color__dark-pink;
+  }
 }
