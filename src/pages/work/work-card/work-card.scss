@@ -1,9 +1,11 @@
 /* @styles */
+@import '~/styles/animations.scss';
 @import '~/styles/breakpoints.scss';
 @import '~/styles/colors.scss';
 
 .work-page__project-card {
   position: relative;
+  @include animista-fade-in();
 }
 
 .work-page__project-card-image {
