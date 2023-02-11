@@ -13,8 +13,8 @@ const WorkCard = ({ image = '', links = {}, techs = {}, title = '' }) => (
         image={{
           alt: `${title} project`,
           src: image,
-          width: 3452,
-          height: 1919,
+          width: 700,
+          height: 600,
         }}
       />
     </div>
