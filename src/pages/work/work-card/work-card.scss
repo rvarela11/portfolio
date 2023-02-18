@@ -7,9 +7,18 @@
   @include animista-fade-in();
 }
 
-.work-page__project-card-image {
-  display: flex;
+.work-page__project-card .work-page__project-card-image {
+  width: 100%;
+  overflow: hidden;
   background-color: $color__black;
+}
+
+.work-page__project-card-image img {
+  transition: all .3s ease;
+}
+
+.work-page__project-card-image img:hover {
+  transform: scale(1.1);
 }
 
 .work-page__project-card-content {
