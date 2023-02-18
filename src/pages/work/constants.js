@@ -35,7 +35,7 @@ export const PROJECTS = [
       site: '/images/MV3/sites/hub.png',
     },
     links: {
-      site: 'https://www.mv3.io/hub',
+      site: 'https://www.mv3.io/user/zer0',
     },
     tech: [TECH.react, TECH.redux, TECH.web3],
   },
