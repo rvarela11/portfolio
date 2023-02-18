@@ -7,7 +7,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Card, CardContent, CardImage } from '@/src/components/shared/card';
 
 const WorkCard = ({ handleWorkCardClick, ...project }) => {
-  const { image = '', links = {}, techs = {}, title = '' } = project;
+  const { images = {}, links = {}, techs = {}, title = '' } = project;
 
   return (
     <Card key={title} className='work-page__project-card'>
@@ -15,7 +15,7 @@ const WorkCard = ({ handleWorkCardClick, ...project }) => {
         <CardImage
           image={{
             alt: `${title} project`,
-            src: image,
+            src: images?.project || '',
             width: 700,
             height: 600,
           }}

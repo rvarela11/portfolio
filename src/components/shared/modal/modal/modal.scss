@@ -1,6 +1,8 @@
+/* @styles */
+@import '~/styles/colors.scss';
+
 @mixin main-modal {
-  background: #202125;
-  border-radius: 1.125rem;
+  background: $color__mid-gray;
   overflow: auto;
   padding: 1rem;
 }

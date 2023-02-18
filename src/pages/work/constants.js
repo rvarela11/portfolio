@@ -1,99 +1,121 @@
-export const PROJECT_FILTERS = {
-  all: 'All',
+const TECHS = {
   react: 'React',
+  redux: 'Redux',
   vanillaJS: 'Vanilla JS',
+  web3: 'Web3',
 };
 
 export const PROJECTS = [
   {
     title: 'MV3',
     description: '6500 digital collectible characters, where holders get to directly benefit from the upside of the IP.',
-    image: '/images/MV3/logo.jpg',
+    images: {
+      project: '/images/MV3/projects/logo.jpg',
+      site: '/images/MV3/sites/home.png',
+    },
     links: {
       site: 'https://www.mv3.io',
     },
-    tech: PROJECT_FILTERS.react,
+    tech: TECHS.react,
     techs: {
-      tech: [PROJECT_FILTERS.react, 'Redux'],
+      tech: [TECHS.react, TECHS.redux],
       other: [],
     },
   },
   {
     title: 'MV3 - Gallery',
     description: '6500 digital collectible characters, where holders get to directly benefit from the upside of the IP.',
-    image: '/images/MV3/gallery-page.png',
+    images: {
+      project: '/images/MV3/projects/gallery.png',
+      site: '/images/MV3/sites/gallery.png',
+    },
     links: {
       site: 'https://www.mv3.io/gallery',
     },
-    tech: PROJECT_FILTERS.react,
+    tech: TECHS.react,
     techs: {
-      tech: [PROJECT_FILTERS.react, 'Redux'],
+      tech: [TECHS.react, TECHS.redux],
       other: [],
     },
   },
   {
     title: 'MV3 - Hub',
     description: '6500 digital collectible characters, where holders get to directly benefit from the upside of the IP.',
-    image: '/images/MV3/hub-page.jpg',
+    images: {
+      project: '/images/MV3/projects/hub.jpg',
+      site: '/images/MV3/sites/hub.png',
+    },
     links: {
       site: 'https://www.mv3.io/hub',
     },
-    tech: PROJECT_FILTERS.react,
+    tech: TECHS.react,
     techs: {
-      tech: [PROJECT_FILTERS.react, 'Redux', 'Web3'],
+      tech: [TECHS.react, TECHS.redux, TECHS.web3],
       other: [],
     },
   },
   {
     title: 'Singularity',
     description: '',
-    image: '/images/MV3/singularity.png',
+    images: {
+      project: '/images/MV3/projects/singularity.png',
+      site: '/images/MV3/sites/singularity.png',
+    },
     links: {
       site: 'https://www.mv3.io/singularity',
     },
-    tech: PROJECT_FILTERS.react,
+    tech: TECHS.react,
     techs: {
-      tech: [PROJECT_FILTERS.react, 'Redux', 'Web3'],
+      tech: [TECHS.react, TECHS.redux, TECHS.web3],
       other: [],
     },
   },
   {
     title: 'Camp Cosmos',
     description: 'Digital collectibles by world famous artist, Alexandra Zutto.',
-    image: '/images/camp-cosmos/logo.png',
+    images: {
+      project: '/images/camp-cosmos/projects/logo.png',
+      site: '/images/camp-cosmos/sites/home.png',
+    },
     links: {
       site: 'https://camp-cosmos.vercel.app',
     },
-    tech: PROJECT_FILTERS.react,
+    tech: TECHS.react,
     techs: {
-      tech: [PROJECT_FILTERS.react],
+      tech: [TECHS.react],
       other: [],
     },
   },
   {
     title: 'Portfolio',
     description: 'Roberto Varela Portfolio',
-    image: '/images/RV_logo_black.png',
+    images: {
+      project: '/images/RV_logo_black.png',
+      site: '/images/RV_portfolio_home.png',
+    },
     links: {
       code: 'https://github.com/rvarela11/portfolio',
     },
-    tech: PROJECT_FILTERS.react,
+    tech: TECHS.react,
     techs: {
-      tech: [PROJECT_FILTERS.react],
+      tech: [TECHS.react],
       other: [],
     },
   },
   {
     title: 'Bubblicious',
     description: 'A bubble game done in vanilla javascript.',
-    image: '/images/bubblicious/all-game-boys.png',
+    images: {
+      project: '/images/bubblicious/projects/all-game-boys.png',
+      site: '/images/bubblicious/sites/home.png',
+    },
     links: {
       code: 'https://github.com/rvarela11/bubblicious',
       site: 'http://rvarela11.github.io/bubblicious',
     },
-    tech: PROJECT_FILTERS.vanillaJS,
+    tech: TECHS.vanillaJS,
     techs: {
-      tech: [PROJECT_FILTERS.vanillaJS],
+      tech: [TECHS.vanillaJS],
       other: [],
     },
   },

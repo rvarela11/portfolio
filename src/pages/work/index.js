@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Page from '@/src/components/shared/page';
 import Modal from '@/src/components/shared/modal';
 import WorkCard from './work-card';
+import WorkModalCard from './work-modal-card';
 
 // @constants
 import { PROJECTS } from './constants';
@@ -40,9 +41,10 @@ const Work = () => {
       <Modal
         handleModalClose={handleModalClose}
         open={work.isModalOpen}
-        // Modal={{ className: 'scenes-modal' }}
+        Drawer={{ className: 'work-drawer' }}
+        Modal={{ className: 'work-modal' }}
       >
-        <div>Howdy</div>
+        <WorkModalCard selected={work.selected} />
       </Modal>
     </Page>
   );
