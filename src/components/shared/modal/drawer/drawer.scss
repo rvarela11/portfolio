@@ -1,4 +1,18 @@
+/* @styles */
+@import '~/styles/colors.scss';
 @import '../modal/modal.scss';
+
+.main-drawer {
+  display: flex;
+  flex-direction: column;
+
+  .MuiDrawer-paper {
+    width: 100%;
+    background: $color__dark-gray;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
 
 .main-drawer__close {
   display: flex;
