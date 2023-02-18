@@ -1,8 +1,12 @@
 .work-modal {
+  width: 1090px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.work-modal-card__image {
   display: flex;
-  flex-direction: column;
-  width: 740px;
-  height: 740px;
-  min-height: 400px;
-  gap: 1.25rem;
 }
