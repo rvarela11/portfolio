@@ -41,7 +41,6 @@ const Work = () => {
       <Modal
         handleModalClose={handleModalClose}
         open={work.isModalOpen}
-        Drawer={{ className: 'work-drawer' }}
         Modal={{ className: 'work-modal' }}
       >
         <WorkModalCard selected={work.selected} />
