@@ -10,8 +10,8 @@ const WorkCard = ({ handleWorkCardClick, ...project }) => {
   const { images = {}, links = {}, tech = [], title = '' } = project;
 
   return (
-    <Card key={title} className='work-page__project-card'>
-      <ButtonBase className='work-page__project-card-image' onClick={() => handleWorkCardClick(project)}>
+    <Card key={title} className='work-card'>
+      <ButtonBase className='work-card__image' onClick={() => handleWorkCardClick(project)}>
         <CardImage
           image={{
             alt: `${title} project`,
@@ -21,12 +21,12 @@ const WorkCard = ({ handleWorkCardClick, ...project }) => {
           }}
         />
       </ButtonBase>
-      <CardContent className='work-page__project-card-content'>
+      <CardContent className='work-card__content'>
         <div>
-          <Typography className='work-page__project-card-content-title'>{title}</Typography>
-          <Typography className='work-page__project-card-content-tech' variant='subtitle2'>{tech.join(' / ')}</Typography>
+          <Typography className='work-card__content-title'>{title}</Typography>
+          <Typography className='work-card__content-tech' variant='subtitle2'>{tech.join(' / ')}</Typography>
         </div>
-        <div className='work-page__project-card-content-actions'>
+        <div className='work-card__content-actions'>
           {
             Object.entries(links).map(([label, link]) => (
               <Button
