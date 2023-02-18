@@ -4,7 +4,8 @@ import { Button, ButtonBase, Typography } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 // @components
-import { Card, CardContent, CardImage } from '@/src/components/shared/card';
+import { Card, CardContent } from '@/src/components/shared/card';
+import Image from '@/src/components/shared/image';
 
 const WorkCard = ({ handleWorkCardClick, ...project }) => {
   const { images = {}, links = {}, tech = [], title = '' } = project;
@@ -12,13 +13,11 @@ const WorkCard = ({ handleWorkCardClick, ...project }) => {
   return (
     <Card key={title} className='work-card'>
       <ButtonBase className='work-card__image' onClick={() => handleWorkCardClick(project)}>
-        <CardImage
-          image={{
-            alt: `${title} project`,
-            src: images?.project || '',
-            width: 700,
-            height: 600,
-          }}
+        <Image
+          alt={`${title} project`}
+          src={images?.project || ''}
+          width={700}
+          height={600}
         />
       </ButtonBase>
       <CardContent className='work-card__content'>
