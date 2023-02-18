@@ -8,7 +8,7 @@ import MainDrawer from './drawer';
 
 const Modal = ({ children, ...props }) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   if (isMobile) {
     return <MainDrawer {...props}>{children}</MainDrawer>;
