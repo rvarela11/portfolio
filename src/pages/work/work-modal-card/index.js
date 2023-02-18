@@ -9,6 +9,8 @@ const WorkModalCard = ({ selected: {
   <div className='work-modal-card__image'>
     <Image
       alt={`${title} project`}
+      blurDataURL='/images/image-blur.png'
+      placeholder='blur'
       quality={100}
       src={images?.site || ''}
       width={3452}

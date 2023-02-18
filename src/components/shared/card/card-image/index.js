@@ -13,7 +13,9 @@ export const CardImage = ({
 }) => (
   <Image
     alt={alt}
+    blurDataURL='/images/image-blur.png'
     className={className}
+    placeholder='blur'
     quality={100}
     src={src}
     width={width}
