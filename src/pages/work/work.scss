@@ -1,0 +1,22 @@
+/* @styles */
+@import '~/styles/breakpoints.scss';
+@import './work-card/work-card.scss';
+
+.work-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1rem;
+}
+
+.work-page-grid::-webkit-scrollbar { 
+  display: none; 
+}
+
+@media screen and (max-width: $breakpoints__sm) {
+  .work-page-title.MuiTypography-root {
+    margin-bottom: 1rem;
+  }
+  .work-page-grid {
+    grid-template-columns: 1fr;
+  }
+}

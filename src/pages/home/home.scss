@@ -1,0 +1,37 @@
+/* @fonts */
+@import '@fontsource/orbitron';
+
+/* @styles */
+@import '~/styles/colors.scss';
+
+.page.home-page {
+  display: flex;
+  align-items: center;
+  padding-left: 5vw;
+}
+
+.home-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.home-page-content_name.MuiTypography-root {
+  font-family: "Orbitron", sans-serif;
+}
+
+.home-page-content_title.MuiTypography-root {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: $color__dark-pink;
+}
+
+.home-page-content_bio {
+  max-width: 700px;
+}
+
+.home-page-content_bio .MuiTypography-root {
+  margin: 0;
+  font-size: 1.5rem;
+}

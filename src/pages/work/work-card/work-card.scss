@@ -1,0 +1,59 @@
+/* @styles */
+@import '~/styles/animations.scss';
+@import '~/styles/breakpoints.scss';
+@import '~/styles/colors.scss';
+
+.work-page__project-card {
+  position: relative;
+  @include animista-fade-in();
+}
+
+.work-page__project-card-image {
+  display: flex;
+  background-color: $color__black;
+}
+
+.work-page__project-card-content {
+  background-color: $color__mid-gray;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work-page__project-card-content-title.MuiTypography-root {
+  font-family: "Orbitron", sans-serif;
+}
+
+.work-page__project-card-content-tech.MuiTypography-root {
+  color: $color__light-green;
+}
+
+.work-page__project-card-content-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.work-page__project-card-content-actions .MuiButton-root {
+  background-color: $color__dark-pink;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.work-page__project-card-content-actions .MuiButton-root:hover {
+  background-color: transparent;
+  outline: 1px solid $color__dark-pink;
+  color: $color__dark-pink;
+}
+
+@media screen and (max-width: $breakpoints__sm) {
+  .work-page__project-card-content-actions {
+    flex-direction: column;
+  }
+  .work-page__project-card-content-title.MuiTypography-root {
+    font-size: 1.25rem;
+  }
+  .work-page__project-card-content-tech.MuiTypography-root {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,12 @@
+/* @styles */
+@import '~/styles/colors.scss';
+
+/* @components */
+@import './nav-links/nav-links.scss';
+
+.nav {
+  position: fixed;
+  display: flex;
+  right: 0;
+  z-index: 1000;
+}
