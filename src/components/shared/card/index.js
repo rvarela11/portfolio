@@ -11,4 +11,3 @@ export const Card = ({
 );
 
 export * from './card-content';
-export * from './card-image';

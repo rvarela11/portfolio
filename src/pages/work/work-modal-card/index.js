@@ -1,6 +1,8 @@
 // @vendors
 import React from 'react';
-import Image from 'next/legacy/image';
+
+// @components
+import Image from '@/src/components/shared/image';
 
 const WorkModalCard = ({ selected: {
   images = {},
@@ -9,9 +11,6 @@ const WorkModalCard = ({ selected: {
   <div className='work-modal-card__image'>
     <Image
       alt={`${title} project`}
-      blurDataURL='/images/image-blur.png'
-      placeholder='blur'
-      quality={100}
       src={images?.site || ''}
       width={3452}
       height={1912}
