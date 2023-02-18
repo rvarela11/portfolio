@@ -17,10 +17,6 @@
   transition: all .3s ease;
 }
 
-.work-card__image img:hover {
-  transform: scale(1.1);
-}
-
 .work-card__content {
   background-color: $color__mid-gray;
   padding: 1rem;
@@ -48,10 +44,9 @@
   box-shadow: none;
 }
 
+// NOTE: Need this for mobile
 .work-card__content-actions .MuiButton-root:hover {
-  background-color: transparent;
-  outline: 1px solid $color__dark-pink;
-  color: $color__dark-pink;
+  background-color: $color__dark-pink;
 }
 
 @media screen and (max-width: $breakpoints__sm) {
@@ -63,5 +58,16 @@
   }
   .work-card__content-tech.MuiTypography-root {
     font-size: 1rem;
+  }
+}
+
+@media(hover: hover) and (pointer: fine) {
+  .work-card__image img:hover {
+    transform: scale(1.1);
+  }
+  .work-card__content-actions .MuiButton-root:hover {
+    background-color: transparent;
+    outline: 1px solid $color__dark-pink;
+    color: $color__dark-pink;
   }
 }

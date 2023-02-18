@@ -18,6 +18,7 @@ const MainDrawer = ({
     <div className='main-drawer__close'>
       <IconButton
         color='inherit'
+        disableRipple
         onClick={handleModalClose}
       >
         <CloseIcon />
