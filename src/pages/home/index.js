@@ -12,7 +12,7 @@ const Home = () => (
       <Typography className='home-page-content_title' paragraph>FRONT-END ENGINEER</Typography>
       <div className='home-page-content_bio'>
         <Typography paragraph>
-          7+ years of front-end development experience with a passion for UI/UX, scaling platforms, and creating intuitive and dynamic user experiences.
+          8+ years of front-end development experience with a passion for UI/UX, scaling platforms, and creating intuitive and dynamic user experiences.
         </Typography>
       </div>
     </div>
