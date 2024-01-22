@@ -20,7 +20,7 @@ const Home = () => (
       </Typography>
       <div className='home-page-content_bio'>
         <Typography paragraph>
-          6+ years of front-end development experience with a passion for UI/UX,
+          7+ years of front-end development experience with a passion for UI/UX,
           scaling platforms, and creating intuitive and dynamic user
           experiences.
         </Typography>
