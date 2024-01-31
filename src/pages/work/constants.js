@@ -57,6 +57,7 @@ export const PROJECTS = [
       site: '/images/camp-cosmos/sites/home.png',
     },
     links: {
+      code: 'https://github.com/rvarela11/camp-cosmos',
       site: 'https://camp-cosmos.vercel.app',
     },
     tech: [TECH.react],
