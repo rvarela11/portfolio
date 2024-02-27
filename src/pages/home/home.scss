@@ -3,10 +3,12 @@
 
 /* @styles */
 @import '~/styles/colors.scss';
+@import './timeline/timeline.scss';
 
 .page.home-page {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
   padding-left: 5vw;
 }
 
@@ -14,24 +16,24 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  justify-content: center;
+  min-height: 70vh;
 }
 
-.home-page-content_name.MuiTypography-root {
-  font-family: "Orbitron", sans-serif;
+.home-page-content__name.MuiTypography-root {
+  font-family: 'Orbitron', sans-serif;
 }
 
-.home-page-content_title.MuiTypography-root {
-  margin: 0;
-  font-size: 2.25rem;
+.home-page-content__title.MuiTypography-root {
   font-weight: 300;
   color: $color__dark-pink;
 }
 
-.home-page-content_bio {
+.home-page-content__bio {
   max-width: 700px;
 }
 
-.home-page-content_bio .MuiTypography-root {
+.home-page-content__bio .MuiTypography-root {
   margin: 0;
   font-size: 1.5rem;
 }

@@ -1,0 +1,39 @@
+/* @styles */
+@import '~/styles/colors.scss';
+
+.timeline-card .vertical-timeline-element-content {
+  background-color: $color__mid-gray;
+  border-radius: unset;
+  box-shadow: unset;
+}
+
+.timeline-card
+  .vertical-timeline-element-content
+  .vertical-timeline-element-content-arrow {
+  border-right: 7px solid $color__mid-gray;
+}
+
+.timeline-card__image {
+  border-radius: 50%;
+}
+
+.timeline-card ul {
+  padding-left: 1rem;
+}
+
+.timeline-card-title.MuiTypography-root {
+  color: $color__dark-pink;
+}
+
+.timeline-card-skills.MuiTypography-root {
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.timeline-card
+  .vertical-timeline-element-content
+  .vertical-timeline-element-date {
+  color: $color__light-green;
+  padding: 0;
+  font-size: 1rem;
+}
