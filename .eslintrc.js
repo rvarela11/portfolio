@@ -28,13 +28,21 @@ module.exports = {
     'object-curly-newline': 'off',
     'react/forbid-prop-types': 'off',
     'react/no-array-index-key': 'off',
-    'react/function-component-definition': [2, {
-      namedComponents: ['arrow-function', 'function-declaration', 'function-expression'],
-      unnamedComponents: ['arrow-function', 'function-expression'],
-    }],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: [
+          'arrow-function',
+          'function-declaration',
+          'function-expression',
+        ],
+        unnamedComponents: ['arrow-function', 'function-expression'],
+      },
+    ],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-wrap-multilines': 'off',
     'react/prefer-stateless-function': [2, { ignorePureComponents: true }],
     'react/no-unescaped-entities': 'off',
     'spaced-comment': 'off',
