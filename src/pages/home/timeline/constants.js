@@ -15,7 +15,7 @@ export const EXPERIENCES = [
   {
     date: '05/2022 - 02/2024',
     description: [
-      'Lead the N-Tier Visibility (Forecast Commits) feature which extends visibility of the AWS Supply Chain app.',
+      'Led the N-Tier Visibility (Forecast Commits) feature which extends visibility of the AWS Supply Chain app.',
       'Core contributor to the Galaxy Design System, figuring out how to scale a design system to the complexity of AWS Supply Chain.',
     ],
     employer: 'Amazon Web Services (AWS)',
