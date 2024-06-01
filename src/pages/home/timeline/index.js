@@ -9,41 +9,45 @@ import { Typography } from '@mui/material';
 // @components
 import Image from '@/src/components/shared/image';
 
-// @constants
-import { EXPERIENCES } from './constants';
-
-const Timeline = () => (
-  <VerticalTimeline layout='1-column-left'>
-    {EXPERIENCES.map((experience, index) => (
-      <VerticalTimelineElement
-        key={index}
-        className='timeline-card'
-        date={experience.date}
-        icon={
-          <Image
-            alt={`${experience.title} experience`}
-            className='timeline-card__image'
-            src={experience?.image ?? ''}
-            width={200}
-            height={200}
-          />
-        }
-      >
-        <Typography className='timeline-card-title' variant='h5'>
-          {experience.title}
-        </Typography>
-        <Typography variant='h6'>{experience.employer}</Typography>
-        <ul>
-          {experience.description.map((item, i) => (
-            <li key={`description-${index}-${i}`}>{item}</li>
-          ))}
-        </ul>
-        <Typography className='timeline-card-skills'>
-          {experience.skills.join(' - ')}
-        </Typography>
-      </VerticalTimelineElement>
-    ))}
-  </VerticalTimeline>
+const Timeline = ({ elements = [], title = '' }) => (
+  <>
+    {title && (
+      <Typography className='timeline-title' variant='h4'>
+        {title}
+      </Typography>
+    )}
+    <VerticalTimeline layout='1-column-left'>
+      {elements.map((element, index) => (
+        <VerticalTimelineElement
+          key={index}
+          className='timeline-card'
+          date={element.date}
+          icon={
+            <Image
+              alt={`${element.title} logo`}
+              className='timeline-card__image'
+              src={element?.image ?? ''}
+              width={200}
+              height={200}
+            />
+          }
+        >
+          <Typography className='timeline-card-title' variant='h5'>
+            {element.title}
+          </Typography>
+          <Typography variant='h6'>{element.employer}</Typography>
+          <ul>
+            {element.description.map((item, i) => (
+              <li key={`description-${index}-${i}`}>{item}</li>
+            ))}
+          </ul>
+          <Typography className='timeline-card-skills'>
+            {element.skills.join(' - ')}
+          </Typography>
+        </VerticalTimelineElement>
+      ))}
+    </VerticalTimeline>
+  </>
 );
 
 export default Timeline;

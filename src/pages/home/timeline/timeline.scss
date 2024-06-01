@@ -1,6 +1,13 @@
 /* @styles */
 @import '~/styles/colors.scss';
 
+.timeline-title.MuiTypography-root {
+  // NOTE: Matching CSS properties from .vertical-timeline class
+  width: 95%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
 .timeline-card .vertical-timeline-element-content {
   background-color: $color__mid-gray;
   border-radius: unset;

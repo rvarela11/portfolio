@@ -6,6 +6,9 @@ import { Typography } from '@mui/material';
 import Page from '@/src/components/shared/page';
 import Timeline from './timeline';
 
+// @constants
+import { EXPERIENCES, PROJECTS } from './timeline/constants';
+
 const Home = () => (
   <Page className='home-page'>
     <div className='home-page-content'>
@@ -27,7 +30,8 @@ const Home = () => (
         </Typography>
       </div>
     </div>
-    <Timeline />
+    <Timeline elements={EXPERIENCES} title='Experience' />
+    <Timeline elements={PROJECTS} title='Projects' />
   </Page>
 );
 

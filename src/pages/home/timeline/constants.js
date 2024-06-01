@@ -13,6 +13,16 @@ const SKILL = {
 // NOTE: Data from https://www.linkedin.com/in/rvarela11
 export const EXPERIENCES = [
   {
+    date: '03/2024 - Present',
+    description: [
+      'Building and optimizing high-quality scalable UI features for the eDiscovery search team.',
+    ],
+    employer: 'DISCO',
+    image: '/logos/csdisco_logo.jpeg',
+    skills: [SKILL.typeScript, SKILL.javaScript, SKILL.react, SKILL.redux],
+    title: 'Software Engineer II, UI',
+  },
+  {
     date: '05/2022 - 02/2024',
     description: [
       'Led the N-Tier Visibility (Forecast Commits) feature which extends visibility of the AWS Supply Chain app.',
@@ -27,22 +37,6 @@ export const EXPERIENCES = [
       SKILL.responsiveWebDesign,
     ],
     title: 'Front-End Engineer',
-  },
-  {
-    date: '03/2021 - 03/2023',
-    description: [
-      "Led a team of 3 engineers to develop MV3, Singularity, and Mint websites using Next.js. Utilized Next.js's file-system-based router for efficient routing and dynamic routing for user profile pages. Implemented shared SEO component for optimal search engine visibility. And incorporated Next.js image optimization for MV3 gallery, ensuring correct sizes for devices and faster page loads with lazy loading.( https://mv3.io )",
-    ],
-    employer: 'Metav3rse',
-    image: '/logos/metav3rse_logo.jpeg',
-    skills: [
-      SKILL.javaScript,
-      SKILL.next,
-      SKILL.react,
-      SKILL.redux,
-      SKILL.responsiveWebDesign,
-    ],
-    title: 'Senior Front-End Engineer',
   },
   {
     date: '04/2021 - 05/2022',
@@ -97,5 +91,40 @@ export const EXPERIENCES = [
       SKILL.apolloGraphQL,
     ],
     title: 'Front-End Engineer',
+  },
+];
+
+// NOTE: Data from https://www.linkedin.com/in/rvarela11
+export const PROJECTS = [
+  {
+    date: '03/2021 - 03/2023',
+    description: [
+      "Led a team of 3 engineers to develop MV3, Singularity, and minting websites using Next.js. Utilized Next.js's file-system-based router for efficient routing and dynamic routing for user profile pages. Implemented shared SEO component for optimal search engine visibility. And incorporated Next.js image optimization for MV3 gallery, ensuring correct sizes for devices and faster page loads with lazy loading.( https://mv3.io )",
+    ],
+    employer: 'Metav3rse',
+    image: '/logos/metav3rse_logo.jpeg',
+    skills: [
+      SKILL.javaScript,
+      SKILL.next,
+      SKILL.react,
+      SKILL.redux,
+      SKILL.responsiveWebDesign,
+    ],
+    title: 'Senior FrontEnd Engineer',
+  },
+  {
+    date: '04/2022 - 07/2024',
+    description: [
+      'Led a team of 2 engineers and 1 designer to built Camp Cosmos, and minting websites using Next.js.',
+    ],
+    employer: 'Camp Cosmos',
+    image: '/logos/camp_cosmos_logo.jpeg',
+    skills: [
+      SKILL.javaScript,
+      SKILL.next,
+      SKILL.react,
+      SKILL.responsiveWebDesign,
+    ],
+    title: 'Senior FrontEnd Engineer',
   },
 ];
