@@ -21,7 +21,10 @@ const SEO = ({
     <meta charSet='utf-8' />
     <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
     <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
+    <meta
+      name='viewport'
+      content='width=device-width, initial-scale=1, shrink-to-fit=no'
+    />
 
     {/*<!-- Google / Search Engine Tags -->*/}
     <meta itemProp='name' content={title} />
@@ -65,14 +68,14 @@ const SEO = ({
 );
 
 SEO.defaultProps = {
-  description: 'Robert Varela portfolio',
+  description: 'Roberto Varela portfolio',
   image: '/images/RV_logo_icon_transparent.png',
   openGraphType: 'website',
   schemaType: 'WebSite',
   social: {
     twitter: '@r083121',
   },
-  title: 'Robert Varela',
+  title: 'Roberto Varela',
   url: 'https://robertvarela.com',
 };
 

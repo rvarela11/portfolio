@@ -17,7 +17,7 @@ const Home = () => (
         variant='h2'
         variantMapping={{ h2: 'h1' }}
       >
-        Robert Varela
+        Roberto Varela
       </Typography>
       <Typography className='home-page-content__title' variant='h4'>
         FRONT-END ENGINEER
