@@ -97,7 +97,7 @@ export const EXPERIENCES = [
 // NOTE: Data from https://www.linkedin.com/in/rvarela11
 export const PROJECTS = [
   {
-    date: '03/2021 - 03/2023',
+    date: '03/2022 - 03/2023',
     description: [
       "Led a team of 3 engineers to develop MV3, Singularity, and minting websites using Next.js. Utilized Next.js's file-system-based router for efficient routing and dynamic routing for user profile pages. Implemented shared SEO component for optimal search engine visibility. And incorporated Next.js image optimization for MV3 gallery, ensuring correct sizes for devices and faster page loads with lazy loading.( https://mv3.io )",
     ],
@@ -113,7 +113,7 @@ export const PROJECTS = [
     title: 'Senior FrontEnd Engineer',
   },
   {
-    date: '04/2022 - 07/2024',
+    date: '04/2022 - 07/2022',
     description: [
       'Led a team of 2 engineers and 1 designer to built Camp Cosmos, and minting websites using Next.js.',
     ],
