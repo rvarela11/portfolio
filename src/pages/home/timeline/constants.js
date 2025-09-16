@@ -19,7 +19,13 @@ export const EXPERIENCES = [
     ],
     employer: 'DISCO',
     image: '/logos/csdisco_logo.jpeg',
-    skills: [SKILL.typeScript, SKILL.javaScript, SKILL.react, SKILL.redux],
+    skills: [
+      SKILL.typeScript,
+      SKILL.javaScript,
+      SKILL.react,
+      SKILL.redux,
+      SKILL.cypress,
+    ],
     title: 'Software Engineer II, UI',
   },
   {
