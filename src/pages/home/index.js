@@ -20,7 +20,7 @@ const Home = () => (
         Roberto Varela
       </Typography>
       <Typography className='home-page-content__title' variant='h4'>
-        FRONT-END ENGINEER
+        SENIOR FRONT-END ENGINEER
       </Typography>
       <div className='home-page-content__bio'>
         <Typography paragraph>
