@@ -16,6 +16,7 @@ export const EXPERIENCES = [
     date: '03/2024 - Present',
     description: [
       'Building and optimizing high-quality scalable UI features for the eDiscovery search team.',
+      'Deliver reusable systems, patterns, and UI expertise that enable teams to move fast and create consistent, high-quality experiences.',
     ],
     employer: 'DISCO',
     image: '/logos/csdisco_logo.jpeg',

@@ -20,7 +20,7 @@
 
 @media(hover: hover) and (pointer: fine) {
   .nav__link:hover {
-    margin-top: 1rem;
+    transform: translateY(1rem);
     color: $color__dark-pink;
   }
 }
