@@ -12,9 +12,6 @@ export const PROJECTS = [
       project: '/images/MV3/projects/logo.jpg',
       site: '/images/MV3/sites/home.png',
     },
-    links: {
-      site: 'https://www.mv3.io',
-    },
     tech: [TECH.react, TECH.redux],
   },
   {
@@ -22,9 +19,6 @@ export const PROJECTS = [
     images: {
       project: '/images/MV3/projects/gallery.png',
       site: '/images/MV3/sites/gallery.png',
-    },
-    links: {
-      site: 'https://www.mv3.io/gallery',
     },
     tech: [TECH.react, TECH.redux],
   },
@@ -34,9 +28,6 @@ export const PROJECTS = [
       project: '/images/MV3/projects/hub.jpg',
       site: '/images/MV3/sites/hub.png',
     },
-    links: {
-      site: 'https://www.mv3.io/user/zer0',
-    },
     tech: [TECH.react, TECH.redux, TECH.web3],
   },
   {
@@ -44,9 +35,6 @@ export const PROJECTS = [
     images: {
       project: '/images/MV3/projects/singularity.png',
       site: '/images/MV3/sites/singularity.png',
-    },
-    links: {
-      site: 'https://www.mv3.io/singularity',
     },
     tech: [TECH.react, TECH.redux, TECH.web3],
   },
