@@ -1,6 +1,6 @@
 // @vendors
-import NextImage from 'next/image';
 import React, { useState } from 'react';
+import NextImage from 'next/image';
 
 // @components
 import Skeleton from '@/src/components/shared/skeleton';

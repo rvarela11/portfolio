@@ -53,7 +53,7 @@ This is a Next.js 13 portfolio website using JavaScript (JSX), Material-UI, and 
 
 ESLint 9 flat config in `eslint.config.mjs`: Airbnb's original rules (via `eslint-config-airbnb-extended/legacy`), Next.js core-web-vitals, and `eslint-plugin-perfectionist`. `yarn lint` runs `eslint .`; `yarn lint --fix` applies sorting.
 
-- perfectionist sorts imports (within each `// @vendors`, `// @components`, ... section), named imports, JSX props and object keys alphabetically
+- perfectionist sorts imports (within each `// @vendors`, `// @components`, ... section), named imports, JSX props and object keys alphabetically, with two exceptions: `react` is always the first import, and `key` is always the first JSX prop
 - `typescript` is a dev dependency only because `eslint-config-airbnb-extended` loads it
 
 Notable relaxed rules:

@@ -1,9 +1,9 @@
 // @vendors
+import React from 'react';
 import { Link as MUILink } from '@mui/material';
 import classnames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
 
 // @utils
 import { SOCIAL_ICONS } from '@/src/utils/icons';
@@ -18,13 +18,13 @@ const NavLinks = ({ className = '' }) => {
       {
         Object.entries(ROUTES).map(([label, route]) => (
           <Link
+            key={route}
             aria-label={`${label} route`}
             className={classnames(`nav__link ${className}`.trim(), {
               'nav__link--selected': router.pathname === route,
             })}
             color='inherit'
             href={route}
-            key={route}
           >
             {label}
           </Link>
@@ -43,11 +43,11 @@ const NavLinks = ({ className = '' }) => {
       {
         Object.entries(SOCIAL_LINKS).map(([label, link]) => (
           <MUILink
+            key={link}
             aria-label={`${label} link`}
             className={`nav__link ${className}`.trim()}
             color='inherit'
             href={link}
-            key={link}
             rel='noreferrer'
             target='_blank'
           >

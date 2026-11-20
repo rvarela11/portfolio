@@ -1,7 +1,7 @@
 // @vendors
+import React from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import { Box, Drawer, IconButton } from '@mui/material';
-import React from 'react';
 
 const MainDrawer = ({
   children,

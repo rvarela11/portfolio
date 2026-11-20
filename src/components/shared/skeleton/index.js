@@ -1,6 +1,6 @@
 // @vendors
-import { Skeleton as MUISkeleton } from '@mui/material';
 import React from 'react';
+import { Skeleton as MUISkeleton } from '@mui/material';
 
 const Skeleton = ({
   children,

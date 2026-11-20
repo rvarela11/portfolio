@@ -19,6 +19,7 @@ const Timeline = ({ elements = [], title = '' }) => (
     <VerticalTimeline layout='1-column-left'>
       {elements.map((element, index) => (
         <VerticalTimelineElement
+          key={index}
           className='timeline-card'
           date={element.date}
           icon={
@@ -30,7 +31,6 @@ const Timeline = ({ elements = [], title = '' }) => (
               width={200}
             />
           }
-          key={index}
         >
           <Typography className='timeline-card-title' variant='h5'>
             {element.title}

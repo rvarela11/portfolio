@@ -75,8 +75,36 @@ export default defineConfig([
       'no-undef': 'warn',
       'no-unused-vars': 'warn',
       'object-curly-newline': 'off',
-      // Keep the `// @vendors`, `// @components`, ... import sections; sort within each one
-      'perfectionist/sort-imports': ['error', { newlinesBetween: 'ignore', partitionByComment: true, type: 'alphabetical' }],
+      // Keep the `// @vendors`, `// @components`, ... import sections; sort within each one, with `react` first
+      'perfectionist/sort-imports': [
+        'error',
+        {
+          customGroups: [{ elementNamePattern: '^react$', groupName: 'react' }],
+          groups: [
+            'react',
+            'type-import',
+            ['value-builtin', 'value-external'],
+            'type-internal',
+            'value-internal',
+            ['type-parent', 'type-sibling', 'type-index'],
+            ['value-parent', 'value-sibling', 'value-index'],
+            'ts-equals-import',
+            'unknown',
+          ],
+          newlinesBetween: 'ignore',
+          partitionByComment: true,
+          type: 'alphabetical',
+        },
+      ],
+      // `key` first, then the rest alphabetically
+      'perfectionist/sort-jsx-props': [
+        'error',
+        {
+          customGroups: [{ elementNamePattern: '^key$', groupName: 'key' }],
+          groups: ['key', 'unknown'],
+          type: 'alphabetical',
+        },
+      ],
       'react/forbid-prop-types': 'off',
       'react/function-component-definition': [
         2,

@@ -1,6 +1,6 @@
 // @vendors
-import { Typography } from '@mui/material';
 import React from 'react';
+import { Typography } from '@mui/material';
 
 // @components
 import Page from '@/src/components/shared/page';

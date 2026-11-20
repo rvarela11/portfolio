@@ -1,4 +1,5 @@
 // @vendors
+import React from 'react';
 import { CacheProvider } from '@emotion/react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { loadBasic } from '@tsparticles/basic';
@@ -6,7 +7,6 @@ import { loadExternalRepulseInteraction } from '@tsparticles/interaction-externa
 import { loadParticlesLinksInteraction } from '@tsparticles/interaction-particles-links';
 import { loadInteractivityPlugin } from '@tsparticles/plugin-interactivity';
 import { Particles, ParticlesProvider } from '@tsparticles/react';
-import React from 'react';
 
 // @components
 import Nav from '@/src/components/shared/nav';

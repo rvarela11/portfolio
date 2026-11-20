@@ -1,6 +1,6 @@
 // @vendors
-import { Box, Modal } from '@mui/material';
 import React from 'react';
+import { Box, Modal } from '@mui/material';
 
 const MainModal = ({
   children,

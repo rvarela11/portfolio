@@ -35,7 +35,7 @@ const Work = () => {
     <Page title='Work'>
       <div className='work-page-grid'>
         { PROJECTS.map((project, index) => (
-          <WorkCard handleWorkCardClick={handleWorkCardClick} key={index} {...project} />
+          <WorkCard key={index} handleWorkCardClick={handleWorkCardClick} {...project} />
         ))}
       </div>
       <Modal
