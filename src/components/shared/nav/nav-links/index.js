@@ -7,7 +7,7 @@ import { Link as MUILink } from '@mui/material';
 
 // @utils
 import { SOCIAL_ICONS } from '@/src/utils/icons';
-import { SOCIAL_LINKS } from '@/src/utils/links';
+import { RESUME_LINK, SOCIAL_LINKS } from '@/src/utils/links';
 import { ROUTES } from '@/src/utils/routes';
 
 const NavLinks = ({ className = '' }) => {
@@ -30,6 +30,16 @@ const NavLinks = ({ className = '' }) => {
           </Link>
         ))
       }
+      <MUILink
+        aria-label='Download resume'
+        className={`nav__link ${className}`.trim()}
+        color='inherit'
+        download
+        href={RESUME_LINK}
+        underline='none'
+      >
+        Resume
+      </MUILink>
       {
         Object.entries(SOCIAL_LINKS).map(([label, link]) => (
           <MUILink

@@ -1,4 +1,5 @@
 /* @styles */
+@import '~/styles/breakpoints.scss';
 @import '~/styles/colors.scss';
 
 .nav__link {
@@ -12,6 +13,12 @@
   background-color: $color__mid-gray;
   transition: all .2s linear;
   padding: 1rem;
+}
+
+@media screen and (max-width: $breakpoints__sm) {
+  .nav__link {
+    padding: 1rem 0.5rem;
+  }
 }
 
 .nav__link--selected {
