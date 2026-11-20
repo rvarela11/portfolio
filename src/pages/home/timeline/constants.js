@@ -35,7 +35,7 @@ export const EXPERIENCES = [
       'Led development of the N-Tier Visibility feature using React and TypeScript, enabling multi-tier forecasting for enterprise customers at global scale.',
       'Scaled the Galaxy Design System to the complexity of AWS Supply Chain, standardizing reusable UI components across the engineering organization.',
     ],
-    employer: 'Amazon Web Services (AWS)',
+    employer: 'Amazon Web Services',
     image: '/logos/aws_logo.jpeg',
     skills: [
       SKILL.typeScript,
