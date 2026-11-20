@@ -10,13 +10,14 @@ const SKILL = {
   typeScript: 'TypeScript',
 };
 
-// NOTE: Data from public/Roberto_Varela_Resume.pdf
+// NOTE: Data from https://www.linkedin.com/in/rvarela11, except Wellsmith (from public/Roberto_Varela_Resume.pdf)
 export const EXPERIENCES = [
   {
     date: '03/2024 - 11/2026',
     description: [
       'Modernized front-end architecture using React and TypeScript, improving scalability and developer velocity.',
-      'Resolved 100% of critical security vulnerabilities, automated 42% of manual tests with Cypress, and prototyped an AI natural language search tool.',
+      'Resolved 100% of critical security vulnerabilities in the search-ui library, automated 42% of tests with Cypress reducing manual QA effort, '
+        + 'and prototyped an AI-powered natural language search tool adopted internally.',
     ],
     employer: 'DISCO',
     image: '/logos/csdisco_logo.jpeg',
@@ -35,7 +36,7 @@ export const EXPERIENCES = [
       'Led development of the N-Tier Visibility feature using React and TypeScript, enabling multi-tier forecasting for enterprise customers at global scale.',
       'Scaled the Galaxy Design System to the complexity of AWS Supply Chain, standardizing reusable UI components across the engineering organization.',
     ],
-    employer: 'Amazon Web Services',
+    employer: 'Amazon Web Services (AWS)',
     image: '/logos/aws_logo.jpeg',
     skills: [
       SKILL.typeScript,
@@ -48,7 +49,7 @@ export const EXPERIENCES = [
   {
     date: '04/2021 - 05/2022',
     description: [
-      'Optimized core features using React and REST APIs, improving performance and user experience for a platform serving 100K+ e-commerce businesses.',
+      "Optimized key features across ShipStation's shipping platform, delivering improvements that impacted a merchant base of 100K+ e-commerce businesses.",
     ],
     employer: 'ShipStation',
     image: '/logos/shipstation_logo.jpeg',
@@ -58,7 +59,7 @@ export const EXPERIENCES = [
   {
     date: '12/2019 - 04/2021',
     description: [
-      'Developed high-performance directory interfaces using React and dynamic form systems, and enterprise-grade error handling used by global customers.',
+      "Delivered a high-performance directory with dynamic forms, and enterprise-grade error handling used by Ping Identity's global customer base.",
     ],
     employer: 'Ping Identity',
     image: '/logos/ping_identity_logo.jpeg',
@@ -100,13 +101,16 @@ export const EXPERIENCES = [
   },
 ];
 
-// NOTE: Data from public/Roberto_Varela_Resume.pdf
+// NOTE: Data from https://www.linkedin.com/in/rvarela11
 export const PROJECTS = [
   {
     date: '03/2022 - 03/2023',
     description: [
-      'Led front-end development across 3 production applications using Next.js, '
-        + 'leading a team of 3 engineers through code reviews, standards-setting, and technical decision-making.',
+      'Led front-end development across 3 production applications (MV3, Singularity, and minting website) using Next.js, '
+        + 'leading a team of 3 engineers through code reviews, standards-setting, and technical decision-making from inception to launch. '
+        + "Utilized Next.js's file-system-based router for efficient routing and dynamic routing for user profile pages. "
+        + 'Implemented shared SEO component for optimal search engine visibility. '
+        + 'And incorporated Next.js image optimization for MV3 gallery, ensuring correct sizes for devices and faster page loads with lazy loading.',
     ],
     employer: 'Metav3rse',
     image: '/logos/metav3rse_logo.jpeg',
