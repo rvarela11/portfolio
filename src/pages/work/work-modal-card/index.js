@@ -12,8 +12,8 @@ const WorkModalCard = ({ selected: {
     <Image
       alt={`${title} project`}
       src={images?.site || ''}
-      width={3452}
-      height={1912}
+      width={2180}
+      height={1207}
     />
   </div>
 );
