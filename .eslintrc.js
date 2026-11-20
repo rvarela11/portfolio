@@ -20,7 +20,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'jsx-quotes': 'off',
     'linebreak-style': 'off',
-    'max-len': [1, 180, 2, { ignoreComments: true }],
+    'max-len': [1, 180, 2, { ignoreComments: true, ignoreStrings: true }],
     'no-console': 'off',
     'no-param-reassign': 'off',
     'no-undef': 'warn',
