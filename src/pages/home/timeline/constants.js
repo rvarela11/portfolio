@@ -10,13 +10,13 @@ const SKILL = {
   typeScript: 'TypeScript',
 };
 
-// NOTE: Data from https://www.linkedin.com/in/rvarela11
+// NOTE: Data from public/Roberto_Varela_Resume.pdf
 export const EXPERIENCES = [
   {
-    date: '03/2024 - Present',
+    date: '03/2024 - 11/2026',
     description: [
-      'Building and optimizing high-quality scalable UI features for the eDiscovery search team.',
-      'Deliver reusable systems, patterns, and UI expertise that enable teams to move fast and create consistent, high-quality experiences.',
+      'Modernized front-end architecture using React and TypeScript, improving scalability and developer velocity.',
+      'Resolved 100% of critical security vulnerabilities, automated 42% of manual tests with Cypress, and prototyped an AI natural language search tool.',
     ],
     employer: 'DISCO',
     image: '/logos/csdisco_logo.jpeg',
@@ -27,13 +27,13 @@ export const EXPERIENCES = [
       SKILL.redux,
       SKILL.cypress,
     ],
-    title: 'Software Engineer II, UI',
+    title: 'Front-End Engineer II',
   },
   {
     date: '05/2022 - 02/2024',
     description: [
-      'Led the N-Tier Visibility (Forecast Commits) feature which extends visibility of the AWS Supply Chain app.',
-      'Core contributor to the Galaxy Design System, figuring out how to scale a design system to the complexity of AWS Supply Chain.',
+      'Led development of the N-Tier Visibility feature using React and TypeScript, enabling multi-tier forecasting for enterprise customers at global scale.',
+      'Scaled the Galaxy Design System to the complexity of AWS Supply Chain, standardizing reusable UI components across the engineering organization.',
     ],
     employer: 'Amazon Web Services (AWS)',
     image: '/logos/aws_logo.jpeg',
@@ -48,7 +48,7 @@ export const EXPERIENCES = [
   {
     date: '04/2021 - 05/2022',
     description: [
-      'Worked within a cross-functional team to enhance, optimize, and add functionality to ShipStation software platform.',
+      'Optimized core features using React and REST APIs, improving performance and user experience for a platform serving 100K+ e-commerce businesses.',
     ],
     employer: 'ShipStation',
     image: '/logos/shipstation_logo.jpeg',
@@ -58,7 +58,7 @@ export const EXPERIENCES = [
   {
     date: '12/2019 - 04/2021',
     description: [
-      'Designed and built a client facing high-performance directory using flexible forms, tables with download/upload capabilities, and robust UI error handling.',
+      'Developed high-performance directory interfaces using React and dynamic form systems, and enterprise-grade error handling used by global customers.',
     ],
     employer: 'Ping Identity',
     image: '/logos/ping_identity_logo.jpeg',
@@ -68,7 +68,7 @@ export const EXPERIENCES = [
   {
     date: '04/2019 - 11/2019',
     description: [
-      'Worked with designers, product owners, and backend developers in an agile environment to turn ideas and mockups into a production-ready web application.',
+      'Shipped a production-ready health coaching web app in an agile environment, bridging design and backend teams to deliver a seamless user experience.',
     ],
     employer: 'Wellsmith',
     image: '/logos/wellsmith_logo.jpeg',
@@ -85,8 +85,7 @@ export const EXPERIENCES = [
   {
     date: '11/2017 - 04/2019',
     description: [
-      'Built internal web based tools with technologies such as React, Redux, GraphQL, and Apollo. These new tools helped the company stay on track to double its revenue and continue to move up in the top 50 brokerage firms.',
-      'Developed the company’s first mobile app (React Native) to help increase market exposure and continue to be the fastest growing freight brokerage in history.',
+      'Built internal tooling that supported 2x revenue growth and a top-50 U.S. freight brokerage ranking during a critical scaling period.',
     ],
     employer: 'Arrive Logistics',
     image: '/logos/arrive_logistics_logo.jpeg',
@@ -101,12 +100,13 @@ export const EXPERIENCES = [
   },
 ];
 
-// NOTE: Data from https://www.linkedin.com/in/rvarela11
+// NOTE: Data from public/Roberto_Varela_Resume.pdf
 export const PROJECTS = [
   {
     date: '03/2022 - 03/2023',
     description: [
-      "Led a team of 3 engineers to develop MV3, Singularity, and minting websites using Next.js. Utilized Next.js's file-system-based router for efficient routing and dynamic routing for user profile pages. Implemented shared SEO component for optimal search engine visibility. And incorporated Next.js image optimization for MV3 gallery, ensuring correct sizes for devices and faster page loads with lazy loading.",
+      'Led front-end development across 3 production applications using Next.js, '
+        + 'leading a team of 3 engineers through code reviews, standards-setting, and technical decision-making.',
     ],
     employer: 'Metav3rse',
     image: '/logos/metav3rse_logo.jpeg',
