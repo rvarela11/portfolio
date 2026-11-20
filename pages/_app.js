@@ -1,8 +1,11 @@
 // @vendors
-import React, { useCallback } from 'react';
+import React from 'react';
 import { CacheProvider } from '@emotion/react';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import { loadBasic } from '@tsparticles/basic';
+import { loadExternalRepulseInteraction } from '@tsparticles/interaction-external-repulse';
+import { loadParticlesLinksInteraction } from '@tsparticles/interaction-particles-links';
+import { loadInteractivityPlugin } from '@tsparticles/plugin-interactivity';
+import { Particles, ParticlesProvider } from '@tsparticles/react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 
 // @components
@@ -23,18 +26,26 @@ import '@/styles/globals.scss';
 
 const clientSideEmotionCache = createEmotionCache();
 
+// Registers only the particle features the config uses: dots that move, links between them, and hover repulse
+const loadParticlesPlugins = async (engine) => {
+  await loadBasic(engine);
+  await loadInteractivityPlugin(engine);
+  await loadParticlesLinksInteraction(engine);
+  await loadExternalRepulseInteraction(engine);
+};
+
 const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
-
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
-  }, []);
 
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={mainTheme}>
         <CssBaseline />
-        {prefersReducedMotion === false && <Particles id='tsparticles' init={particlesInit} options={PARTICLES_JSON} />}
+        {prefersReducedMotion === false && (
+          <ParticlesProvider init={loadParticlesPlugins}>
+            <Particles id='tsparticles' options={PARTICLES_JSON} />
+          </ParticlesProvider>
+        )}
         <Nav />
         <Component {...pageProps} />
       </ThemeProvider>

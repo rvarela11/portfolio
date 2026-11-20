@@ -16,14 +16,18 @@
     "@fontsource/orbitron": "^4.5.11",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.7",
+    "@tsparticles/basic": "4.6.0",
+    "@tsparticles/engine": "4.6.0",
+    "@tsparticles/interaction-external-repulse": "4.6.0",
+    "@tsparticles/interaction-particles-links": "4.6.0",
+    "@tsparticles/plugin-interactivity": "4.6.0",
+    "@tsparticles/react": "4.6.0",
     "classnames": "^2.3.2",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-tsparticles": "^2.8.0",
     "react-vertical-timeline-component": "^3.6.0",
-    "sass": "^1.58.0",
-    "tsparticles": "^2.8.0"
+    "sass": "^1.58.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "13.1.6",
