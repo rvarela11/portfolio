@@ -29,6 +29,12 @@ a {
   text-decoration: none;
 }
 
+// NOTE: tsparticles renders its canvas in the page flow for one frame before fixing it, which pushes the layout down
+#tsparticles {
+  position: fixed;
+  inset: 0;
+}
+
 section.page {
   padding: 2.5rem;
   padding-top: 3.5rem;
