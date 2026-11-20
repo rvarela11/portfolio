@@ -35,8 +35,8 @@ const SEO = ({
     <meta property='og:title' content={title} />
     <meta property='og:description' content={description} />
     <meta property='og:image' content={image} />
-    <meta property='og:image:width' content='1200' />
-    <meta property='og:image:height' content='630' />
+    <meta property='og:image:width' content='1400' />
+    <meta property='og:image:height' content='1061' />
     <meta property='og:url' content={url} />
     <meta property='og:type' content={openGraphType} />
     <meta property='og:site_name' content='Roberto Varela'></meta>
@@ -45,7 +45,7 @@ const SEO = ({
     <meta name='twitter:title' content={title} />
     <meta name='twitter:description' content={description} />
     <meta name='twitter:image' content={image} />
-    <meta name='twitter:card' content='summary' />
+    <meta name='twitter:card' content='summary_large_image' />
     <meta property='twitter:url' content={url} />
     <meta name='twitter:creator' content={social.twitter} />
     <meta name='twitter:site' content={social.twitter} />
@@ -63,13 +63,13 @@ const SEO = ({
       }}
     />
 
-    <link rel='icon' type='image/x-icon' href={image} />
+    <link rel='icon' type='image/png' href='/images/RV_logo_icon_transparent.png' />
   </Head>
 );
 
 SEO.defaultProps = {
   description: 'Roberto Varela portfolio',
-  image: '/images/RV_logo_icon_transparent.png',
+  image: 'https://www.robertvarela.com/images/RV_logo_black.png',
   openGraphType: 'website',
   schemaType: 'WebSite',
   social: {
