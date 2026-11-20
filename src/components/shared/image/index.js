@@ -1,6 +1,6 @@
 // @vendors
 import React, { useState } from 'react';
-import NextImage from 'next/legacy/image';
+import NextImage from 'next/image';
 
 // @components
 import Skeleton from '@/src/components/shared/skeleton';
@@ -19,9 +19,9 @@ const Image = ({
     <Skeleton loading={loading}>
       <NextImage
         alt={alt}
-        className={className}
+        className={`image ${className}`.trim()}
         height={height}
-        onLoadingComplete={() => setLoading(false)}
+        onLoad={() => setLoading(false)}
         quality={quality}
         src={src}
         width={width}
