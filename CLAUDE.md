@@ -53,6 +53,6 @@ This is a Next.js 13 portfolio website using JavaScript (JSX), Material-UI, and 
 
 Uses Airbnb preset with Next.js core-web-vitals. Notable relaxed rules:
 - JSX allowed in .js files
-- Max line length: 180 characters
+- Max line length: 180 characters (comments and strings exempt, so keep long copy on one line rather than splitting it with `+`)
 - Console statements allowed
 - Prop spreading allowed
