@@ -63,7 +63,7 @@ const SEO = ({
       }}
     />
 
-    <link rel='icon' type='image/png' href='/images/RV_logo_icon_transparent.png' />
+    <link rel='icon' type='image/png' href='/images/favicon.png' />
   </Head>
 );
 
