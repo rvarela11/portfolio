@@ -85,7 +85,7 @@ export const EXPERIENCES = [
   {
     date: '11/2017 - 04/2019',
     description: [
-      'Built internal web based tools with technologies such as react, redux, graphQL, and apollo. These new tools helped the company stay on track to double its revenue and continue to move up in the top 50 brokerage firms.',
+      'Built internal web based tools with technologies such as React, Redux, GraphQL, and Apollo. These new tools helped the company stay on track to double its revenue and continue to move up in the top 50 brokerage firms.',
       'Developed the company’s first mobile app (React Native) to help increase market exposure and continue to be the fastest growing freight brokerage in history.',
     ],
     employer: 'Arrive Logistics',
@@ -106,7 +106,7 @@ export const PROJECTS = [
   {
     date: '03/2022 - 03/2023',
     description: [
-      "Led a team of 3 engineers to develop MV3, Singularity, and minting websites using Next.js. Utilized Next.js's file-system-based router for efficient routing and dynamic routing for user profile pages. Implemented shared SEO component for optimal search engine visibility. And incorporated Next.js image optimization for MV3 gallery, ensuring correct sizes for devices and faster page loads with lazy loading.( https://mv3.io )",
+      "Led a team of 3 engineers to develop MV3, Singularity, and minting websites using Next.js. Utilized Next.js's file-system-based router for efficient routing and dynamic routing for user profile pages. Implemented shared SEO component for optimal search engine visibility. And incorporated Next.js image optimization for MV3 gallery, ensuring correct sizes for devices and faster page loads with lazy loading.",
     ],
     employer: 'Metav3rse',
     image: '/logos/metav3rse_logo.jpeg',
@@ -117,12 +117,12 @@ export const PROJECTS = [
       SKILL.redux,
       SKILL.responsiveWebDesign,
     ],
-    title: 'Senior FrontEnd Engineer',
+    title: 'Senior Front-End Engineer',
   },
   {
     date: '04/2022 - 07/2022',
     description: [
-      'Led a team of 2 engineers and 1 designer to built Camp Cosmos, and minting websites using Next.js.',
+      'Led a team of 2 engineers and 1 designer to build Camp Cosmos, and minting websites using Next.js.',
     ],
     employer: 'Camp Cosmos',
     image: '/logos/camp_cosmos_logo.jpeg',
@@ -132,6 +132,6 @@ export const PROJECTS = [
       SKILL.react,
       SKILL.responsiveWebDesign,
     ],
-    title: 'Senior FrontEnd Engineer',
+    title: 'Senior Front-End Engineer',
   },
 ];
