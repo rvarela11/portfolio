@@ -8,6 +8,9 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 // @components
 import Nav from '@/src/components/shared/nav';
 
+// @hooks
+import { usePrefersReducedMotion } from '@/src/hooks/usePrefersReducedMotion';
+
 // @public
 import PARTICLES_JSON from '@/public/assets/particles-config.json';
 
@@ -21,6 +24,8 @@ import '@/styles/globals.scss';
 const clientSideEmotionCache = createEmotionCache();
 
 const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }) => {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
@@ -29,7 +34,7 @@ const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }) =>
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={mainTheme}>
         <CssBaseline />
-        <Particles id='tsparticles' init={particlesInit} options={PARTICLES_JSON} />
+        {prefersReducedMotion === false && <Particles id='tsparticles' init={particlesInit} options={PARTICLES_JSON} />}
         <Nav />
         <Component {...pageProps} />
       </ThemeProvider>
