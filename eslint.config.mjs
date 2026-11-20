@@ -75,13 +75,17 @@ export default defineConfig([
       'no-undef': 'warn',
       'no-unused-vars': 'warn',
       'object-curly-newline': 'off',
-      // Keep the `// @vendors`, `// @components`, ... import sections; sort within each one, with `react` first
+      // Keep the `// @vendors`, `// @components`, ... import sections; sort within each one, with `react` first and `next` second
       'perfectionist/sort-imports': [
         'error',
         {
-          customGroups: [{ elementNamePattern: '^react$', groupName: 'react' }],
+          customGroups: [
+            { elementNamePattern: '^react$', groupName: 'react' },
+            { elementNamePattern: '^next(/|$)', groupName: 'next' },
+          ],
           groups: [
             'react',
+            'next',
             'type-import',
             ['value-builtin', 'value-external'],
             'type-internal',
