@@ -43,6 +43,12 @@ This is a Next.js 13 portfolio website using JavaScript (JSX), Material-UI, and 
 
 `@/*` maps to the project root (configured in jsconfig.json).
 
+## Workflow
+
+- Work is tracked as GitHub issues in `rvarela11/portfolio` on the [Portfolio - Polish](https://github.com/users/rvarela11/projects/3) board. Take one ticket at a time, starting it with `/start-ticket <issue#>`.
+- Before each ticket, pull `main` and branch as `<issue#>-<short-description>` (e.g. `6-pin-nav-to-top`).
+- Never push to `main`. Every change lands through a PR, with `Closes #<issue#>` in the body for ticket work.
+
 ## ESLint Configuration
 
 Uses Airbnb preset with Next.js core-web-vitals. Notable relaxed rules:
