@@ -25,7 +25,8 @@ const Home = () => (
       <div className='home-page-content__bio'>
         <Typography paragraph>
           Senior front-end engineer with a passion for UI/UX, scaling platforms,
-          and creating intuitive and dynamic user experiences.
+          and creating intuitive and dynamic user experiences, leveraging AI tools
+          to accelerate development and innovation.
         </Typography>
       </div>
     </div>
