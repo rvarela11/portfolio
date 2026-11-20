@@ -3,8 +3,8 @@ import React from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
 
 // @components
-import MainModal from './modal';
 import MainDrawer from './drawer';
+import MainModal from './modal';
 
 const Modal = ({ children, ...props }) => {
   const theme = useTheme();

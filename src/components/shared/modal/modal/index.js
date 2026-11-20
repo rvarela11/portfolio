@@ -5,8 +5,8 @@ import { Box, Modal } from '@mui/material';
 const MainModal = ({
   children,
   handleModalClose = () => {},
-  open = false,
   Modal: { className = '' } = {},
+  open = false,
 }) => (
   <Modal
     closeAfterTransition

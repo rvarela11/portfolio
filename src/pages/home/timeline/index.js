@@ -1,10 +1,10 @@
 // @vendors
+import { Typography } from '@mui/material';
+import 'react-vertical-timeline-component/style.min.css';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { Typography } from '@mui/material';
 
 // @components
 import Image from '@/src/components/shared/image';
@@ -26,9 +26,9 @@ const Timeline = ({ elements = [], title = '' }) => (
             <Image
               alt={`${element.title} logo`}
               className='timeline-card__image'
+              height={200}
               src={element?.image ?? ''}
               width={200}
-              height={200}
             />
           }
         >

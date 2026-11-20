@@ -2,8 +2,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import classnames from 'classnames';
 import { Link as MUILink } from '@mui/material';
+import classnames from 'classnames';
 
 // @utils
 import { SOCIAL_ICONS } from '@/src/utils/icons';

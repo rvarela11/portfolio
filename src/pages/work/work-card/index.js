@@ -1,7 +1,7 @@
 // @vendors
 import React from 'react';
-import { Button, ButtonBase, Typography } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { Button, ButtonBase, Typography } from '@mui/material';
 
 // @components
 import { Card, CardContent } from '@/src/components/shared/card';
@@ -15,9 +15,9 @@ const WorkCard = ({ handleWorkCardClick, ...project }) => {
       <ButtonBase className='work-card__image' onClick={() => handleWorkCardClick(project)}>
         <Image
           alt={`${title} project`}
+          height={600}
           src={images?.project || ''}
           width={700}
-          height={600}
         />
       </ButtonBase>
       <CardContent className='work-card__content'>
@@ -32,8 +32,8 @@ const WorkCard = ({ handleWorkCardClick, ...project }) => {
                 key={label}
                 component='a'
                 href={link}
-                target='_blank'
                 startIcon={<OpenInNewIcon />}
+                target='_blank'
                 variant='contained'
               >
                 {label}

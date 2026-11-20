@@ -1,19 +1,19 @@
 // @vendors
 import React from 'react';
-import { Box, Drawer, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import { Box, Drawer, IconButton } from '@mui/material';
 
 const MainDrawer = ({
   children,
+  Drawer: { className = '' } = {},
   handleModalClose = () => {},
   open = false,
-  Drawer: { className = '' } = {},
 }) => (
   <Drawer
     anchor='right'
     className='main-drawer'
-    open={open || false}
     ModalProps={{ keepMounted: true }}
+    open={open || false}
   >
     <div className='main-drawer__close'>
       <IconButton

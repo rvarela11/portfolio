@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 
 // @components
-import Page from '@/src/components/shared/page';
 import Modal from '@/src/components/shared/modal';
+import Page from '@/src/components/shared/page';
 import WorkCard from './work-card';
 import WorkModalCard from './work-modal-card';
 
@@ -40,8 +40,8 @@ const Work = () => {
       </div>
       <Modal
         handleModalClose={handleModalClose}
-        open={work.isModalOpen}
         Modal={{ className: 'work-modal' }}
+        open={work.isModalOpen}
       >
         <WorkModalCard selected={work.selected} />
       </Modal>

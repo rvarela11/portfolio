@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 yarn dev        # Start development server on localhost:3000
 yarn build      # Create production build
 yarn start      # Start production server
-yarn lint       # Run ESLint (Airbnb + Next.js rules)
+yarn lint       # Run ESLint (Airbnb + Next.js + perfectionist rules)
 ```
 
 Use `yarn dev -H [IP address]` to expose the dev server on a specific IP.
@@ -51,7 +51,12 @@ This is a Next.js 13 portfolio website using JavaScript (JSX), Material-UI, and 
 
 ## ESLint Configuration
 
-Uses Airbnb preset with Next.js core-web-vitals. Notable relaxed rules:
+ESLint 9 flat config in `eslint.config.mjs`: Airbnb's original rules (via `eslint-config-airbnb-extended/legacy`), Next.js core-web-vitals, and `eslint-plugin-perfectionist`. `yarn lint` runs `eslint .`; `yarn lint --fix` applies sorting.
+
+- perfectionist sorts imports (within each `// @vendors`, `// @components`, ... section), named imports, JSX props and object keys alphabetically, with exceptions: `react` is always the first import and `next`/`next/*` imports come right after it, and `key` is always the first JSX prop
+- `typescript` is a dev dependency only because `eslint-config-airbnb-extended` loads it
+
+Notable relaxed rules:
 - JSX allowed in .js files
 - Max line length: 180 characters (comments and strings exempt, so keep long copy on one line rather than splitting it with `+`)
 - Console statements allowed
