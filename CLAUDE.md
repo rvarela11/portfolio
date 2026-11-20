@@ -45,7 +45,7 @@ This is a Next.js 13 portfolio website using JavaScript (JSX), Material-UI, and 
 
 ## Workflow
 
-- Work is tracked as GitHub issues in `rvarela11/portfolio` on the [Portfolio - Polish](https://github.com/users/rvarela11/projects/3) board. Take one ticket at a time, starting it with `/start-ticket <issue#>`.
+- Work is tracked as GitHub issues in `rvarela11/portfolio` on one of `rvarela11`'s GitHub project boards; the board changes from effort to effort, and `/start-ticket` finds the right one. Take one ticket at a time, starting it with `/start-ticket <issue#>`.
 - Before each ticket, pull `main` and branch as `<issue#>-<short-description>` (e.g. `6-pin-nav-to-top`).
 - Never push to `main`. Every change lands through a PR, with `Closes #<issue#>` in the body for ticket work.
 
