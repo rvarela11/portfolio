@@ -1,4 +1,3 @@
-export const PORTFOLIO_SITE = 'https://www.zer0.codes';
 export const RESUME_LINK = '/Roberto_Varela_Resume.pdf';
 export const SOCIAL_LINKS = {
   github: 'https://github.com/rvarela11',
