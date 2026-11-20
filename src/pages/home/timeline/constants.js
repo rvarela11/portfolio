@@ -10,14 +10,14 @@ const SKILL = {
   typeScript: 'TypeScript',
 };
 
-// NOTE: Data from https://www.linkedin.com/in/rvarela11, except Wellsmith (from public/Roberto_Varela_Resume.pdf)
+// NOTE: Data from https://www.linkedin.com/in/rvarela11
 export const EXPERIENCES = [
   {
     date: '03/2024 - 11/2026',
     description: [
       'Modernized front-end architecture using React and TypeScript, improving scalability and developer velocity.',
-      'Resolved 100% of critical security vulnerabilities in the search-ui library, automated 42% of tests with Cypress reducing manual QA effort, '
-        + 'and prototyped an AI-powered natural language search tool adopted internally.',
+      'Resolved 100% of critical security vulnerabilities in the search-ui library, automated 42% of tests with Cypress reducing manual QA effort, ' +
+        'and prototyped an AI-powered natural language search tool adopted internally.',
     ],
     employer: 'DISCO',
     image: '/logos/csdisco_logo.jpeg',
@@ -106,11 +106,11 @@ export const PROJECTS = [
   {
     date: '03/2022 - 03/2023',
     description: [
-      'Led front-end development across 3 production applications (MV3, Singularity, and minting website) using Next.js, '
-        + 'leading a team of 3 engineers through code reviews, standards-setting, and technical decision-making from inception to launch. '
-        + "Utilized Next.js's file-system-based router for efficient routing and dynamic routing for user profile pages. "
-        + 'Implemented shared SEO component for optimal search engine visibility. '
-        + 'And incorporated Next.js image optimization for MV3 gallery, ensuring correct sizes for devices and faster page loads with lazy loading.',
+      'Led front-end development across 3 production applications (MV3, Singularity, and minting website) using Next.js, ' +
+        'leading a team of 3 engineers through code reviews, standards-setting, and technical decision-making from inception to launch. ' +
+        "Utilized Next.js's file-system-based router for efficient routing and dynamic routing for user profile pages. " +
+        'Implemented shared SEO component for optimal search engine visibility. ' +
+        'And incorporated Next.js image optimization for MV3 gallery, ensuring correct sizes for devices and faster page loads with lazy loading.',
     ],
     employer: 'Metav3rse',
     image: '/logos/metav3rse_logo.jpeg',
