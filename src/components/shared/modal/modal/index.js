@@ -1,12 +1,12 @@
 // @vendors
-import React from 'react';
 import { Box, Modal } from '@mui/material';
+import React from 'react';
 
 const MainModal = ({
   children,
   handleModalClose = () => {},
-  open = false,
   Modal: { className = '' } = {},
+  open = false,
 }) => (
   <Modal
     closeAfterTransition

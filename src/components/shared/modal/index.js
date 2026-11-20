@@ -1,10 +1,10 @@
 // @vendors
-import React from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
+import React from 'react';
 
 // @components
-import MainModal from './modal';
 import MainDrawer from './drawer';
+import MainModal from './modal';
 
 const Modal = ({ children, ...props }) => {
   const theme = useTheme();

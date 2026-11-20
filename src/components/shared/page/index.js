@@ -1,11 +1,11 @@
 // @vendors
-import React from 'react';
 import { Typography } from '@mui/material';
+import React from 'react';
 
 // @components
 import SEO from '../SEO';
 
-const Page = ({ className = '', children, title = '', SEOProps = {} }) => (
+const Page = ({ children, className = '', SEOProps = {}, title = '' }) => (
   <>
     <SEO {...SEOProps} />
     <section className={`page ${className}`.trim()}>
