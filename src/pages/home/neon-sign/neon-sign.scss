@@ -1,0 +1,77 @@
+/* @fonts */
+@import '@fontsource/orbitron/500.css';
+
+/* @styles */
+@import 'styles/colors.scss';
+
+$neon-sign__lit: $color__light-gray;
+$neon-sign__unlit: rgba(226, 221, 223, 0.3);
+
+@property --neon-glow {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 1;
+}
+
+// The heading holds the lit state and plays the switch-on once from the first paint
+.neon-sign {
+  --neon-glow: 1;
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.6rem, 7.5vw, 5.75rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $neon-sign__lit;
+  animation: neon-sign-ignite 1.6s steps(1, end) both;
+}
+
+// Still a toggle button (pauses the flicker), but with the default cursor so the name doesn't look like a link
+.neon-sign__tube {
+  all: unset;
+  cursor: default;
+  display: inline-block;
+  color: inherit;
+  text-shadow:
+    0 0 calc(4px * var(--neon-glow)) rgba(5, 217, 232, 0.35),
+    0 0 calc(12px * var(--neon-glow)) rgba(5, 217, 232, 0.3),
+    0 0 calc(28px * var(--neon-glow)) rgba(5, 217, 232, 0.3),
+    0 0 calc(56px * var(--neon-glow)) rgba(5, 217, 232, 0.15);
+
+  &:focus-visible {
+    outline: 1px dashed $color__light-green;
+    outline-offset: 8px;
+  }
+}
+
+// Two brightness dips in 0.8s (under 3 per second); the glow dims but the name stays readable
+.neon-sign__tube--sputtering {
+  animation: neon-sign-sputter 0.8s steps(1, end) both;
+}
+
+@keyframes neon-sign-ignite {
+  0% { --neon-glow: 0; color: $neon-sign__unlit; }
+  12% { --neon-glow: 0.6; color: $neon-sign__lit; }
+  18% { --neon-glow: 0; color: $neon-sign__unlit; }
+  46% { --neon-glow: 0.8; color: $neon-sign__lit; }
+  54% { --neon-glow: 0; color: $neon-sign__unlit; }
+  70% { --neon-glow: 1; color: $neon-sign__lit; }
+  100% { --neon-glow: 1; color: $neon-sign__lit; }
+}
+
+@keyframes neon-sign-sputter {
+  0% { --neon-glow: 1; opacity: 1; }
+  15% { --neon-glow: 0.15; opacity: 0.6; }
+  35% { --neon-glow: 1; opacity: 1; }
+  60% { --neon-glow: 0.3; opacity: 0.75; }
+  80% { --neon-glow: 1; opacity: 1; }
+  100% { --neon-glow: 1; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neon-sign,
+  .neon-sign__tube--sputtering {
+    animation: none;
+  }
+}
