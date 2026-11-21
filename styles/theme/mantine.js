@@ -1,7 +1,9 @@
 // @vendors
-import { createTheme } from '@mantine/core';
+import { createTheme, Drawer, Modal } from '@mantine/core';
 
-// Same colors and font as the MUI theme in ./main.js, so both libraries render alike while MUI is phased out (#17)
+// Above the fixed nav (z-index 1000 in src/components/shared/nav/nav.scss)
+const OVERLAY_Z_INDEX = 1300;
+
 export const mantineCssVariablesResolver = () => ({
   dark: {
     '--mantine-color-body': '#141416',
@@ -12,5 +14,20 @@ export const mantineCssVariablesResolver = () => ({
 });
 
 export const mantineTheme = createTheme({
+  // Same values as styles/breakpoints.scss (in em: 1em = 16px); keep the two in sync
+  /* eslint-disable perfectionist/sort-objects -- breakpoints read best smallest to largest */
+  breakpoints: {
+    xs: '0em',
+    sm: '37.5em',
+    md: '56.25em',
+    lg: '75em',
+    xl: '96em',
+  },
+  /* eslint-enable perfectionist/sort-objects */
+  components: {
+    Drawer: Drawer.extend({ defaultProps: { zIndex: OVERLAY_Z_INDEX } }),
+    Modal: Modal.extend({ defaultProps: { zIndex: OVERLAY_Z_INDEX } }),
+  },
+  cursorType: 'pointer',
   fontFamily: '"Helvetica Neue", sans-serif',
 });

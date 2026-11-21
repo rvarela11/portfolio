@@ -1,6 +1,6 @@
 // @vendors
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Text, Title } from '@mantine/core';
 
 // @components
 import Page from '@/src/components/shared/page';
@@ -12,22 +12,18 @@ import { EXPERIENCES, PROJECTS } from './timeline/constants';
 const Home = () => (
   <Page className='home-page'>
     <div className='home-page-content'>
-      <Typography
-        className='home-page-content__name'
-        variant='h2'
-        variantMapping={{ h2: 'h1' }}
-      >
+      <Title className='home-page-content__name' order={1}>
         Roberto Varela
-      </Typography>
-      <Typography className='home-page-content__title' variant='h4'>
+      </Title>
+      <Title className='home-page-content__title' order={4}>
         SENIOR FRONT-END ENGINEER
-      </Typography>
+      </Title>
       <div className='home-page-content__bio'>
-        <Typography paragraph>
+        <Text>
           Senior front-end engineer with a passion for UI/UX, scaling platforms,
           and creating intuitive and dynamic user experiences, leveraging AI tools
           to accelerate development and innovation.
-        </Typography>
+        </Text>
       </div>
     </div>
     <Timeline elements={EXPERIENCES} title='Experience' />

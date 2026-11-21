@@ -1,5 +1,5 @@
 // @vendors
-import { Typography } from '@mui/material';
+import { Text, Title } from '@mantine/core';
 import 'react-vertical-timeline-component/style.min.css';
 import {
   VerticalTimeline,
@@ -12,9 +12,9 @@ import Image from '@/src/components/shared/image';
 const Timeline = ({ elements = [], title = '' }) => (
   <>
     {title && (
-      <Typography className='timeline-title' variant='h4'>
+      <Title className='timeline-title' order={4}>
         {title}
-      </Typography>
+      </Title>
     )}
     <VerticalTimeline layout='1-column-left'>
       {elements.map((element, index) => (
@@ -32,18 +32,18 @@ const Timeline = ({ elements = [], title = '' }) => (
             />
           }
         >
-          <Typography className='timeline-card-title' variant='h5'>
+          <Title className='timeline-card-title' order={5}>
             {element.title}
-          </Typography>
-          <Typography variant='h6'>{element.employer}</Typography>
+          </Title>
+          <Title className='timeline-card-employer' order={6}>{element.employer}</Title>
           <ul>
             {element.description.map((item, i) => (
               <li key={`description-${index}-${i}`}>{item}</li>
             ))}
           </ul>
-          <Typography className='timeline-card-skills'>
+          <Text className='timeline-card-skills'>
             {element.skills.join(' - ')}
-          </Typography>
+          </Text>
         </VerticalTimelineElement>
       ))}
     </VerticalTimeline>

@@ -1,6 +1,6 @@
 // @vendors
 import React from 'react';
-import { Skeleton as MUISkeleton } from '@mui/material';
+import { Skeleton as MantineSkeleton } from '@mantine/core';
 
 const Skeleton = ({
   children,
@@ -12,9 +12,9 @@ const Skeleton = ({
   }
 
   return (
-    <MUISkeleton {...props} style={{ maxWidth: '100%', transform: 'inherit' }}>
+    <MantineSkeleton className='skeleton' visible {...props}>
       {children}
-    </MUISkeleton>
+    </MantineSkeleton>
   );
 };
 

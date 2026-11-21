@@ -2,12 +2,14 @@
 @import 'styles/animations.scss';
 @import 'styles/breakpoints.scss';
 @import 'styles/colors.scss';
+@import 'styles/typography.scss';
 
 .work-card {
   @include animista-fade-in();
 }
 
 .work-card .work-card__image {
+  display: flex;
   width: 100%;
   overflow: hidden;
   background-color: $color__black;
@@ -27,11 +29,13 @@
   justify-content: space-between;
 }
 
-.work-card__content-title.MuiTypography-root {
+.work-card__content-title {
+  @include typography-body1;
   font-family: "Orbitron", sans-serif;
 }
 
-.work-card__content-tech.MuiTypography-root {
+.work-card__content-tech {
+  @include typography-subtitle2;
   color: $color__light-green;
 }
 
@@ -40,14 +44,27 @@
   gap: 0.5rem;
 }
 
-.work-card__content-actions .MuiButton-root {
+.work-card__action {
+  height: auto;
+  min-width: 64px;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.75;
+  text-transform: uppercase;
+  color: $color__white;
   background-color: $color__dark-pink;
+  border: 0;
   border-radius: 0;
   box-shadow: none;
 }
 
+.work-card__action-icon {
+  margin: 0 8px 0 -4px;
+}
+
 // NOTE: Need this for mobile
-.work-card__content-actions .MuiButton-root:hover {
+.work-card__action:hover {
   background-color: $color__dark-pink;
 }
 
@@ -55,10 +72,10 @@
   .work-card__content-actions {
     flex-direction: column;
   }
-  .work-card__content-title.MuiTypography-root {
+  .work-card__content-title {
     font-size: 1.25rem;
   }
-  .work-card__content-tech.MuiTypography-root {
+  .work-card__content-tech {
     font-size: 1rem;
   }
 }
@@ -67,7 +84,7 @@
   .work-card__image img:hover {
     transform: scale(1.1);
   }
-  .work-card__content-actions .MuiButton-root:hover {
+  .work-card__action:hover {
     background-color: transparent;
     outline: 1px solid $color__dark-pink;
     color: $color__dark-pink;
