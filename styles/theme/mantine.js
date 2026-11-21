@@ -12,12 +12,14 @@ export const mantineCssVariablesResolver = () => ({
 
 export const mantineTheme = createTheme({
   // Same values as styles/breakpoints.scss (in em: 1em = 16px); keep the two in sync
+  /* eslint-disable perfectionist/sort-objects -- breakpoints read best smallest to largest */
   breakpoints: {
-    lg: '75em',
-    md: '56.25em',
-    sm: '37.5em',
-    xl: '96em',
     xs: '0em',
+    sm: '37.5em',
+    md: '56.25em',
+    lg: '75em',
+    xl: '96em',
   },
+  /* eslint-enable perfectionist/sort-objects */
   fontFamily: '"Helvetica Neue", sans-serif',
 });
