@@ -1,5 +1,8 @@
 /* @styles */
+@import 'styles/breakpoints.scss';
 @import 'styles/colors.scss';
+
+$nav-link__cut: 12px;
 
 .nav__link {
   width: 100%;
@@ -11,8 +14,22 @@
   align-items: center;
   justify-content: center;
   background-color: $color__mid-gray;
+  border-bottom: 1px solid $color__mid-green;
   transition: all .2s linear;
   padding: 1rem 0.5rem;
+
+  // The panel's outer edge: teal left border and a clipped top-left corner
+  &:first-child {
+    padding-left: 1rem;
+    border-left: 1px solid $color__mid-green;
+    clip-path: polygon(#{$nav-link__cut} 0, 100% 0, 100% 100%, 0 100%, 0 #{$nav-link__cut});
+  }
+
+  &:focus-visible {
+    outline: 1px dashed $color__light-green;
+    outline-offset: -4px;
+    color: $color__dark-pink;
+  }
 }
 
 .nav__link--selected {
@@ -23,5 +40,21 @@
   .nav__link:hover {
     transform: translateY(1rem);
     color: $color__dark-pink;
+  }
+}
+
+@media screen and (max-width: $breakpoints__sm) {
+  .nav__link {
+    padding: 1rem 0.4rem;
+    font-size: 0.8rem;
+
+    &:first-child {
+      padding-left: 0.8rem;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
