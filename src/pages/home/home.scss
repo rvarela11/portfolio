@@ -23,7 +23,8 @@
   flex-direction: column;
   gap: 0.5rem;
   justify-content: center;
-  min-height: 70vh;
+  // Leaves room for the Experience heading at the bottom of the first screen on a laptop
+  min-height: 55vh;
 }
 
 .home-page-content__title {
