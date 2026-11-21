@@ -132,10 +132,10 @@ export default defineConfig([
     },
   },
 
-  // CommonJS config file (defines `module`)
+  // CommonJS config file (defines `module`; `__dirname` is a Node global)
   {
     files: ['next.config.js'],
-    languageOptions: { sourceType: 'commonjs' },
+    languageOptions: { globals: { __dirname: 'readonly' }, sourceType: 'commonjs' },
   },
 
   // The import resolver can't follow package "exports" subpaths like `eslint/config`

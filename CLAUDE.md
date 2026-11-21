@@ -15,7 +15,7 @@ Use `yarn dev -H [IP address]` to expose the dev server on a specific IP.
 
 ## Architecture Overview
 
-This is a Next.js 13 portfolio website using JavaScript (JSX), Material-UI, and Emotion for styling.
+This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website using JavaScript (JSX), Material-UI, and Emotion for styling. Requires Node 20.9+ (`engines` in package.json).
 
 ### Directory Structure
 
@@ -31,7 +31,9 @@ This is a Next.js 13 portfolio website using JavaScript (JSX), Material-UI, and 
 
 **Component Wrapper**: All pages use the `<Page>` component which provides layout, SEO, and consistent structure.
 
-**Styling**: Hybrid approach using Emotion CSS-in-JS (primary) and SCSS modules. MUI ThemeProvider wraps the app with a custom dark theme.
+**Styling**: Global SCSS (imported through `styles/globals.scss`) plus MUI components; MUI ThemeProvider wraps the app with a custom dark theme. SCSS imports resolve from the project root (`sassOptions.loadPaths` in `next.config.js`), so write `@import 'styles/colors.scss';` rather than long relative paths; nearby files stay relative (`./timeline/timeline.scss`). Don't use `~/` imports: Turbopack can't resolve them.
+
+**React 19**: `defaultProps` is ignored on function components; put defaults in the parameters.
 
 **Data**: Static data stored in constants.js files within page directories (EXPERIENCES, PROJECTS arrays). No backend API.
 

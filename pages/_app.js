@@ -53,8 +53,4 @@ const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }) =>
   );
 };
 
-App.defaultProps = {
-  emotionCache: undefined,
-};
-
 export default App;

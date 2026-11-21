@@ -3,14 +3,15 @@
 import React from 'react';
 import Head from 'next/head';
 
+// React 19 ignores defaultProps on function components, so defaults live in the parameters
 const SEO = ({
-  description,
-  image,
-  openGraphType,
-  schemaType,
-  social,
-  title,
-  url,
+  description = 'Roberto Varela portfolio',
+  image = 'https://www.robertvarela.com/images/RV_logo_black.png',
+  openGraphType = 'website',
+  schemaType = 'WebSite',
+  social = { twitter: '@r083121' },
+  title = 'Roberto Varela',
+  url = 'https://www.robertvarela.com',
 }) => (
   <Head>
     {/*<!-- Primary Meta Tags -->*/}
@@ -66,17 +67,5 @@ const SEO = ({
     <link rel='icon' type='image/png' href='/images/favicon.png' />
   </Head>
 );
-
-SEO.defaultProps = {
-  description: 'Roberto Varela portfolio',
-  image: 'https://www.robertvarela.com/images/RV_logo_black.png',
-  openGraphType: 'website',
-  schemaType: 'WebSite',
-  social: {
-    twitter: '@r083121',
-  },
-  title: 'Roberto Varela',
-  url: 'https://www.robertvarela.com',
-};
 
 export default SEO;
