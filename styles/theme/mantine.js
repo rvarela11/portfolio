@@ -21,5 +21,6 @@ export const mantineTheme = createTheme({
     xl: '96em',
   },
   /* eslint-enable perfectionist/sort-objects */
+  cursorType: 'pointer',
   fontFamily: '"Helvetica Neue", sans-serif',
 });
