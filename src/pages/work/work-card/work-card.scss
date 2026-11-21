@@ -22,9 +22,9 @@
 }
 
 .work-card__content {
-  background-color: $color__mid-gray;
   padding: 1rem;
   display: flex;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -35,8 +35,7 @@
 }
 
 .work-card__content-tech {
-  @include typography-subtitle2;
-  color: $color__light-green;
+  margin-top: 0.4rem;
 }
 
 .work-card__content-actions {
@@ -74,9 +73,6 @@
   }
   .work-card__content-title {
     font-size: 1.25rem;
-  }
-  .work-card__content-tech {
-    font-size: 1rem;
   }
 }
 

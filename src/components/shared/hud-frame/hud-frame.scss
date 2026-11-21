@@ -1,0 +1,20 @@
+/* @styles */
+@import 'styles/colors.scss';
+
+$hud-frame__cut: 18px;
+
+@mixin hud-frame-clip {
+  clip-path: polygon(0 0, calc(100% - #{$hud-frame__cut}) 0, 100% #{$hud-frame__cut}, 100% 100%, 0 100%);
+}
+
+.hud-frame {
+  @include hud-frame-clip;
+  padding: 1px;
+  background: rgba($color__light-green, 0.6);
+}
+
+.hud-frame__panel {
+  @include hud-frame-clip;
+  height: 100%;
+  background: $color__panel;
+}

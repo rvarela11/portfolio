@@ -1,0 +1,16 @@
+/* @styles */
+@import 'styles/colors.scss';
+
+// Every Mantine Badge (class set in styles/theme/mantine.js): teal fill, muted light text, normal case
+.badge {
+  height: auto;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+  color: rgba($color__light-gray, 0.8);
+  background: rgba($color__mid-green, 0.6);
+  border: 0;
+}

@@ -4,14 +4,15 @@ import { Button, Text, UnstyledButton } from '@mantine/core';
 import { IconExternalLink } from '@tabler/icons-react';
 
 // @components
-import { Card, CardContent } from '@/src/components/shared/card';
+import { HudFrame } from '@/src/components/shared/hud-frame';
 import Image from '@/src/components/shared/image';
+import { SkillChips } from '@/src/components/shared/skill-chips';
 
 const WorkCard = ({ handleWorkCardClick, ...project }) => {
   const { images = {}, links = {}, tech = [], title = '' } = project;
 
   return (
-    <Card key={title} className='work-card'>
+    <HudFrame className='work-card'>
       <UnstyledButton className='work-card__image' onClick={() => handleWorkCardClick(project)}>
         <Image
           alt={`${title} project`}
@@ -20,10 +21,10 @@ const WorkCard = ({ handleWorkCardClick, ...project }) => {
           width={700}
         />
       </UnstyledButton>
-      <CardContent className='work-card__content'>
+      <div className='work-card__content'>
         <div>
           <Text className='work-card__content-title'>{title}</Text>
-          <Text className='work-card__content-tech'>{tech.join(' / ')}</Text>
+          <SkillChips className='work-card__content-tech' skills={tech} />
         </div>
         <div className='work-card__content-actions'>
           {
@@ -42,8 +43,8 @@ const WorkCard = ({ handleWorkCardClick, ...project }) => {
             ))
           }
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </HudFrame>
   );
 };
 

@@ -1,4 +1,5 @@
 /* @styles */
+@import 'styles/breakpoints.scss';
 @import 'styles/colors.scss';
 @import 'styles/typography.scss';
 
@@ -10,24 +11,48 @@
   margin: 0 auto;
 }
 
-.timeline-card .vertical-timeline-element-content {
-  background-color: $color__mid-gray;
-  border-radius: unset;
-  box-shadow: unset;
+// The library's stylesheet loads after this one, so overrides of its rules need one extra class to win
+
+// The line the entries hang from
+.vertical-timeline.vertical-timeline--one-column-left::before {
+  width: 2px;
+  margin-left: 1px;
+  background: rgba($color__light-green, 0.6);
 }
 
-.timeline-card
-  .vertical-timeline-element-content
-  .vertical-timeline-element-content-arrow {
-  border-right: 7px solid $color__mid-gray;
+// Logo badge: cyan ring
+.timeline-card .vertical-timeline-element-icon.shadow-size-small {
+  overflow: hidden;
+  box-shadow: 0 0 0 2px rgba($color__light-green, 0.6);
 }
 
 .timeline-card__image {
   border-radius: 50%;
 }
 
-.timeline-card ul {
-  padding-left: 1rem;
+// The library's card box only positions the HudFrame inside it
+.timeline-card .vertical-timeline-element-content {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.timeline-card .vertical-timeline-element-content-arrow,
+.vertical-timeline .timeline-card .vertical-timeline-element-content .vertical-timeline-element-date {
+  display: none;
+}
+
+.timeline-card__body {
+  padding: 1.25rem 1.5rem 1.4rem;
+}
+
+.timeline-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .timeline-card-title {
@@ -35,20 +60,38 @@
   color: $color__dark-pink;
 }
 
+.timeline-card__dates {
+  font-size: 1rem;
+  color: $color__light-green;
+}
+
 .timeline-card-employer {
   @include typography-h6;
 }
 
-// Specific enough to beat the timeline library's `.vertical-timeline-element-content p` font size and margin
-.timeline-card .timeline-card-skills {
-  margin: 1rem 0;
-  font-size: 1rem;
+.timeline-card__description {
+  margin: 0.9rem 0 1rem;
+  padding-left: 1.1rem;
+
+  li + li {
+    margin-top: 0.35rem;
+  }
+
+  li::marker {
+    color: $color__light-green;
+  }
 }
 
-.timeline-card
-  .vertical-timeline-element-content
-  .vertical-timeline-element-date {
-  color: $color__light-green;
-  padding: 0;
-  font-size: 1rem;
+// Cards appear without bouncing when motion is reduced
+@media (prefers-reduced-motion: reduce) {
+  .vertical-timeline.vertical-timeline--animate .vertical-timeline-element-icon.bounce-in,
+  .vertical-timeline.vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+    animation: none;
+  }
+}
+
+@media screen and (max-width: $breakpoints__sm) {
+  .timeline-card__body {
+    padding: 1rem 1rem 1.1rem;
+  }
 }
