@@ -7,7 +7,6 @@ import MainDrawer from './drawer';
 import MainModal from './modal';
 
 const Modal = ({ children, ...props }) => {
-  // Same breakpoint as MUI's down('md')
   const isMobile = useMediaQuery('(max-width: 899.95px)');
 
   if (isMobile) {
