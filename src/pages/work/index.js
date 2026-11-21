@@ -11,7 +11,7 @@ import WorkModalCard from './work-modal-card';
 import { PROJECTS } from './constants';
 
 const SEO_PROPS = {
-  description: 'Work by Roberto Varela, senior front-end engineer: MV3, Singularity, Camp Cosmos, Bubblicious and this portfolio, built with React, Redux and Web3.',
+  description: 'Work by Roberto Varela',
   title: 'Work | Roberto Varela',
   url: 'https://www.robertvarela.com/work',
 };
