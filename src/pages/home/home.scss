@@ -43,8 +43,8 @@
   font-size: 1.5rem;
 }
 
-// Phones: the hero takes only the space it needs, so the first Experience card shows on the first screen
-@media screen and (max-width: $breakpoints__sm) {
+// Mobile: the hero takes only the space it needs, so the first Experience card shows on the first screen
+@media screen and (max-width: $breakpoints__md) {
   .home-page-content {
     min-height: 0;
     padding: 7rem 0 4rem;
