@@ -1,5 +1,7 @@
 // @vendors
-import { createTheme, Drawer, Modal } from '@mantine/core';
+import {
+  Badge, createTheme, Drawer, Modal,
+} from '@mantine/core';
 
 // Shared by every Modal and Drawer: a 50% black backdrop, above the fixed nav (z-index 1000 in src/components/shared/nav/nav.scss)
 const OVERLAY_DEFAULT_PROPS = {
@@ -29,6 +31,8 @@ export const mantineTheme = createTheme({
   },
   /* eslint-enable perfectionist/sort-objects */
   components: {
+    // Square teal tags; the look lives in styles/theme/badge.scss
+    Badge: Badge.extend({ classNames: { root: 'badge' }, defaultProps: { radius: 0 } }),
     Drawer: Drawer.extend({ defaultProps: OVERLAY_DEFAULT_PROPS }),
     Modal: Modal.extend({ defaultProps: OVERLAY_DEFAULT_PROPS }),
   },

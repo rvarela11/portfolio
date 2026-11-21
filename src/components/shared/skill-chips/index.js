@@ -1,10 +1,11 @@
 // @vendors
 import React from 'react';
+import { Badge, Group } from '@mantine/core';
 
 export const SkillChips = ({ className = '', skills = [] }) => (
-  <ul aria-label='Skills' className={`skill-chips ${className}`.trim()}>
+  <Group aria-label='Skills' className={`skill-chips ${className}`.trim()} component='ul' gap='0.4rem'>
     {skills.map((skill) => (
-      <li key={skill}>{skill}</li>
+      <Badge key={skill} component='li'>{skill}</Badge>
     ))}
-  </ul>
+  </Group>
 );
