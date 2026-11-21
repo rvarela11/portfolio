@@ -2,6 +2,7 @@
 @import '@fontsource/orbitron';
 
 /* @styles */
+@import 'styles/breakpoints.scss';
 @import 'styles/colors.scss';
 @import 'styles/typography.scss';
 @import './neon-sign/neon-sign.scss';
@@ -40,4 +41,16 @@
 .home-page-content__bio p {
   @include typography-body1;
   font-size: 1.5rem;
+}
+
+// Phones: the hero takes only the space it needs, so the first Experience card shows on the first screen
+@media screen and (max-width: $breakpoints__sm) {
+  .home-page-content {
+    min-height: 0;
+    padding: 7rem 0 4rem;
+  }
+
+  .home-page-content__bio p {
+    font-size: 1.25rem;
+  }
 }
