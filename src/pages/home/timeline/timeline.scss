@@ -5,6 +5,8 @@
 
 .timeline-title {
   @include typography-h4;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
   // NOTE: Matching CSS properties from .vertical-timeline class
   width: 95%;
   max-width: 1170px;
