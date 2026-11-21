@@ -2,7 +2,7 @@
 
 ## About
 
-This website is built with `Next.js` and uses `yarn` and `Node.js`. [Install the latest yarn](https://yarnpkg.com/en/docs/install) to avoid lockfile conflicts with other team members. You’ll need `Node.js` version 10.13 or later. If you don’t have `Node.js` installed, [install it from here](https://nodejs.org/en/).
+This website is built with `Next.js` and uses `yarn` and `Node.js`. You'll need `Node.js` 20.9 or later ([install it from here](https://nodejs.org/en/)) and Yarn 1 (Classic), since the lockfile is in Yarn 1 format: `npm install -g yarn`.
 
 ## Quick Start
 
@@ -13,8 +13,11 @@ This website is built with `Next.js` and uses `yarn` and `Node.js`. [Install the
 
 \* Alternatively you can run `yarn dev -H [IP address]`.
 
+Run `yarn lint` to check the code (ESLint with Airbnb, Next.js and perfectionist rules), and `yarn build` for a production build.
+
 ### Technologies
 
 1. Next.js - https://nextjs.org
-2. React - https://reactjs.org
-3. MUI - https://mui.com
+2. React - https://react.dev
+3. Mantine - https://mantine.dev
+4. Sass - https://sass-lang.com

@@ -30,4 +30,5 @@ export const mantineTheme = createTheme({
   },
   cursorType: 'pointer',
   fontFamily: '"Helvetica Neue", sans-serif',
+  lineHeights: { md: '1.5' },
 });

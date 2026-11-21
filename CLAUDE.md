@@ -15,7 +15,7 @@ Use `yarn dev -H [IP address]` to expose the dev server on a specific IP.
 
 ## Architecture Overview
 
-This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website using JavaScript (JSX), Material-UI, and Emotion for styling. Requires Node 20.9+ (`engines` in package.json).
+This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website using JavaScript (JSX), Mantine components, and SCSS for styling. Requires Node 20.9+ (`engines` in package.json).
 
 ### Directory Structure
 
@@ -23,23 +23,22 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 - `/src/components/shared` - Reusable components (Page, Card, Modal, Image, SEO, Nav)
 - `/src/pages` - Page-level components with their constants (home/, work/)
 - `/src/utils` - Utility exports (icons, links, routes)
-- `/styles` - Global SCSS and MUI theme configuration
-- `/utility` - Server-side utilities (Emotion cache for SSR)
+- `/styles` - Global SCSS, type styles (`typography.scss`), breakpoints, and the Mantine theme (`theme/mantine.js`)
 - `/public` - Static assets (images, logos, particle config)
 
 ### Key Patterns
 
 **Component Wrapper**: All pages use the `<Page>` component which provides layout, SEO, and consistent structure.
 
-**Styling**: Global SCSS (imported through `styles/globals.scss`) plus MUI components; MUI ThemeProvider wraps the app with a custom dark theme. SCSS imports resolve from the project root (`sassOptions.loadPaths` in `next.config.js`), so write `@import 'styles/colors.scss';` rather than long relative paths; nearby files stay relative (`./timeline/timeline.scss`). Don't use `~/` imports: Turbopack can't resolve them.
+**Styling**: Global SCSS (imported through `styles/globals.scss`) plus Mantine components. `MantineProvider` wraps the app with a forced dark theme (`styles/theme/mantine.js`: colors, font, breakpoints, pointer cursor, modal/drawer z-index). Mantine's CSS is imported in its layered form, so the site's SCSS always wins over Mantine's base styles. Text sizes come from the mixins in `styles/typography.scss`. Breakpoints are defined twice, in `styles/breakpoints.scss` (SCSS media queries) and the Mantine theme (JS); keep them in sync. SCSS imports resolve from the project root (`sassOptions.loadPaths` in `next.config.js`), so write `@import 'styles/colors.scss';` rather than long relative paths; nearby files stay relative (`./timeline/timeline.scss`). Don't use `~/` imports: Turbopack can't resolve them.
 
 **React 19**: `defaultProps` is ignored on function components; put defaults in the parameters.
 
 **Data**: Static data stored in constants.js files within page directories (EXPERIENCES, PROJECTS arrays). No backend API.
 
-**Responsive Modal**: The Modal component switches between MUI Modal (desktop) and Drawer (mobile) based on breakpoints.
+**Responsive Modal**: The Modal component switches between Mantine's Modal (desktop) and Drawer (mobile) at `theme.breakpoints.md`.
 
-**SSR**: Emotion cache configured in _document.js for server-side CSS extraction.
+**Icons**: Tabler (`@tabler/icons-react`) in general; GitHub and LinkedIn come from `react-icons` (Font Awesome).
 
 ### Path Aliases
 
