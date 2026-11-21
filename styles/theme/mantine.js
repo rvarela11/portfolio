@@ -1,5 +1,8 @@
 // @vendors
-import { createTheme } from '@mantine/core';
+import { createTheme, Drawer, Modal } from '@mantine/core';
+
+// Above the fixed nav (z-index 1000 in src/components/shared/nav/nav.scss)
+const OVERLAY_Z_INDEX = 1300;
 
 export const mantineCssVariablesResolver = () => ({
   dark: {
@@ -21,6 +24,10 @@ export const mantineTheme = createTheme({
     xl: '96em',
   },
   /* eslint-enable perfectionist/sort-objects */
+  components: {
+    Drawer: Drawer.extend({ defaultProps: { zIndex: OVERLAY_Z_INDEX } }),
+    Modal: Modal.extend({ defaultProps: { zIndex: OVERLAY_Z_INDEX } }),
+  },
   cursorType: 'pointer',
   fontFamily: '"Helvetica Neue", sans-serif',
 });
