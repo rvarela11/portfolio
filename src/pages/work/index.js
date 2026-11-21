@@ -10,6 +10,12 @@ import WorkModalCard from './work-modal-card';
 // @constants
 import { PROJECTS } from './constants';
 
+const SEO_PROPS = {
+  description: 'Work by Roberto Varela, senior front-end engineer: MV3, Singularity, Camp Cosmos, Bubblicious and this portfolio, built with React, Redux and Web3.',
+  title: 'Work | Roberto Varela',
+  url: 'https://www.robertvarela.com/work',
+};
+
 const Work = () => {
   const [work, setWork] = useState({
     isModalOpen: false,
@@ -32,7 +38,7 @@ const Work = () => {
   };
 
   return (
-    <Page title='Work'>
+    <Page SEOProps={SEO_PROPS} title='Work'>
       <div className='work-page-grid'>
         { PROJECTS.map((project, index) => (
           <WorkCard key={index} handleWorkCardClick={handleWorkCardClick} {...project} />

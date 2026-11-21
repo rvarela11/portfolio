@@ -9,7 +9,7 @@ const Page = ({ children, className = '', SEOProps = {}, title = '' }) => (
   <>
     <SEO {...SEOProps} />
     <section className={`page ${className}`.trim()}>
-      {title && <Title className='page-title' order={2}>{title}</Title>}
+      {title && <Title className='page-title' order={1}>{title}</Title>}
       {children}
     </section>
   </>

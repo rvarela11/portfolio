@@ -14,7 +14,7 @@ import { SkillChips } from '@/src/components/shared/skill-chips';
 const Timeline = ({ elements = [], title = '' }) => (
   <>
     {title && (
-      <Title className='timeline-title' order={4}>
+      <Title className='timeline-title' order={2}>
         {title}
       </Title>
     )}
@@ -36,14 +36,14 @@ const Timeline = ({ elements = [], title = '' }) => (
           <HudFrame>
             <div className='timeline-card__body'>
               <div className='timeline-card__head'>
-                <Title className='timeline-card-title' order={5}>
+                <Title className='timeline-card-title' order={3}>
                   {element.title}
                 </Title>
                 <Text className='timeline-card__dates' component='span'>
                   {element.date}
                 </Text>
               </div>
-              <Title className='timeline-card-employer' order={6}>{element.employer}</Title>
+              <Title className='timeline-card-employer' order={4}>{element.employer}</Title>
               <ul className='timeline-card__description'>
                 {element.description.map((item) => (
                   <li key={item}>{item}</li>

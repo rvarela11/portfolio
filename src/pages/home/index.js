@@ -1,6 +1,6 @@
 // @vendors
 import React from 'react';
-import { Text, Title } from '@mantine/core';
+import { Text } from '@mantine/core';
 
 // @components
 import Page from '@/src/components/shared/page';
@@ -14,9 +14,9 @@ const Home = () => (
   <Page className='home-page'>
     <div className='home-page-content'>
       <NeonSign>Roberto Varela</NeonSign>
-      <Title className='home-page-content__title' order={4}>
+      <Text className='home-page-content__title'>
         Senior Front-End Engineer
-      </Title>
+      </Text>
       <div className='home-page-content__bio'>
         <Text>
           Senior front-end engineer with a passion for UI/UX, scaling platforms,
