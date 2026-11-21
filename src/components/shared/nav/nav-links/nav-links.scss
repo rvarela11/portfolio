@@ -18,11 +18,19 @@ $nav-link__cut: 12px;
   transition: all .2s linear;
   padding: 1rem 0.5rem;
 
-  // The panel's outer edge: teal left border and a clipped top-left corner
+  // The panel's outer edge: teal left border and a clipped top-left corner.
+  // The clip runs 1px past the right and bottom so it only cuts the corner: the link's width is fractional,
+  // and a clip edge there is anti-aliased, leaving a see-through seam next to the following link.
   &:first-child {
     padding-left: 1rem;
     border-left: 1px solid $color__mid-green;
-    clip-path: polygon(#{$nav-link__cut} 0, 100% 0, 100% 100%, 0 100%, 0 #{$nav-link__cut});
+    clip-path: polygon(
+      #{$nav-link__cut} 0,
+      calc(100% + 1px) 0,
+      calc(100% + 1px) calc(100% + 1px),
+      0 calc(100% + 1px),
+      0 #{$nav-link__cut}
+    );
   }
 
   &:focus-visible {
