@@ -14,16 +14,16 @@ $nav-link__cut: 12px;
   align-items: center;
   justify-content: center;
   background-color: $color__mid-gray;
-  border-bottom: 1px solid $color__mid-green;
+  border-bottom: 1px solid rgba($color__light-green, 0.6);
   transition: all .2s linear;
   padding: 1rem 0.5rem;
 
-  // The panel's outer edge: teal left border and a clipped top-left corner.
+  // The panel's outer edge: cyan left border and a clipped top-left corner.
   // The clip runs 1px past the right and bottom so it only cuts the corner: the link's width is fractional,
   // and a clip edge there is anti-aliased, leaving a see-through seam next to the following link.
   &:first-child {
     padding-left: 1rem;
-    border-left: 1px solid $color__mid-green;
+    border-left: 1px solid rgba($color__light-green, 0.6);
     clip-path: polygon(
       #{$nav-link__cut} 0,
       calc(100% + 1px) 0,
