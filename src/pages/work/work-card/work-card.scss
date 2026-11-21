@@ -1,7 +1,7 @@
 /* @styles */
-@import '~/styles/animations.scss';
-@import '~/styles/breakpoints.scss';
-@import '~/styles/colors.scss';
+@import 'styles/animations.scss';
+@import 'styles/breakpoints.scss';
+@import 'styles/colors.scss';
 
 .work-card {
   @include animista-fade-in();
