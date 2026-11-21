@@ -1,6 +1,7 @@
 // @vendors
 import React from 'react';
 import { CacheProvider } from '@emotion/react';
+import { MantineProvider } from '@mantine/core';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { loadBasic } from '@tsparticles/basic';
 import { loadExternalRepulseInteraction } from '@tsparticles/interaction-external-repulse';
@@ -22,6 +23,9 @@ import createEmotionCache from '@/utility/createEmotionCache';
 
 // @styles
 import mainTheme from '../styles/theme/main';
+import { mantineCssVariablesResolver, mantineTheme } from '../styles/theme/mantine';
+// Layered so unlayered styles (SCSS, MUI) win over Mantine's base styles while both libraries are installed
+import '@mantine/core/styles.layer.css';
 import '@/styles/globals.scss';
 
 const clientSideEmotionCache = createEmotionCache();
@@ -39,16 +43,18 @@ const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }) =>
 
   return (
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={mainTheme}>
-        <CssBaseline />
-        {prefersReducedMotion === false && (
-          <ParticlesProvider init={loadParticlesPlugins}>
-            <Particles id='tsparticles' options={PARTICLES_JSON} />
-          </ParticlesProvider>
-        )}
-        <Nav />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <MantineProvider cssVariablesResolver={mantineCssVariablesResolver} forceColorScheme='dark' theme={mantineTheme}>
+        <ThemeProvider theme={mainTheme}>
+          <CssBaseline />
+          {prefersReducedMotion === false && (
+            <ParticlesProvider init={loadParticlesPlugins}>
+              <Particles id='tsparticles' options={PARTICLES_JSON} />
+            </ParticlesProvider>
+          )}
+          <Nav />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </MantineProvider>
     </CacheProvider>
   );
 };
