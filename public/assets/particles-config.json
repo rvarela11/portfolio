@@ -1,7 +1,7 @@
 {
   "detectRetina": true,
   "interactivity": {
-    "detectsOn": "canvas",
+    "detectsOn": "window",
     "events": {
       "onClick": {
         "enable": false
@@ -26,7 +26,7 @@
       "color": "#05d9e8",
       "distance": 150,
       "enable": true,
-      "opacity": 0.4,
+      "opacity": 0.2,
       "width": 1
     },
     "move": {
@@ -34,7 +34,7 @@
       "enable": true,
       "outModes": "out",
       "random": false,
-      "speed": 4,
+      "speed": 1,
       "straight": false
     },
     "number": {
@@ -46,7 +46,7 @@
       "value": 80
     },
     "opacity": {
-      "value": 0.5
+      "value": 0.25
     },
     "paint": {
       "fill": {

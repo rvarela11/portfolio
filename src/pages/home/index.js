@@ -4,6 +4,7 @@ import { Text, Title } from '@mantine/core';
 
 // @components
 import Page from '@/src/components/shared/page';
+import { NeonSign } from './neon-sign';
 import Timeline from './timeline';
 
 // @constants
@@ -12,11 +13,9 @@ import { EXPERIENCES, PROJECTS } from './timeline/constants';
 const Home = () => (
   <Page className='home-page'>
     <div className='home-page-content'>
-      <Title className='home-page-content__name' order={1}>
-        Roberto Varela
-      </Title>
+      <NeonSign>Roberto Varela</NeonSign>
       <Title className='home-page-content__title' order={4}>
-        SENIOR FRONT-END ENGINEER
+        Senior Front-End Engineer
       </Title>
       <div className='home-page-content__bio'>
         <Text>

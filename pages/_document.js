@@ -7,7 +7,7 @@ const Document = () => (
   <Html lang="en" {...mantineHtmlProps}>
     <Head>
       <ColorSchemeScript forceColorScheme="dark" />
-      <meta content="#1976d2" name="theme-color" />
+      <meta content="#141416" name="theme-color" />
     </Head>
     <body>
       <Main />
