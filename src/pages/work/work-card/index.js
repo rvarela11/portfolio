@@ -1,6 +1,6 @@
 // @vendors
 import React from 'react';
-import { Button, ButtonBase, Typography } from '@mui/material';
+import { Button, Text, UnstyledButton } from '@mantine/core';
 import { IconExternalLink } from '@tabler/icons-react';
 
 // @components
@@ -12,29 +12,30 @@ const WorkCard = ({ handleWorkCardClick, ...project }) => {
 
   return (
     <Card key={title} className='work-card'>
-      <ButtonBase className='work-card__image' onClick={() => handleWorkCardClick(project)}>
+      <UnstyledButton className='work-card__image' onClick={() => handleWorkCardClick(project)}>
         <Image
           alt={`${title} project`}
           height={600}
           src={images?.project || ''}
           width={700}
         />
-      </ButtonBase>
+      </UnstyledButton>
       <CardContent className='work-card__content'>
         <div>
-          <Typography className='work-card__content-title'>{title}</Typography>
-          <Typography className='work-card__content-tech' variant='subtitle2'>{tech.join(' / ')}</Typography>
+          <Text className='work-card__content-title'>{title}</Text>
+          <Text className='work-card__content-tech'>{tech.join(' / ')}</Text>
         </div>
         <div className='work-card__content-actions'>
           {
             Object.entries(links).map(([label, link]) => (
               <Button
                 key={label}
+                className='work-card__action'
+                classNames={{ section: 'work-card__action-icon' }}
                 component='a'
                 href={link}
-                startIcon={<IconExternalLink size={20} />}
+                leftSection={<IconExternalLink size={20} />}
                 target='_blank'
-                variant='contained'
               >
                 {label}
               </Button>

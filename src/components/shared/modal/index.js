@@ -1,14 +1,14 @@
 // @vendors
 import React from 'react';
-import { useMediaQuery, useTheme } from '@mui/material';
+import { useMediaQuery } from '@mantine/hooks';
 
 // @components
 import MainDrawer from './drawer';
 import MainModal from './modal';
 
 const Modal = ({ children, ...props }) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  // Same breakpoint as MUI's down('md')
+  const isMobile = useMediaQuery('(max-width: 899.95px)');
 
   if (isMobile) {
     return <MainDrawer {...props}>{children}</MainDrawer>;

@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Link as MUILink } from '@mui/material';
+import { Anchor } from '@mantine/core';
 import classnames from 'classnames';
 
 // @utils
@@ -30,7 +30,7 @@ const NavLinks = ({ className = '' }) => {
           </Link>
         ))
       }
-      <MUILink
+      <Anchor
         aria-label='Download resume'
         className={`nav__link ${className}`.trim()}
         color='inherit'
@@ -39,10 +39,10 @@ const NavLinks = ({ className = '' }) => {
         underline='none'
       >
         Resume
-      </MUILink>
+      </Anchor>
       {
         Object.entries(SOCIAL_LINKS).map(([label, link]) => (
-          <MUILink
+          <Anchor
             key={link}
             aria-label={`${label} link`}
             className={`nav__link ${className}`.trim()}
@@ -52,7 +52,7 @@ const NavLinks = ({ className = '' }) => {
             target='_blank'
           >
             {SOCIAL_ICONS[label]}
-          </MUILink>
+          </Anchor>
         ))
       }
     </>

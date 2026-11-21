@@ -1,7 +1,9 @@
 /* @styles */
 @import 'styles/colors.scss';
+@import 'styles/typography.scss';
 
-.timeline-title.MuiTypography-root {
+.timeline-title {
+  @include typography-h4;
   // NOTE: Matching CSS properties from .vertical-timeline class
   width: 95%;
   max-width: 1170px;
@@ -28,11 +30,17 @@
   padding-left: 1rem;
 }
 
-.timeline-card-title.MuiTypography-root {
+.timeline-card-title {
+  @include typography-h5;
   color: $color__dark-pink;
 }
 
-.timeline-card-skills.MuiTypography-root {
+.timeline-card-employer {
+  @include typography-h6;
+}
+
+// Specific enough to beat the timeline library's `.vertical-timeline-element-content p` font size and margin
+.timeline-card .timeline-card-skills {
   margin: 1rem 0;
   font-size: 1rem;
 }

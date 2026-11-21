@@ -1,7 +1,6 @@
 // @vendors
 import React from 'react';
-import { Box, Drawer, IconButton } from '@mui/material';
-import { IconX } from '@tabler/icons-react';
+import { Box, Drawer } from '@mantine/core';
 
 const MainDrawer = ({
   children,
@@ -10,20 +9,20 @@ const MainDrawer = ({
   open = false,
 }) => (
   <Drawer
-    anchor='right'
-    className='main-drawer'
-    ModalProps={{ keepMounted: true }}
-    open={open || false}
+    classNames={{
+      body: 'main-drawer__body',
+      close: 'main-drawer__close',
+      content: 'main-drawer',
+      header: 'main-drawer__header',
+    }}
+    closeButtonProps={{ 'aria-label': 'Close', iconSize: 32, size: 32 }}
+    keepMounted
+    onClose={handleModalClose}
+    opened={open}
+    overlayProps={{ backgroundOpacity: 0.5, color: '#000' }}
+    position='right'
+    size='100%'
   >
-    <div className='main-drawer__close'>
-      <IconButton
-        color='inherit'
-        disableRipple
-        onClick={handleModalClose}
-      >
-        <IconX />
-      </IconButton>
-    </div>
     <Box className={`main-drawer__content ${className}`.trim()}>
       { open && children }
     </Box>

@@ -3,6 +3,7 @@
 
 /* @styles */
 @import 'styles/colors.scss';
+@import 'styles/typography.scss';
 @import './timeline/timeline.scss';
 
 .page.home-page {
@@ -20,11 +21,13 @@
   min-height: 70vh;
 }
 
-.home-page-content__name.MuiTypography-root {
+.home-page-content__name {
+  @include typography-h2;
   font-family: 'Orbitron', sans-serif;
 }
 
-.home-page-content__title.MuiTypography-root {
+.home-page-content__title {
+  @include typography-h4;
   font-weight: 300;
   color: $color__dark-pink;
 }
@@ -33,7 +36,7 @@
   max-width: 700px;
 }
 
-.home-page-content__bio .MuiTypography-root {
-  margin: 0;
+.home-page-content__bio p {
+  @include typography-body1;
   font-size: 1.5rem;
 }

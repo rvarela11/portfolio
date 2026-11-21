@@ -1,0 +1,4 @@
+// While loading, keep the image off the text baseline so the placeholder is exactly the image's size
+.skeleton img {
+  display: block;
+}

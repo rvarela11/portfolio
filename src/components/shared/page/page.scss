@@ -1,4 +1,8 @@
-.page-title.MuiTypography-root {
+/* @styles */
+@import 'styles/typography.scss';
+
+.page-title {
+  @include typography-h2;
   font-family: "Orbitron", sans-serif;
   margin-bottom: 2rem;
 }

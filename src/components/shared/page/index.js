@@ -1,6 +1,6 @@
 // @vendors
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Title } from '@mantine/core';
 
 // @components
 import SEO from '../SEO';
@@ -9,7 +9,7 @@ const Page = ({ children, className = '', SEOProps = {}, title = '' }) => (
   <>
     <SEO {...SEOProps} />
     <section className={`page ${className}`.trim()}>
-      {title && <Typography className='page-title' variant='h2'>{title}</Typography>}
+      {title && <Title className='page-title' order={2}>{title}</Title>}
       {children}
     </section>
   </>

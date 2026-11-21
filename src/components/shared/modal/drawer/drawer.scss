@@ -3,29 +3,18 @@
 @import '../modal/modal.scss';
 
 .main-drawer {
-  display: flex;
-  flex-direction: column;
-
-  .MuiDrawer-paper {
-    width: 100%;
-    background: $color__dark-gray;
-    padding: 1rem;
-    gap: 1rem;
-  }
+  background: $color__dark-gray;
 }
 
-.main-drawer__close {
-  display: flex;
+.main-drawer__header {
   justify-content: flex-end;
+  min-height: 0;
+  padding: 1.5rem 1rem 0.5rem;
+  background: $color__dark-gray;
+}
 
-  .MuiButtonBase-root {
-    padding-right: 0;
-  }
-
-  svg {
-    width: 2rem;
-    height: 2rem;
-  }
+.main-drawer__body {
+  padding: 1rem;
 }
 
 .main-drawer__content {
