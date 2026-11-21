@@ -24,7 +24,7 @@ import createEmotionCache from '@/utility/createEmotionCache';
 // @styles
 import mainTheme from '../styles/theme/main';
 import { mantineCssVariablesResolver, mantineTheme } from '../styles/theme/mantine';
-// Layered so unlayered styles (SCSS, MUI) win over Mantine's base styles while both libraries are installed
+// Layered so the site's own SCSS wins over Mantine's base styles
 import '@mantine/core/styles.layer.css';
 import '@/styles/globals.scss';
 
