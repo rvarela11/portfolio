@@ -6,7 +6,7 @@ import Head from 'next/head';
 import { SOCIAL_LINKS } from '@/src/utils/links';
 
 const DEFAULT_DESCRIPTION = 'Roberto Varela is a senior front-end engineer with a passion for UI/UX, scaling platforms, and creating intuitive and dynamic user experiences.';
-const DEFAULT_TITLE = 'Roberto Varela | Senior Front-End Engineer';
+const DEFAULT_TITLE = 'Roberto Varela';
 const SITE_URL = 'https://www.robertvarela.com';
 
 // Describes Roberto for search engines, so a search for his name can link this site to his GitHub and LinkedIn
