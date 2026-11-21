@@ -7,7 +7,9 @@ import {
 } from 'react-vertical-timeline-component';
 
 // @components
+import { HudFrame } from '@/src/components/shared/hud-frame';
 import Image from '@/src/components/shared/image';
+import { SkillChips } from '@/src/components/shared/skill-chips';
 
 const Timeline = ({ elements = [], title = '' }) => (
   <>
@@ -17,14 +19,13 @@ const Timeline = ({ elements = [], title = '' }) => (
       </Title>
     )}
     <VerticalTimeline layout='1-column-left'>
-      {elements.map((element, index) => (
+      {elements.map((element) => (
         <VerticalTimelineElement
-          key={index}
+          key={`${element.employer}-${element.date}`}
           className='timeline-card'
-          date={element.date}
           icon={
             <Image
-              alt={`${element.title} logo`}
+              alt={`${element.employer} logo`}
               className='timeline-card__image'
               height={200}
               src={element?.image ?? ''}
@@ -32,18 +33,25 @@ const Timeline = ({ elements = [], title = '' }) => (
             />
           }
         >
-          <Title className='timeline-card-title' order={5}>
-            {element.title}
-          </Title>
-          <Title className='timeline-card-employer' order={6}>{element.employer}</Title>
-          <ul>
-            {element.description.map((item, i) => (
-              <li key={`description-${index}-${i}`}>{item}</li>
-            ))}
-          </ul>
-          <Text className='timeline-card-skills'>
-            {element.skills.join(' - ')}
-          </Text>
+          <HudFrame>
+            <div className='timeline-card__body'>
+              <div className='timeline-card__head'>
+                <Title className='timeline-card-title' order={5}>
+                  {element.title}
+                </Title>
+                <Text className='timeline-card__dates' component='span'>
+                  {element.date}
+                </Text>
+              </div>
+              <Title className='timeline-card-employer' order={6}>{element.employer}</Title>
+              <ul className='timeline-card__description'>
+                {element.description.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <SkillChips skills={element.skills} />
+            </div>
+          </HudFrame>
         </VerticalTimelineElement>
       ))}
     </VerticalTimeline>

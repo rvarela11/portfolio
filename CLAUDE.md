@@ -20,7 +20,7 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 ### Directory Structure
 
 - `/pages` - Next.js page routes (_app.js, _document.js, index.js, work.js)
-- `/src/components/shared` - Reusable components (Page, Card, Modal, Image, SEO, Nav)
+- `/src/components/shared` - Reusable components (Page, HudFrame, SkillChips, Modal, Image, SEO, Nav)
 - `/src/pages` - Page-level components with their constants (home/, work/)
 - `/src/utils` - Utility exports (icons, links, routes)
 - `/styles` - Global SCSS, type styles (`typography.scss`), breakpoints, and the Mantine theme (`theme/mantine.js`)
