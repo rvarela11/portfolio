@@ -1,9 +1,13 @@
 // @vendors
 import { createTheme, Drawer, Modal } from '@mantine/core';
 
-// Above the fixed nav (z-index 1000 in src/components/shared/nav/nav.scss)
-const OVERLAY_Z_INDEX = 1300;
+// Shared by every Modal and Drawer: a 50% black backdrop, above the fixed nav (z-index 1000 in src/components/shared/nav/nav.scss)
+const OVERLAY_DEFAULT_PROPS = {
+  overlayProps: { backgroundOpacity: 0.5, color: '#000' },
+  zIndex: 1300,
+};
 
+// Same values as $color__dark-gray and $color__light-gray in styles/colors.scss; keep the two in sync
 export const mantineCssVariablesResolver = () => ({
   dark: {
     '--mantine-color-body': '#141416',
@@ -25,8 +29,8 @@ export const mantineTheme = createTheme({
   },
   /* eslint-enable perfectionist/sort-objects */
   components: {
-    Drawer: Drawer.extend({ defaultProps: { zIndex: OVERLAY_Z_INDEX } }),
-    Modal: Modal.extend({ defaultProps: { zIndex: OVERLAY_Z_INDEX } }),
+    Drawer: Drawer.extend({ defaultProps: OVERLAY_DEFAULT_PROPS }),
+    Modal: Modal.extend({ defaultProps: OVERLAY_DEFAULT_PROPS }),
   },
   cursorType: 'pointer',
   fontFamily: '"Helvetica Neue", sans-serif',

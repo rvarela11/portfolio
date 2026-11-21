@@ -19,7 +19,6 @@ const MainModal = ({
     closeButtonProps={{ 'aria-label': 'Close', iconSize: 32, size: 32 }}
     onClose={handleModalClose}
     opened={open}
-    overlayProps={{ backgroundOpacity: 0.5, color: '#000' }}
     size={1090}
   >
     { open && children }

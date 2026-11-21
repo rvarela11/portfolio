@@ -19,7 +19,6 @@ const MainDrawer = ({
     keepMounted
     onClose={handleModalClose}
     opened={open}
-    overlayProps={{ backgroundOpacity: 0.5, color: '#000' }}
     position='right'
     size='100%'
   >
