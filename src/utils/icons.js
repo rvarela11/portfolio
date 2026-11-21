@@ -1,8 +1,8 @@
 // @vendors
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
+// react-icons for the brand marks: they match the previous MUI icons (circled GitHub mark, square LinkedIn)
 export const SOCIAL_ICONS = {
-  github: <GitHubIcon />,
-  linkedin: <LinkedInIcon />,
+  github: <FaGithub size={24} />,
+  linkedin: <FaLinkedin size={24} />,
 };

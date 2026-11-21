@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
+import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
 
 // @utility
 import createEmotionCache from '@/utility/createEmotionCache';
@@ -12,8 +13,9 @@ import theme from '../styles/theme/main';
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="en" {...mantineHtmlProps}>
         <Head>
+          <ColorSchemeScript forceColorScheme="dark" />
           {/* PWA primary color */}
           <meta content={theme.palette.primary.main} name="theme-color" />
           <meta content="" name="emotion-insertion-point" />

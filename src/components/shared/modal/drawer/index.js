@@ -1,7 +1,7 @@
 // @vendors
 import React from 'react';
-import CloseIcon from '@mui/icons-material/Close';
 import { Box, Drawer, IconButton } from '@mui/material';
+import { IconX } from '@tabler/icons-react';
 
 const MainDrawer = ({
   children,
@@ -21,7 +21,7 @@ const MainDrawer = ({
         disableRipple
         onClick={handleModalClose}
       >
-        <CloseIcon />
+        <IconX />
       </IconButton>
     </div>
     <Box className={`main-drawer__content ${className}`.trim()}>

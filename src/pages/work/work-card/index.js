@@ -1,7 +1,7 @@
 // @vendors
 import React from 'react';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Button, ButtonBase, Typography } from '@mui/material';
+import { IconExternalLink } from '@tabler/icons-react';
 
 // @components
 import { Card, CardContent } from '@/src/components/shared/card';
@@ -32,7 +32,7 @@ const WorkCard = ({ handleWorkCardClick, ...project }) => {
                 key={label}
                 component='a'
                 href={link}
-                startIcon={<OpenInNewIcon />}
+                startIcon={<IconExternalLink size={20} />}
                 target='_blank'
                 variant='contained'
               >
