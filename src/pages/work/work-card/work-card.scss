@@ -50,6 +50,10 @@
   text-wrap: balance;
 }
 
+.work-card__tech {
+  margin-top: 0.4rem;
+}
+
 .work-card__link {
   &::after {
     content: '';
