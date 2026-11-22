@@ -185,7 +185,7 @@ export const PROJECTS = [
     links: {
       code: 'https://github.com/rvarela11/portfolio',
     },
-    outcome: 'Live at robertvarela.com. The 2026 rebuild shipped in 33 pull requests over three days, each one reviewed before it merged.',
+    outcome: 'Live at robertvarela.com.',
     role: 'Designer & Developer',
     slug: 'portfolio',
     summary: 'This site: a cyberpunk-styled portfolio built with Next.js.',
