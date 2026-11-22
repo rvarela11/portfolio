@@ -13,6 +13,8 @@ yarn lint       # Run ESLint (Airbnb + Next.js + perfectionist rules)
 
 Use `yarn dev -H [IP address]` to expose the dev server on a specific IP.
 
+Verify changes with `yarn lint && yarn build`. There are no tests and no CI.
+
 ## Architecture Overview
 
 This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website using JavaScript (JSX), Mantine components, and SCSS for styling. Requires Node 20.9+ (`engines` in package.json).
@@ -40,9 +42,23 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 
 **Icons**: Tabler (`@tabler/icons-react`) in general; GitHub and LinkedIn come from `react-icons` (Font Awesome).
 
+**Deploy**: Vercel builds on Linux, which is case-sensitive; macOS isn't. Keep file and folder casing consistent and use `git mv` for case-only renames.
+
 ### Path Aliases
 
 `@/*` maps to the project root (configured in jsconfig.json).
+
+## Standards
+
+Meet WCAG 2.1 AA, stay responsive down to 320px, and respect `prefers-reduced-motion`. Gate JS-driven motion with `usePrefersReducedMotion` (`src/hooks/usePrefersReducedMotion.js`) and CSS motion with a `@media (prefers-reduced-motion: reduce)` block.
+
+## Conventions
+
+- Module-level constants that never change (fixed strings, data objects, maps) use `CONSTANT_CASE`: `ROUTES`, `SOCIAL_LINKS`, `QUERY`. Values built at runtime and anything inside a function stay camelCase.
+- Name an event handler `handle` + the event or action (`handleClick`, `handleModalClose`) and pass it to an `on`-prefixed prop (`onClose={handleModalClose}`). Callback props a component accepts keep the `on` prefix.
+- Import across folders with the `@/` alias. Keep relative paths only for `./` and a single `../`; never climb two or more folders.
+- A component used by one page gets its own folder under that page (`src/pages/home/neon-sign/`). A child component used by only one parent nests inside the parent's folder (`src/components/shared/modal/drawer/`). Hooks go in a `hooks/` folder beside the component (`src/pages/home/neon-sign/hooks/`).
+- Ask before adding dependencies or global styles (`styles/globals.scss`).
 
 ## Workflow
 
