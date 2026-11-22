@@ -15,7 +15,6 @@ const TECH = {
   reactRouter: 'React Router',
   redux: 'Redux',
   sass: 'Sass',
-  tsParticles: 'tsParticles',
   typeScript: 'TypeScript',
   vite: 'Vite',
   vitest: 'Vitest',
@@ -190,7 +189,7 @@ export const PROJECTS = [
     slug: 'portfolio',
     summary: 'This site: a cyberpunk-styled portfolio built with Next.js.',
     team: 'Solo, with Claude Code as a pair',
-    tech: [TECH.next, TECH.react, TECH.mantine, TECH.sass, TECH.tsParticles],
+    tech: [TECH.next, TECH.react, TECH.mantine, TECH.sass],
     title: 'Portfolio',
   },
 ];
