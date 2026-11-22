@@ -4,8 +4,18 @@
 @import 'styles/colors.scss';
 @import 'styles/typography.scss';
 
+// The wrapper carries the image button's focus ring: the HUD frame's clip-path would cut off a ring drawn on the frame or the button
 .work-card {
   @include animista-fade-in();
+
+  &:has(.work-card__image:focus-visible) {
+    outline: 2px dashed $color__light-green;
+    outline-offset: 4px;
+  }
+}
+
+.work-card__frame {
+  height: 100%;
 }
 
 .work-card .work-card__image {
@@ -13,6 +23,10 @@
   width: 100%;
   overflow: hidden;
   background-color: $color__black;
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .work-card__image img {
