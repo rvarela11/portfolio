@@ -24,7 +24,10 @@ const TECH = {
 
 export const PROJECTS = [
   {
-    description: 'Pay My Lawyer gives law firms one place to take payments by card, bank transfer, cash or check, send invoices, keep client records and book paid appointments. Firms sign up through a guided enrollment that verifies their business and owners with the payment provider they choose, Dwolla or Usio. Another team built it five years ago, but it never launched. The redesign runs in three phases: rebuild the website and enrollment on the existing backend, then the firm portal, then the backend itself.',
+    description: [
+      'Pay My Lawyer gives law firms one place to take payments by card, bank transfer, cash or check, send invoices, keep client records and book paid appointments. Firms sign up through a guided enrollment that verifies their business and owners with the payment provider they choose, Dwolla or Usio.',
+      'Another team built it five years ago, but it never launched. The redesign runs in three phases: rebuild the website and enrollment on the existing backend, then the firm portal, then the backend itself.',
+    ],
     highlights: [
       {
         text: 'A step-by-step setup with a separate path for each payment provider. Each screen checks only its own fields, and answers carry over when a firm switches providers.',
@@ -51,7 +54,7 @@ export const PROJECTS = [
       code: 'https://github.com/rvarela11/pay-my-lawyer',
       site: 'https://rvarela11.github.io/pay-my-lawyer/',
     },
-    outcome: 'Redesigning it for Pizaña Law Firm, an immigration practice in Brownsville, Texas. Phase 1, the website and enrollment, is in progress.',
+    outcome: 'Redesigning it for Pizaña Law Firm, an immigration practice in Brownsville, Texas.',
     phases: [
       { status: PHASE_STATUS.inProgress, title: 'Website and enrollment' },
       { status: PHASE_STATUS.next, title: 'Portal' },
@@ -74,7 +77,9 @@ export const PROJECTS = [
     title: 'Pay My Lawyer',
   },
   {
-    description: 'MV3 sold 6,500 collectible 3D characters, each one owned on the blockchain, as the cast of a cinematic universe its collectors could take part in. Collectors connected a MetaMask wallet to mint, browse the full cast, track what they owned, and reveal new characters.',
+    description: [
+      'MV3 sold 6,500 collectible 3D characters, each one owned on the blockchain, as the cast of a cinematic universe its collectors could take part in. Collectors connected a MetaMask wallet to mint, browse the full cast, track what they owned, and reveal new characters.',
+    ],
     highlights: [
       {
         text: 'Led front-end development of both apps, the mint site and the main web app, guiding the team through code reviews, standards and technical decisions from inception to launch.',
@@ -125,7 +130,9 @@ export const PROJECTS = [
     title: 'MV3',
   },
   {
-    description: 'Camp Cosmos is a collection of 10,000 illustrated campers, each one owned on the blockchain, with art by Brooklyn illustrator Alexandra "Zutto." Its story centers on an alien anthropologist who breaks orders to help Earth face the climate crisis. The site introduces that world through its lore, the cosmos, the team and an FAQ, and gives collectors a page to mint.',
+    description: [
+      'Camp Cosmos is a collection of 10,000 illustrated campers, each one owned on the blockchain, with art by Brooklyn illustrator Alexandra "Zutto." Its story centers on an alien anthropologist who breaks orders to help Earth face the climate crisis. The site introduces that world through its lore, the cosmos, the team and an FAQ, and gives collectors a page to mint.',
+    ],
     highlights: [
       {
         text: 'Tabbed sections with flip cards for each team member, the artist and the development partner.',
@@ -157,7 +164,9 @@ export const PROJECTS = [
     title: 'Camp Cosmos',
   },
   {
-    description: "The site you're on. First built in 2023, it was rebuilt in 2026 with a cyberpunk look (a neon-sign name, cards framed as heads-up display panels, a drifting particle background) without giving up accessibility.",
+    description: [
+      "The site you're on. First built in 2023, it was rebuilt in 2026 with a cyberpunk look (a neon-sign name, cards framed as heads-up display panels, a drifting particle background) without giving up accessibility.",
+    ],
     highlights: [
       {
         text: 'The name in the hero flickers like a neon sign, and holds steady for visitors who prefer reduced motion.',

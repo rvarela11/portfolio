@@ -22,7 +22,7 @@ import { ROUTES } from '@/src/utils/routes';
 
 export const Project = ({ slug = '' }) => {
   const {
-    description = '',
+    description = [],
     highlights = [],
     images = {},
     links = {},
@@ -52,23 +52,32 @@ export const Project = ({ slug = '' }) => {
       </Link>
       <Title className='page-title project-page__title' order={1}>{title}</Title>
       <Text className='project-page__summary'>{summary}</Text>
-      <ProjectLinks links={links} />
       <HudFrame className='project-page__screenshot'>
         <Image alt={`Screenshot of the ${title} site`} height={1207} src={images.site ?? ''} width={2180} />
       </HudFrame>
-      <ProjectFacts role={role} team={team} tech={tech} />
-      <Text className='project-page__text'>{description}</Text>
-      <section className='project-page__section'>
-        <Title className='project-page__heading' order={2}>Outcome</Title>
-        <Text className='project-page__text'>{outcome}</Text>
-      </section>
-      {phases.length > 0 && <ProjectPhases phases={phases} />}
-      <section className='project-page__section'>
-        <Title className='project-page__heading' order={2}>Highlights</Title>
-        {highlights.map((highlight) => (
-          <ProjectHighlight key={highlight.title} projectTitle={title} {...highlight} />
-        ))}
-      </section>
+      {/* The aside comes first so narrow screens show the facts before the story; on wide screens it moves to the right column */}
+      <div className='project-page__layout'>
+        <aside className='project-page__aside'>
+          <ProjectFacts role={role} team={team} tech={tech} />
+          <ProjectLinks links={links} />
+        </aside>
+        <div className='project-page__main'>
+          {description.map((paragraph) => (
+            <Text key={paragraph} className='project-page__text'>{paragraph}</Text>
+          ))}
+          <section className='project-page__section'>
+            <Title className='project-page__heading' order={2}>Outcome</Title>
+            <Text className='project-page__text'>{outcome}</Text>
+          </section>
+          {phases.length > 0 && <ProjectPhases phases={phases} />}
+          <section className='project-page__section'>
+            <Title className='project-page__heading' order={2}>Highlights</Title>
+            {highlights.map((highlight) => (
+              <ProjectHighlight key={highlight.title} projectTitle={title} {...highlight} />
+            ))}
+          </section>
+        </div>
+      </div>
     </Page>
   );
 };

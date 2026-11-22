@@ -1,4 +1,5 @@
 /* @styles */
+@import 'styles/breakpoints.scss';
 @import 'styles/colors.scss';
 @import 'styles/typography.scss';
 @import './project-facts/project-facts.scss';
@@ -32,7 +33,7 @@
 }
 
 .project-page__screenshot {
-  max-width: 1100px;
+  max-width: 960px;
   margin-top: 2rem;
 }
 
@@ -41,9 +42,38 @@
   width: 100%;
 }
 
+.project-page__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 4rem;
+  max-width: 960px;
+  margin-top: 3rem;
+}
+
+// Sits in the right column and stays in view while the story scrolls; top clears the fixed nav
+.project-page__aside {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  position: sticky;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-page__main {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 .project-page__text {
   @include typography-body1;
   max-width: 65ch;
+
+  & + & {
+    margin-top: 1rem;
+  }
 }
 
 .project-page__section {
@@ -51,10 +81,26 @@
 }
 
 .project-page__heading {
-  @include typography-h4;
+  @include typography-h5;
   margin-bottom: 1rem;
   font-family: 'Orbitron', sans-serif;
   font-weight: 500;
+}
+
+@media screen and (max-width: $breakpoints__md) {
+  .project-page__layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .project-page__aside,
+  .project-page__main {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .project-page__aside {
+    position: static;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
