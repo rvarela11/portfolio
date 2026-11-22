@@ -5,7 +5,6 @@ import { Text, Title } from '@mantine/core';
 import { IconChevronLeft } from '@tabler/icons-react';
 
 // @components
-import { HudFrame } from '@/src/components/shared/hud-frame';
 import Image from '@/src/components/shared/image';
 import Page from '@/src/components/shared/page';
 import { SITE_URL } from '@/src/components/shared/SEO';
@@ -52,9 +51,9 @@ export const Project = ({ slug = '' }) => {
       </Link>
       <Title className='page-title project-page__title' order={1}>{title}</Title>
       <Text className='project-page__summary'>{summary}</Text>
-      <HudFrame className='project-page__screenshot'>
+      <div className='project-page__screenshot'>
         <Image alt={`Screenshot of the ${title} site`} height={1207} src={images.site ?? ''} width={2180} />
-      </HudFrame>
+      </div>
       <div className='project-page__layout'>
         <aside className='project-page__aside'>
           <ProjectFacts role={role} team={team} tech={tech} />
