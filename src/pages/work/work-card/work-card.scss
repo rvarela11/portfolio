@@ -17,8 +17,9 @@
   }
 }
 
+// A wide crop keeps the cards short; the image covers the strip, centered
 .work-card__image {
-  aspect-ratio: 7 / 6;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background-color: $color__black;
 
