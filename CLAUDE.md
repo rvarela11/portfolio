@@ -53,6 +53,8 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 
 Meet WCAG 2.1 AA, stay responsive down to 320px, and respect `prefers-reduced-motion`. Gate JS-driven motion with `usePrefersReducedMotion` (`src/hooks/usePrefersReducedMotion.js`) and CSS motion with a `@media (prefers-reduced-motion: reduce)` block.
 
+Known exception: the background particle network drifts continuously with no pause control, which falls short of WCAG 2.2.2 (Pause, Stop, Hide). This is accepted on purpose (#60), and visitors who prefer reduced motion get no particles at all. Don't re-raise it in reviews or audits.
+
 When an element shows keyboard focus with a ring (the nav links, the neon sign), the ring is always dashed cyan (`$color__light-green`), never solid or another color. Consistency comes first. Focus that fills the element instead, like the pink CODE/SITE buttons, is fine.
 
 ## Conventions
