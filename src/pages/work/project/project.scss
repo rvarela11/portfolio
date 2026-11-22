@@ -37,10 +37,13 @@
   font-weight: 400;
 }
 
-// A faint cyan glow outlines every screenshot, so dark sites keep their edges against the dark page and the panels
-.project-screenshot {
-  box-shadow: 0 0 0 1px rgba($color__light-green, 0.08), 0 0 48px rgba($color__light-green, 0.18);
+// A panel-colored mat keeps dark sites from blending into the page; highlight screenshots get the same look from their panel's padding
+.project-page__screenshot {
+  padding: 12px;
+  background: $color__panel;
+}
 
+.project-screenshot {
   .image {
     display: block;
     width: 100%;

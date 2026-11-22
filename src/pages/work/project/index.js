@@ -52,7 +52,7 @@ export const Project = ({ slug = '' }) => {
         <Title className='page-title project-page__title' order={1}>{title}</Title>
         <Text className='project-page__summary'>{summary}</Text>
         <ProjectFacts links={links} role={role} team={team} tech={tech} />
-        <div className='project-screenshot'>
+        <div className='project-screenshot project-page__screenshot'>
           <Image alt={`Screenshot of the ${title} site`} height={1207} src={images.site ?? ''} width={2180} />
         </div>
         <div className='project-page__description'>
