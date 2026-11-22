@@ -10,6 +10,7 @@ import { ProjectLinks } from '../project-links';
 export const ProjectFacts = ({
   links = {},
   linksNote = '',
+  projectTitle = '',
   role = '',
   team = '',
   tech = [],
@@ -32,7 +33,7 @@ export const ProjectFacts = ({
           </dd>
         </div>
       </dl>
-      <ProjectLinks links={links} />
+      <ProjectLinks links={links} projectTitle={projectTitle} />
       {linksNote && <Text className='project-facts__note'>{linksNote}</Text>}
     </div>
   </HudFrame>
