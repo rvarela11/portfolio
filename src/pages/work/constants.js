@@ -162,7 +162,7 @@ export const PROJECTS = [
   },
   {
     description: [
-      "The site you're on. First built in 2023, it was rebuilt in 2026 with a cyberpunk look (a neon-sign name, cards framed as heads-up display panels, a drifting particle background) without giving up accessibility.",
+      "The site you're on. A cyberpunk look (a neon-sign name, cards framed as heads-up display panels, a drifting particle background) without giving up accessibility.",
     ],
     highlights: [
       {
