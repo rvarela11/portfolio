@@ -22,6 +22,8 @@ const Work = () => {
     selected: {},
   });
 
+  const modalTitle = work.selected.title ? `${work.selected.title} screenshot` : '';
+
   const handleModalClose = () => {
     setWork((prevState) => ({
       ...prevState,
@@ -48,6 +50,7 @@ const Work = () => {
         handleModalClose={handleModalClose}
         Modal={{ className: 'work-modal' }}
         open={work.isModalOpen}
+        title={modalTitle}
       >
         <WorkModalCard selected={work.selected} />
       </Modal>

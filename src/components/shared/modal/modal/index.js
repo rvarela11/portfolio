@@ -1,12 +1,13 @@
 // @vendors
 import React from 'react';
-import { Modal } from '@mantine/core';
+import { Modal, VisuallyHidden } from '@mantine/core';
 
 const MainModal = ({
   children,
   handleModalClose = () => {},
   Modal: { className = '' } = {},
   open = false,
+  title = '',
 }) => (
   <Modal
     centered
@@ -20,6 +21,7 @@ const MainModal = ({
     onClose={handleModalClose}
     opened={open}
     size={1090}
+    title={title && <VisuallyHidden>{title}</VisuallyHidden>}
   >
     { open && children }
   </Modal>
