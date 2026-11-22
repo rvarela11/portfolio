@@ -1,6 +1,6 @@
 // @vendors
 import React from 'react';
-import { Title } from '@mantine/core';
+import { Container, Title } from '@mantine/core';
 
 // @components
 import Page from '@/src/components/shared/page';
@@ -17,7 +17,7 @@ const SEO_PROPS = {
 
 const Work = () => (
   <Page SEOProps={SEO_PROPS}>
-    <div className='work-page__container'>
+    <Container px={0} size={1100}>
       <Title className='page-title' order={1}>Work</Title>
       <ul className='work-page-grid'>
         {PROJECTS.map((project) => (
@@ -26,7 +26,7 @@ const Work = () => (
           </li>
         ))}
       </ul>
-    </div>
+    </Container>
   </Page>
 );
 

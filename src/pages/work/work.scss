@@ -4,12 +4,6 @@
 @import './work-card/work-card.scss';
 @import './work-modal-card/work-modal-card.scss';
 
-// Same centered width as the project pages, so the list and its pages line up
-.work-page__container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 // A list of cards, two per row, one on narrow screens
 .work-page-grid {
   display: grid;
