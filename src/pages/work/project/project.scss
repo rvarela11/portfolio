@@ -1,9 +1,9 @@
 /* @styles */
-@import 'styles/breakpoints.scss';
 @import 'styles/colors.scss';
 @import 'styles/typography.scss';
 @import './project-facts/project-facts.scss';
 @import './project-highlight/project-highlight.scss';
+@import './project-highlights/project-highlights.scss';
 @import './project-links/project-links.scss';
 @import './project-outcome/project-outcome.scss';
 @import './project-phases/project-phases.scss';
@@ -74,18 +74,6 @@
   margin-bottom: 1rem;
   font-family: 'Orbitron', sans-serif;
   font-weight: 500;
-}
-
-.project-page__highlights {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
-}
-
-@media screen and (max-width: $breakpoints__md) {
-  .project-page__highlights {
-    grid-template-columns: minmax(0, 1fr);
-  }
 }
 
 @media (hover: hover) and (pointer: fine) {

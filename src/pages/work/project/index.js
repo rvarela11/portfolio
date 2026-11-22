@@ -9,7 +9,7 @@ import Image from '@/src/components/shared/image';
 import Page from '@/src/components/shared/page';
 import { SITE_URL } from '@/src/components/shared/SEO';
 import { ProjectFacts } from './project-facts';
-import { ProjectHighlight } from './project-highlight';
+import { ProjectHighlights } from './project-highlights';
 import { ProjectOutcome } from './project-outcome';
 import { ProjectPhases } from './project-phases';
 
@@ -64,14 +64,7 @@ export const Project = ({ slug = '' }) => {
         </div>
         <ProjectOutcome text={outcome} />
         {phases.length > 0 && <ProjectPhases phases={phases} />}
-        <section className='project-page__section'>
-          <Title className='project-page__heading' order={2}>Highlights</Title>
-          <div className='project-page__highlights'>
-            {highlights.map((highlight) => (
-              <ProjectHighlight key={highlight.title} projectTitle={title} {...highlight} />
-            ))}
-          </div>
-        </section>
+        <ProjectHighlights highlights={highlights} projectTitle={title} />
       </div>
     </Page>
   );
