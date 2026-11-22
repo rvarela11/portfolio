@@ -9,6 +9,7 @@ const Image = ({
   alt = '',
   className = '',
   height = 0,
+  priority = false,
   quality = 75,
   src = '',
   width = 0,
@@ -22,6 +23,7 @@ const Image = ({
         className={`image ${className}`.trim()}
         height={height}
         onLoad={() => setLoading(false)}
+        priority={priority}
         quality={quality}
         src={src}
         width={width}

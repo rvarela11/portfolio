@@ -1,0 +1,21 @@
+/* @styles */
+@import 'styles/colors.scss';
+@import 'styles/typography.scss';
+
+// The result gets a cyan rule so it reads as the payoff, not one more paragraph
+.project-outcome {
+  max-width: 65ch;
+  margin-top: 2.5rem;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 3px solid $color__light-green;
+}
+
+.project-outcome__label {
+  @include typography-subtitle2;
+  margin-bottom: 0.25rem;
+  color: $color__light-green;
+}
+
+.project-outcome__text {
+  @include typography-body1;
+}

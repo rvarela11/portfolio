@@ -7,7 +7,7 @@ import { SOCIAL_LINKS } from '@/src/utils/links';
 
 const DEFAULT_DESCRIPTION = 'Roberto Varela is a senior front-end engineer with a passion for UI/UX, scaling platforms, and creating intuitive and dynamic user experiences.';
 const DEFAULT_TITLE = 'Roberto Varela';
-const SITE_URL = 'https://www.robertvarela.com';
+export const SITE_URL = 'https://www.robertvarela.com';
 
 // Describes Roberto for search engines, so a search for his name can link this site to his GitHub and LinkedIn
 const PERSON_SCHEMA = {
@@ -23,6 +23,8 @@ const PERSON_SCHEMA = {
 const SEO = ({
   description = DEFAULT_DESCRIPTION,
   image = `${SITE_URL}/images/RV_logo_black.png`,
+  imageHeight = 1061,
+  imageWidth = 1400,
   openGraphType = 'website',
   title = DEFAULT_TITLE,
   url = SITE_URL,
@@ -37,8 +39,8 @@ const SEO = ({
     <meta content={title} property='og:title' />
     <meta content={description} property='og:description' />
     <meta content={image} property='og:image' />
-    <meta content='1400' property='og:image:width' />
-    <meta content='1061' property='og:image:height' />
+    <meta content={imageWidth} property='og:image:width' />
+    <meta content={imageHeight} property='og:image:height' />
     <meta content={url} property='og:url' />
     <meta content={openGraphType} property='og:type' />
     <meta content='Roberto Varela' property='og:site_name' />

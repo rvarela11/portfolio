@@ -1,0 +1,74 @@
+/* @styles */
+@import 'styles/breakpoints.scss';
+@import 'styles/colors.scss';
+@import 'styles/typography.scss';
+
+// Mantine's Stepper, restyled: cyan for the phase in progress, muted dots and line for the rest
+.project-phases {
+  --stepper-color: #{$color__light-green};
+  --stepper-outline-color: #{rgba($color__light-gray, 0.15)};
+  --stepper-outline-thickness: 2px;
+}
+
+// Labels size to their text instead of wrapping at Mantine's four-icon max width
+.project-phases__step {
+  max-width: none;
+}
+
+.project-phases__icon {
+  @include typography-subtitle2;
+  color: rgba($color__light-gray, 0.7);
+  background: $color__dark-gray;
+  border: 2px solid rgba($color__light-gray, 0.3);
+  border-radius: 50%;
+
+  &[data-progress] {
+    color: $color__light-green;
+    border-color: $color__light-green;
+  }
+}
+
+.project-phases__body {
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.project-phases__title {
+  @include typography-body1;
+}
+
+.project-phases__status {
+  @include typography-subtitle2;
+  margin: 0;
+  color: rgba($color__light-gray, 0.7);
+}
+
+.project-phases__step[data-progress] .project-phases__status {
+  color: $color__light-green;
+}
+
+// The phases have no step content to show
+.project-phases__content {
+  display: none;
+}
+
+// Narrow screens stack the phases, dot beside the text, without the joining line
+@media screen and (max-width: $breakpoints__sm) {
+  .project-phases {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .project-phases__separator {
+    display: none;
+  }
+  .project-phases__step {
+    flex-direction: row;
+    align-items: center;
+  }
+  .project-phases__body {
+    align-items: flex-start;
+    margin: 0 0 0 0.75rem;
+    text-align: left;
+  }
+}

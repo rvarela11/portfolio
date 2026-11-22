@@ -2,7 +2,7 @@
 import React from 'react';
 
 // @components
-import Work from '../src/pages/work';
+import Work from '@/src/pages/work';
 
 const WorkPage = () => <Work />;
 

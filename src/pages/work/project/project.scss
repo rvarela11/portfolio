@@ -1,0 +1,82 @@
+/* @styles */
+@import 'styles/colors.scss';
+@import 'styles/typography.scss';
+@import './project-facts/project-facts.scss';
+@import './project-highlight/project-highlight.scss';
+@import './project-links/project-links.scss';
+@import './project-outcome/project-outcome.scss';
+@import './project-phases/project-phases.scss';
+
+.project-page__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-page__back {
+  @include typography-subtitle2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  color: $color__light-green;
+
+  &:focus-visible {
+    outline: 2px dashed $color__light-green;
+    outline-offset: 4px;
+  }
+}
+
+.project-page__title {
+  margin-bottom: 0.75rem;
+}
+
+// One sentence, read like a subtitle: it spans the container, and balance splits any wrap into even lines
+.project-page__summary {
+  @include typography-h6;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+// A panel-colored mat keeps dark sites from blending into the page; highlight screenshots get the same look from their panel's padding
+.project-page__screenshot {
+  padding: 12px;
+  background: $color__panel;
+}
+
+.project-screenshot {
+  .image {
+    display: block;
+    width: 100%;
+  }
+}
+
+.project-page__description {
+  margin-top: 3rem;
+}
+
+.project-page__text {
+  @include typography-body1;
+  max-width: 65ch;
+
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
+.project-page__section {
+  margin-top: 3rem;
+}
+
+.project-page__heading {
+  @include typography-h5;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-page__back:hover {
+    text-decoration: underline;
+  }
+}

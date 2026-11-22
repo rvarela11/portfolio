@@ -1,0 +1,27 @@
+/* @styles */
+@import 'styles/colors.scss';
+@import 'styles/typography.scss';
+
+.project-highlight--wide {
+  grid-column: 1 / -1;
+}
+
+.project-highlight__body {
+  padding: 1.25rem 1.5rem;
+}
+
+.project-highlight__title {
+  @include typography-h6;
+  font-weight: 400;
+  color: $color__dark-pink;
+}
+
+.project-highlight__text {
+  @include typography-body1;
+  max-width: 65ch;
+  margin-top: 0.4rem;
+}
+
+.project-highlight__image {
+  margin-top: 1rem;
+}
