@@ -16,4 +16,6 @@ $color__mid-green: #005678;
 $color__dark-green: #01012b;
 
 /* Pink */
+// Lighter pink for text on $color__mid-gray, where $color__dark-pink falls below 4.5:1 contrast
+$color__light-pink: #ff6e96;
 $color__dark-pink: #ff2a6d;

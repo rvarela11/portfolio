@@ -36,18 +36,18 @@ $nav-link__cut: 12px;
   &:focus-visible {
     outline: 1px dashed $color__light-green;
     outline-offset: -4px;
-    color: $color__dark-pink;
+    color: $color__light-pink;
   }
 }
 
 .nav__link--selected {
-  color: $color__dark-pink;
+  color: $color__light-pink;
 }
 
 @media(hover: hover) and (pointer: fine) {
   .nav__link:hover {
     transform: translateY(1rem);
-    color: $color__dark-pink;
+    color: $color__light-pink;
   }
 }
 
