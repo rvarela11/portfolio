@@ -5,6 +5,7 @@
 @import './project-facts/project-facts.scss';
 @import './project-highlight/project-highlight.scss';
 @import './project-links/project-links.scss';
+@import './project-outcome/project-outcome.scss';
 @import './project-phases/project-phases.scss';
 
 .project-page__container {
@@ -62,24 +63,6 @@
   & + & {
     margin-top: 1rem;
   }
-}
-
-// The result gets a cyan rule so it reads as the payoff, not one more paragraph
-.project-page__outcome {
-  max-width: 65ch;
-  margin-top: 2.5rem;
-  padding: 0.25rem 0 0.25rem 1.25rem;
-  border-left: 3px solid $color__light-green;
-}
-
-.project-page__outcome-label {
-  @include typography-subtitle2;
-  margin-bottom: 0.25rem;
-  color: $color__light-green;
-}
-
-.project-page__outcome-text {
-  @include typography-body1;
 }
 
 .project-page__section {

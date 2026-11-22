@@ -10,6 +10,7 @@ import Page from '@/src/components/shared/page';
 import { SITE_URL } from '@/src/components/shared/SEO';
 import { ProjectFacts } from './project-facts';
 import { ProjectHighlight } from './project-highlight';
+import { ProjectOutcome } from './project-outcome';
 import { ProjectPhases } from './project-phases';
 
 // @constants
@@ -61,10 +62,7 @@ export const Project = ({ slug = '' }) => {
             <Text key={paragraph} className='project-page__text'>{paragraph}</Text>
           ))}
         </div>
-        <section className='project-page__outcome'>
-          <Title className='project-page__outcome-label' order={2}>Outcome</Title>
-          <Text className='project-page__outcome-text'>{outcome}</Text>
-        </section>
+        <ProjectOutcome text={outcome} />
         {phases.length > 0 && <ProjectPhases phases={phases} />}
         <section className='project-page__section'>
           <Title className='project-page__heading' order={2}>Highlights</Title>
