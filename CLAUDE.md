@@ -22,7 +22,7 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 ### Directory Structure
 
 - `/pages` - Next.js page routes (_app.js, _document.js, index.js, work/index.js, work/[slug].js)
-- `/src/components/shared` - Reusable components (Page, HudFrame, SkillChips, Modal, Image, SEO, Nav)
+- `/src/components/shared` - Reusable components (Page, HudFrame, SkillChips, Image, SEO, Nav)
 - `/src/hooks` - Hooks shared across components (`usePrefersReducedMotion`)
 - `/src/pages` - Page-level components with their constants (home/, work/)
 - `/src/utils` - Utility exports (icons, links, routes)
@@ -33,15 +33,13 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 
 **Component Wrapper**: All pages use the `<Page>` component which provides layout, SEO, and consistent structure.
 
-**Styling**: Global SCSS (imported through `styles/globals.scss`) plus Mantine components. `MantineProvider` wraps the app with a forced dark theme (`styles/theme/mantine.js`: colors, font, breakpoints, pointer cursor, modal/drawer z-index, and a `badge` class on every Badge, styled in `styles/theme/badge.scss`). Mantine's CSS is imported in its layered form, so the site's SCSS always wins over Mantine's base styles. Text sizes come from the mixins in `styles/typography.scss`. Breakpoints are defined twice, in `styles/breakpoints.scss` (SCSS media queries) and the Mantine theme (JS); keep them in sync. SCSS imports resolve from the project root (`sassOptions.loadPaths` in `next.config.js`), so write `@import 'styles/colors.scss';` rather than long relative paths; nearby files stay relative (`./timeline/timeline.scss`). Don't use `~/` imports: Turbopack can't resolve them.
+**Styling**: Global SCSS (imported through `styles/globals.scss`) plus Mantine components. `MantineProvider` wraps the app with a forced dark theme (`styles/theme/mantine.js`: colors, font, breakpoints, pointer cursor, and a `badge` class on every Badge, styled in `styles/theme/badge.scss`). Mantine's CSS is imported in its layered form, so the site's SCSS always wins over Mantine's base styles. Text sizes come from the mixins in `styles/typography.scss`. Breakpoints are defined twice, in `styles/breakpoints.scss` (SCSS media queries) and the Mantine theme (JS); keep them in sync. SCSS imports resolve from the project root (`sassOptions.loadPaths` in `next.config.js`), so write `@import 'styles/colors.scss';` rather than long relative paths; nearby files stay relative (`./timeline/timeline.scss`). Don't use `~/` imports: Turbopack can't resolve them.
 
 **React 19**: `defaultProps` is ignored on function components; put defaults in the parameters.
 
 **Data**: Static data stored in constants.js files within page directories (EXPERIENCES, PROJECTS arrays). No backend API.
 
 **Project pages**: Each project in `PROJECTS` gets a static page at `/work/[slug]`, built with `getStaticPaths` and `getStaticProps`.
-
-**Responsive Modal**: The Modal component switches between Mantine's Modal (desktop) and Drawer (mobile) at `theme.breakpoints.md`.
 
 **Icons**: Tabler (`@tabler/icons-react`) in general; GitHub and LinkedIn come from `react-icons` (Font Awesome).
 
@@ -62,7 +60,7 @@ When an element shows keyboard focus with a ring (the nav links, the neon sign),
 ## Conventions
 
 - Module-level constants that never change (fixed strings, data objects, maps) use `CONSTANT_CASE`: `ROUTES`, `SOCIAL_LINKS`, `QUERY`. Values built at runtime and anything inside a function stay camelCase.
-- Name an event handler `handle` + the event or action (`handleClick`, `handleModalClose`).
+- Name an event handler `handle` + the event or action (`handleClick`, `handleSubmit`).
 - Never climb two or more folders with a relative import (`../../`); use the `@/` alias instead.
 - General-purpose components live in `src/components/shared/`; a section of one page gets its own folder under that page (`src/pages/home/neon-sign/`). A component's own hooks go in a `hooks/` folder beside it (`src/pages/home/neon-sign/hooks/`); hooks shared across components go in `src/hooks/`.
 - Ask before adding dependencies or global styles (`styles/globals.scss`).
