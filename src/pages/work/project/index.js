@@ -55,7 +55,6 @@ export const Project = ({ slug = '' }) => {
       <HudFrame className='project-page__screenshot'>
         <Image alt={`Screenshot of the ${title} site`} height={1207} src={images.site ?? ''} width={2180} />
       </HudFrame>
-      {/* The aside comes first so narrow screens show the facts before the story; on wide screens it moves to the right column */}
       <div className='project-page__layout'>
         <aside className='project-page__aside'>
           <ProjectFacts role={role} team={team} tech={tech} />

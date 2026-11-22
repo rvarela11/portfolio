@@ -50,13 +50,11 @@
   margin-top: 3rem;
 }
 
-// Sits in the right column and stays in view while the story scrolls; top clears the fixed nav
+// Comes first in the markup so narrow screens show the facts first; wide screens move it to the right column
 .project-page__aside {
   grid-column: 2;
   grid-row: 1;
   align-self: start;
-  position: sticky;
-  top: 5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -97,9 +95,6 @@
   .project-page__main {
     grid-column: 1;
     grid-row: auto;
-  }
-  .project-page__aside {
-    position: static;
   }
 }
 
