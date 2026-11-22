@@ -1,58 +1,10 @@
 /* @styles */
-@import 'styles/colors.scss';
+@import 'styles/buttons.scss';
 
-$project-links__cut: 8px;
-
-// Pink outline with a clipped top-right corner: the pink background shows through as the border around the panel-colored ::after
 .project-links__action {
-  position: relative;
-  isolation: isolate;
-  height: auto;
-  min-width: 64px;
-  padding: 6px 16px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.75;
-  text-transform: uppercase;
-  color: $color__dark-pink;
-  background-color: $color__dark-pink;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  clip-path: polygon(0 0, calc(100% - #{$project-links__cut}) 0, 100% #{$project-links__cut}, 100% 100%, 0 100%);
-  transition: color .2s linear;
-
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 1px;
-    z-index: -1;
-    background-color: $color__panel;
-    clip-path: polygon(0 0, calc(100% - #{$project-links__cut - 0.5px}) 0, 100% #{$project-links__cut - 0.5px}, 100% 100%, 0 100%);
-    transition: opacity .2s linear;
-  }
-
-  // Keyboard focus fills the button, like hover; clip-path would cut off a focus outline
-  &:focus-visible {
-    color: $color__white;
-    outline: none;
-
-    &::after {
-      opacity: 0;
-    }
-  }
+  @include hud-button;
 }
 
 .project-links__action-icon {
   margin: 0 8px 0 -4px;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .project-links__action:hover {
-    color: $color__white;
-
-    &::after {
-      opacity: 0;
-    }
-  }
 }

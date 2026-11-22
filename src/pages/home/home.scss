@@ -3,6 +3,7 @@
 
 /* @styles */
 @import 'styles/breakpoints.scss';
+@import 'styles/buttons.scss';
 @import 'styles/colors.scss';
 @import 'styles/typography.scss';
 @import './neon-sign/neon-sign.scss';
@@ -15,7 +16,7 @@
   padding-left: 5vw;
 }
 
-// Positioned so the hero sits above the particle canvas (fixed, z-index 0)
+// Positioned so the hero sits above the page content's stacking level; the particle canvas sits behind at z-index -1
 .home-page-content {
   position: relative;
   z-index: 1;
@@ -42,6 +43,13 @@
 .home-page-content__bio p {
   @include typography-body1;
   font-size: 1.5rem;
+}
+
+// Sits on the page background, so the fill matches it rather than the panel color
+.home-page-content__work {
+  @include hud-button($color__dark-gray);
+  align-self: flex-start;
+  margin-top: 1rem;
 }
 
 // Mobile: the hero takes only the space it needs, so the first Experience card shows on the first screen
