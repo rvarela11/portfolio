@@ -1,4 +1,5 @@
 // @vendors
+import Link from 'next/link';
 import { Text, Title } from '@mantine/core';
 import 'react-vertical-timeline-component/style.min.css';
 import {
@@ -50,6 +51,9 @@ const Timeline = ({ elements = [], title = '' }) => (
                 ))}
               </ul>
               <SkillChips skills={element.skills} />
+              {element.link && (
+                <Link className='timeline-card__link' href={element.link.href}>{element.link.text}</Link>
+              )}
             </div>
           </HudFrame>
         </VerticalTimelineElement>

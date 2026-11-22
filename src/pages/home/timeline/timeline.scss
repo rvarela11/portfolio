@@ -71,6 +71,18 @@
   @include typography-h6;
 }
 
+.timeline-card__link {
+  @include typography-subtitle2;
+  display: inline-block;
+  margin-top: 1rem;
+  color: $color__light-green;
+
+  &:focus-visible {
+    outline: 2px dashed $color__light-green;
+    outline-offset: 4px;
+  }
+}
+
 .timeline-card__description {
   margin: 0.9rem 0 1rem;
   padding-left: 1.1rem;
@@ -95,5 +107,11 @@
 @media screen and (max-width: $breakpoints__sm) {
   .timeline-card__body {
     padding: 1rem 1rem 1.1rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .timeline-card__link:hover {
+    text-decoration: underline;
   }
 }
