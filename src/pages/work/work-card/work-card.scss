@@ -50,6 +50,7 @@
   @include typography-h6;
   font-family: 'Orbitron', sans-serif;
   font-weight: 500;
+  color: $color__dark-pink;
 }
 
 .work-card__summary {
@@ -79,8 +80,9 @@
   .work-card:hover .work-card__image .image {
     transform: scale(1.05);
   }
-  .work-card:hover .work-card__title {
-    color: $color__dark-pink;
+  .work-card:hover .work-card__link {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
 }
 
