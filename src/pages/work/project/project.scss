@@ -58,6 +58,8 @@
 .project-page__text {
   @include typography-body1;
   max-width: 65ch;
+  font-size: 1.125rem;
+  line-height: 1.6;
 
   & + & {
     margin-top: 1rem;
