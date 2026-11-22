@@ -13,7 +13,7 @@ $nav-link__cut: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $color__mid-gray;
+  background-color: $color__panel;
   border-bottom: 1px solid rgba($color__light-green, 0.6);
   transition: all .2s linear;
   padding: 1rem 0.5rem;
@@ -36,18 +36,18 @@ $nav-link__cut: 12px;
   &:focus-visible {
     outline: 1px dashed $color__light-green;
     outline-offset: -4px;
-    color: $color__light-pink;
+    color: $color__dark-pink;
   }
 }
 
 .nav__link--selected {
-  color: $color__light-pink;
+  color: $color__dark-pink;
 }
 
 @media(hover: hover) and (pointer: fine) {
   .nav__link:hover {
     transform: translateY(1rem);
-    color: $color__light-pink;
+    color: $color__dark-pink;
   }
 }
 
