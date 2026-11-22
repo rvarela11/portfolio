@@ -1,11 +1,10 @@
 // @vendors
-import React, { useState } from 'react';
+import React from 'react';
+import { Container, Title } from '@mantine/core';
 
 // @components
-import Modal from '@/src/components/shared/modal';
 import Page from '@/src/components/shared/page';
-import WorkCard from './work-card';
-import WorkModalCard from './work-modal-card';
+import { WorkCard } from './work-card';
 
 // @constants
 import { PROJECTS } from './constants';
@@ -16,46 +15,19 @@ const SEO_PROPS = {
   url: 'https://www.robertvarela.com/work',
 };
 
-const Work = () => {
-  const [work, setWork] = useState({
-    isModalOpen: false,
-    selected: {},
-  });
-
-  const modalTitle = work.selected.title ? `${work.selected.title} screenshot` : '';
-
-  const handleModalClose = () => {
-    setWork((prevState) => ({
-      ...prevState,
-      isModalOpen: false,
-    }));
-  };
-
-  const handleWorkCardClick = (selected = {}) => {
-    setWork((prevState) => ({
-      ...prevState,
-      isModalOpen: true,
-      selected,
-    }));
-  };
-
-  return (
-    <Page SEOProps={SEO_PROPS} title='Work'>
-      <div className='work-page-grid'>
-        { PROJECTS.map((project, index) => (
-          <WorkCard key={index} handleWorkCardClick={handleWorkCardClick} {...project} />
+const Work = () => (
+  <Page SEOProps={SEO_PROPS}>
+    <Container px={0} size={1100}>
+      <Title className='page-title' order={1}>Work</Title>
+      <ul className='work-page-grid'>
+        {PROJECTS.map((project) => (
+          <li key={project.slug}>
+            <WorkCard {...project} />
+          </li>
         ))}
-      </div>
-      <Modal
-        handleModalClose={handleModalClose}
-        Modal={{ className: 'work-modal' }}
-        open={work.isModalOpen}
-        title={modalTitle}
-      >
-        <WorkModalCard selected={work.selected} />
-      </Modal>
-    </Page>
-  );
-};
+      </ul>
+    </Container>
+  </Page>
+);
 
 export default Work;

@@ -1,21 +1,14 @@
 /* @styles */
-@import 'styles/breakpoints.scss';
 @import './project/project.scss';
 @import './work-card/work-card.scss';
 @import './work-modal-card/work-modal-card.scss';
 
+// Two cards per row while each card is at least 420px, the width MV3's chips need on one line; one column below that
 .work-page-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 1rem;
-}
-
-.work-page-grid::-webkit-scrollbar { 
-  display: none; 
-}
-
-@media screen and (max-width: $breakpoints__sm) {
-  .work-page-grid {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

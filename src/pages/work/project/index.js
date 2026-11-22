@@ -1,7 +1,7 @@
 // @vendors
 import React from 'react';
 import Link from 'next/link';
-import { Text, Title } from '@mantine/core';
+import { Container, Text, Title } from '@mantine/core';
 import { IconChevronLeft } from '@tabler/icons-react';
 
 // @components
@@ -46,7 +46,7 @@ export const Project = ({ slug = '' }) => {
 
   return (
     <Page className='project-page' SEOProps={seoProps}>
-      <div className='project-page__container'>
+      <Container px={0} size={1100}>
         <Link className='project-page__back' href={ROUTES.work}>
           <IconChevronLeft aria-hidden size={18} />
           All work
@@ -65,7 +65,7 @@ export const Project = ({ slug = '' }) => {
         <ProjectOutcome text={outcome} />
         {phases.length > 0 && <ProjectPhases phases={phases} />}
         <ProjectHighlights highlights={highlights} projectTitle={title} />
-      </div>
+      </Container>
     </Page>
   );
 };
