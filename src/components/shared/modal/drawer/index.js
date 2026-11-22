@@ -1,12 +1,13 @@
 // @vendors
 import React from 'react';
-import { Box, Drawer } from '@mantine/core';
+import { Box, Drawer, VisuallyHidden } from '@mantine/core';
 
 const MainDrawer = ({
   children,
   Drawer: { className = '' } = {},
   handleModalClose = () => {},
   open = false,
+  title = '',
 }) => (
   <Drawer
     classNames={{
@@ -21,6 +22,7 @@ const MainDrawer = ({
     opened={open}
     position='right'
     size='100%'
+    title={title && <VisuallyHidden>{title}</VisuallyHidden>}
   >
     <Box className={`main-drawer__content ${className}`.trim()}>
       { open && children }
