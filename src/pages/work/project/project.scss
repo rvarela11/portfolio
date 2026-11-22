@@ -37,9 +37,14 @@
   font-weight: 400;
 }
 
-.project-page__screenshot .image {
-  display: block;
-  width: 100%;
+// A faint cyan glow outlines every screenshot, so dark sites keep their edges against the dark page and the panels
+.project-screenshot {
+  box-shadow: 0 0 0 1px rgba($color__light-green, 0.08), 0 0 48px rgba($color__light-green, 0.18);
+
+  .image {
+    display: block;
+    width: 100%;
+  }
 }
 
 .project-page__description {
