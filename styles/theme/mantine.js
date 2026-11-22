@@ -39,4 +39,6 @@ export const mantineTheme = createTheme({
   cursorType: 'pointer',
   fontFamily: '"Helvetica Neue", sans-serif',
   lineHeights: { md: '1.5' },
+  // Mantine's transitions (modal and drawer open/close) are skipped for visitors who prefer reduced motion
+  respectReducedMotion: true,
 });

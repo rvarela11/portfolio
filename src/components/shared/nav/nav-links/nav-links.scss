@@ -51,6 +51,13 @@ $nav-link__cut: 12px;
   }
 }
 
+// Links don't slide on hover when motion is reduced; the pink text still marks hover
+@media (prefers-reduced-motion: reduce) {
+  .nav__link:hover {
+    transform: none;
+  }
+}
+
 @media screen and (max-width: $breakpoints__sm) {
   .nav__link {
     padding: 1rem 0.4rem;
