@@ -1,11 +1,9 @@
 // @vendors
-import React, { useState } from 'react';
+import React from 'react';
 
 // @components
-import Modal from '@/src/components/shared/modal';
 import Page from '@/src/components/shared/page';
-import WorkCard from './work-card';
-import WorkModalCard from './work-modal-card';
+import { WorkRow } from './work-row';
 
 // @constants
 import { PROJECTS } from './constants';
@@ -16,46 +14,16 @@ const SEO_PROPS = {
   url: 'https://www.robertvarela.com/work',
 };
 
-const Work = () => {
-  const [work, setWork] = useState({
-    isModalOpen: false,
-    selected: {},
-  });
-
-  const modalTitle = work.selected.title ? `${work.selected.title} screenshot` : '';
-
-  const handleModalClose = () => {
-    setWork((prevState) => ({
-      ...prevState,
-      isModalOpen: false,
-    }));
-  };
-
-  const handleWorkCardClick = (selected = {}) => {
-    setWork((prevState) => ({
-      ...prevState,
-      isModalOpen: true,
-      selected,
-    }));
-  };
-
-  return (
-    <Page SEOProps={SEO_PROPS} title='Work'>
-      <div className='work-page-grid'>
-        { PROJECTS.map((project, index) => (
-          <WorkCard key={index} handleWorkCardClick={handleWorkCardClick} {...project} />
-        ))}
-      </div>
-      <Modal
-        handleModalClose={handleModalClose}
-        Modal={{ className: 'work-modal' }}
-        open={work.isModalOpen}
-        title={modalTitle}
-      >
-        <WorkModalCard selected={work.selected} />
-      </Modal>
-    </Page>
-  );
-};
+const Work = () => (
+  <Page SEOProps={SEO_PROPS} title='Work'>
+    <ul className='work-page-list'>
+      {PROJECTS.map((project) => (
+        <li key={project.slug}>
+          <WorkRow {...project} />
+        </li>
+      ))}
+    </ul>
+  </Page>
+);
 
 export default Work;
