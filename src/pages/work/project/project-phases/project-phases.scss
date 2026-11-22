@@ -3,66 +3,34 @@
 @import 'styles/colors.scss';
 @import 'styles/typography.scss';
 
-$project-phases__dot: 2rem;
-
-// A full-width stepper: first dot at the left edge, last at the right, the rest evenly between, on one line.
-// The end steps get half the width of the middle ones so every dot lands on an even division of the track.
+// Mantine's Stepper, restyled: cyan for the phase in progress, muted dots and line for the rest
 .project-phases {
-  counter-reset: phase;
-  position: relative;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  --stepper-color: #{$color__light-green};
+  --stepper-outline-color: #{rgba($color__light-gray, 0.15)};
+  --stepper-outline-thickness: 2px;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: calc(#{$project-phases__dot} / 2 - 1px);
-    left: calc(#{$project-phases__dot} / 2);
-    right: calc(#{$project-phases__dot} / 2);
-    height: 2px;
-    background: rgba($color__light-gray, 0.15);
+// Labels size to their text instead of wrapping at Mantine's four-icon max width
+.project-phases__step {
+  max-width: none;
+}
+
+.project-phases__icon {
+  @include typography-subtitle2;
+  color: rgba($color__light-gray, 0.7);
+  background: $color__dark-gray;
+  border: 2px solid rgba($color__light-gray, 0.3);
+  border-radius: 50%;
+
+  &[data-progress] {
+    color: $color__light-green;
+    border-color: $color__light-green;
   }
 }
 
-.project-phases__step {
-  counter-increment: phase;
-  display: flex;
-  flex: 2 1 0;
-  flex-direction: column;
-  align-items: center;
+.project-phases__body {
   gap: 0.25rem;
-  min-width: 0;
-  text-align: center;
-
-  &::before {
-    @include typography-subtitle2;
-    content: counter(phase);
-    position: relative;
-    z-index: 1;
-    display: grid;
-    place-items: center;
-    width: $project-phases__dot;
-    height: $project-phases__dot;
-    margin-bottom: 0.5rem;
-    color: rgba($color__light-gray, 0.7);
-    background: $color__dark-gray;
-    border: 2px solid rgba($color__light-gray, 0.3);
-    border-radius: 50%;
-  }
-
-  &:first-child {
-    flex-grow: 1;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  &:last-child {
-    flex-grow: 1;
-    align-items: flex-end;
-    text-align: right;
-  }
+  margin-top: 0.5rem;
 }
 
 .project-phases__title {
@@ -71,42 +39,36 @@ $project-phases__dot: 2rem;
 
 .project-phases__status {
   @include typography-subtitle2;
+  margin: 0;
   color: rgba($color__light-gray, 0.7);
 }
 
-.project-phases__step--active {
-  &::before {
-    color: $color__light-green;
-    border-color: $color__light-green;
-  }
+.project-phases__step[data-progress] .project-phases__status {
+  color: $color__light-green;
+}
 
-  .project-phases__status {
-    color: $color__light-green;
-  }
+// The phases have no step content to show
+.project-phases__content {
+  display: none;
 }
 
 // Narrow screens stack the phases, dot beside the text, without the joining line
 @media screen and (max-width: $breakpoints__sm) {
   .project-phases {
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
-
-    &::before {
-      display: none;
-    }
   }
-  .project-phases__step,
-  .project-phases__step:first-child,
-  .project-phases__step:last-child {
-    display: grid;
-    grid-template-columns: $project-phases__dot minmax(0, 1fr);
-    column-gap: 0.75rem;
+  .project-phases__separator {
+    display: none;
+  }
+  .project-phases__step {
+    flex-direction: row;
     align-items: center;
+  }
+  .project-phases__body {
+    align-items: flex-start;
+    margin: 0 0 0 0.75rem;
     text-align: left;
-
-    &::before {
-      grid-row: span 2;
-      margin-bottom: 0;
-    }
   }
 }
