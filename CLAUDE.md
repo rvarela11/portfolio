@@ -21,7 +21,7 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 
 ### Directory Structure
 
-- `/pages` - Next.js page routes (_app.js, _document.js, index.js, work.js)
+- `/pages` - Next.js page routes (_app.js, _document.js, index.js, work/index.js, work/[slug].js)
 - `/src/components/shared` - Reusable components (Page, HudFrame, SkillChips, Modal, Image, SEO, Nav)
 - `/src/hooks` - Hooks shared across components (`usePrefersReducedMotion`)
 - `/src/pages` - Page-level components with their constants (home/, work/)
@@ -38,6 +38,8 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 **React 19**: `defaultProps` is ignored on function components; put defaults in the parameters.
 
 **Data**: Static data stored in constants.js files within page directories (EXPERIENCES, PROJECTS arrays). No backend API.
+
+**Project pages**: Each project in `PROJECTS` gets a static page at `/work/[slug]`, built with `getStaticPaths` and `getStaticProps`.
 
 **Responsive Modal**: The Modal component switches between Mantine's Modal (desktop) and Drawer (mobile) at `theme.breakpoints.md`.
 

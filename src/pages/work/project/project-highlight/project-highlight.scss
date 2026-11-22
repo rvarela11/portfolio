@@ -1,0 +1,28 @@
+/* @styles */
+@import 'styles/colors.scss';
+@import 'styles/typography.scss';
+
+.project-highlight + .project-highlight {
+  margin-top: 2rem;
+}
+
+.project-highlight__title {
+  @include typography-h5;
+  color: $color__dark-pink;
+}
+
+.project-highlight__text {
+  @include typography-body1;
+  max-width: 65ch;
+  margin-top: 0.4rem;
+}
+
+.project-highlight__image {
+  max-width: 1100px;
+  margin-top: 1rem;
+}
+
+.project-highlight__image .image {
+  display: block;
+  width: 100%;
+}

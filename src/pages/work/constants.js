@@ -1,4 +1,4 @@
-const PHASE_STATUS = {
+export const PHASE_STATUS = {
   inProgress: 'In progress',
   next: 'Next',
   planned: 'Planned',

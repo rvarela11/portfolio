@@ -21,7 +21,7 @@ const NavLinks = ({ className = '' }) => {
             key={route}
             aria-label={`${label} route`}
             className={classnames(`nav__link ${className}`.trim(), {
-              'nav__link--selected': router.pathname === route,
+              'nav__link--selected': router.pathname === route || (route !== ROUTES.home && router.pathname.startsWith(`${route}/`)),
             })}
             color='inherit'
             href={route}
