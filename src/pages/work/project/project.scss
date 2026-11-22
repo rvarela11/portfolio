@@ -30,11 +30,12 @@
   margin-bottom: 0.75rem;
 }
 
+// One sentence, read like a subtitle: it spans the container, and balance splits any wrap into even lines
 .project-page__summary {
   @include typography-h6;
-  max-width: 65ch;
   margin-bottom: 1.5rem;
   font-weight: 400;
+  text-wrap: balance;
 }
 
 // A panel-colored mat keeps dark sites from blending into the page; highlight screenshots get the same look from their panel's padding
