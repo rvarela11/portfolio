@@ -23,6 +23,7 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 
 - `/pages` - Next.js page routes (_app.js, _document.js, index.js, work.js)
 - `/src/components/shared` - Reusable components (Page, HudFrame, SkillChips, Modal, Image, SEO, Nav)
+- `/src/hooks` - Hooks shared across components (`usePrefersReducedMotion`)
 - `/src/pages` - Page-level components with their constants (home/, work/)
 - `/src/utils` - Utility exports (icons, links, routes)
 - `/styles` - Global SCSS, type styles (`typography.scss`), breakpoints, and the Mantine theme (`theme/mantine.js`)
@@ -55,9 +56,9 @@ Meet WCAG 2.1 AA, stay responsive down to 320px, and respect `prefers-reduced-mo
 ## Conventions
 
 - Module-level constants that never change (fixed strings, data objects, maps) use `CONSTANT_CASE`: `ROUTES`, `SOCIAL_LINKS`, `QUERY`. Values built at runtime and anything inside a function stay camelCase.
-- Name an event handler `handle` + the event or action (`handleClick`, `handleModalClose`) and pass it to an `on`-prefixed prop (`onClose={handleModalClose}`). Callback props a component accepts keep the `on` prefix.
-- Import across folders with the `@/` alias. Keep relative paths only for `./` and a single `../`; never climb two or more folders.
-- A component used by one page gets its own folder under that page (`src/pages/home/neon-sign/`). A child component used by only one parent nests inside the parent's folder (`src/components/shared/modal/drawer/`). Hooks go in a `hooks/` folder beside the component (`src/pages/home/neon-sign/hooks/`).
+- Name an event handler `handle` + the event or action (`handleClick`, `handleModalClose`).
+- Never climb two or more folders with a relative import (`../../`); use the `@/` alias instead.
+- General-purpose components live in `src/components/shared/`; a section of one page gets its own folder under that page (`src/pages/home/neon-sign/`). A component's own hooks go in a `hooks/` folder beside it (`src/pages/home/neon-sign/hooks/`); hooks shared across components go in `src/hooks/`.
 - Ask before adding dependencies or global styles (`styles/globals.scss`).
 
 ## Workflow
