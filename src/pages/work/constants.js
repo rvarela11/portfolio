@@ -82,7 +82,7 @@ export const PROJECTS = [
     ],
     highlights: [
       {
-        text: 'Led front-end development of both apps, the mint site and the main web app, guiding the team through code reviews, standards and technical decisions from inception to launch.',
+        text: 'Led front-end development of both apps, the mint site and the main web app, guiding the team through code reviews, standards and technical decisions from inception to launch, working closely with a designer, a backend engineer and a smart contract engineer.',
         title: 'Leading the team',
       },
       {
@@ -113,11 +113,12 @@ export const PROJECTS = [
       project: '/images/MV3/projects/gallery.png',
       site: '/images/MV3/sites/home.png',
     },
+    linksNote: 'Sites offline',
     outcome: 'Sold out all 6,500 characters. Shipped two production apps, which have since been taken offline.',
     role: 'Senior Front-End Engineer',
     slug: 'mv3',
     summary: 'Collectible characters for a cinematic universe, from the sold-out mint to the collector hub.',
-    team: 'Led 3 front-end engineers; worked with a designer, a backend engineer and a smart contract engineer',
+    team: 'Led 3 front-end engineers',
     tech: [
       TECH.next,
       TECH.react,

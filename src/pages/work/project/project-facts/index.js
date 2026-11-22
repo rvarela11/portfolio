@@ -1,5 +1,6 @@
 // @vendors
 import React from 'react';
+import { Text } from '@mantine/core';
 
 // @components
 import { HudFrame } from '@/src/components/shared/hud-frame';
@@ -8,6 +9,7 @@ import { ProjectLinks } from '../project-links';
 
 export const ProjectFacts = ({
   links = {},
+  linksNote = '',
   role = '',
   team = '',
   tech = [],
@@ -31,6 +33,7 @@ export const ProjectFacts = ({
         </div>
       </dl>
       <ProjectLinks links={links} />
+      {linksNote && <Text className='project-facts__note'>{linksNote}</Text>}
     </div>
   </HudFrame>
 );

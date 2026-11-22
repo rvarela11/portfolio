@@ -33,6 +33,12 @@
   color: $color__light-green;
 }
 
+// Stands in for the Code/Site links when a project has none, in the same muted gray as an upcoming phase
+.project-facts__note {
+  @include typography-subtitle2;
+  color: rgba($color__light-gray, 0.7);
+}
+
 .project-facts__value {
   @include typography-body1;
   margin: 0;
