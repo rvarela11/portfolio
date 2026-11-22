@@ -13,6 +13,8 @@ yarn lint       # Run ESLint (Airbnb + Next.js + perfectionist rules)
 
 Use `yarn dev -H [IP address]` to expose the dev server on a specific IP.
 
+Verify changes with `yarn lint && yarn build`. There are no tests and no CI.
+
 ## Architecture Overview
 
 This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website using JavaScript (JSX), Mantine components, and SCSS for styling. Requires Node 20.9+ (`engines` in package.json).
@@ -21,6 +23,7 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 
 - `/pages` - Next.js page routes (_app.js, _document.js, index.js, work.js)
 - `/src/components/shared` - Reusable components (Page, HudFrame, SkillChips, Modal, Image, SEO, Nav)
+- `/src/hooks` - Hooks shared across components (`usePrefersReducedMotion`)
 - `/src/pages` - Page-level components with their constants (home/, work/)
 - `/src/utils` - Utility exports (icons, links, routes)
 - `/styles` - Global SCSS, type styles (`typography.scss`), breakpoints, and the Mantine theme (`theme/mantine.js`)
@@ -40,9 +43,23 @@ This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website us
 
 **Icons**: Tabler (`@tabler/icons-react`) in general; GitHub and LinkedIn come from `react-icons` (Font Awesome).
 
+**Deploy**: Vercel builds on Linux, which is case-sensitive; macOS isn't. Keep file and folder casing consistent and use `git mv` for case-only renames.
+
 ### Path Aliases
 
 `@/*` maps to the project root (configured in jsconfig.json).
+
+## Standards
+
+Meet WCAG 2.1 AA, stay responsive down to 320px, and respect `prefers-reduced-motion`. Gate JS-driven motion with `usePrefersReducedMotion` (`src/hooks/usePrefersReducedMotion.js`) and CSS motion with a `@media (prefers-reduced-motion: reduce)` block.
+
+## Conventions
+
+- Module-level constants that never change (fixed strings, data objects, maps) use `CONSTANT_CASE`: `ROUTES`, `SOCIAL_LINKS`, `QUERY`. Values built at runtime and anything inside a function stay camelCase.
+- Name an event handler `handle` + the event or action (`handleClick`, `handleModalClose`).
+- Never climb two or more folders with a relative import (`../../`); use the `@/` alias instead.
+- General-purpose components live in `src/components/shared/`; a section of one page gets its own folder under that page (`src/pages/home/neon-sign/`). A component's own hooks go in a `hooks/` folder beside it (`src/pages/home/neon-sign/hooks/`); hooks shared across components go in `src/hooks/`.
+- Ask before adding dependencies or global styles (`styles/globals.scss`).
 
 ## Workflow
 
