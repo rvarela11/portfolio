@@ -80,10 +80,6 @@
   .work-card:hover .work-card__image .image {
     transform: scale(1.05);
   }
-  .work-card:hover .work-card__link {
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-  }
 }
 
 // No zoom on hover when motion is reduced
