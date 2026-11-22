@@ -7,6 +7,11 @@
 @import './project-links/project-links.scss';
 @import './project-phases/project-phases.scss';
 
+.project-page__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .project-page__back {
   @include typography-subtitle2;
   display: inline-flex;
@@ -32,37 +37,13 @@
   font-weight: 400;
 }
 
-.project-page__screenshot {
-  max-width: 960px;
-  margin-top: 2rem;
-}
-
 .project-page__screenshot .image {
   display: block;
   width: 100%;
 }
 
-.project-page__layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 4rem;
-  max-width: 960px;
+.project-page__description {
   margin-top: 3rem;
-}
-
-// Comes first in the markup so narrow screens show the facts first; wide screens move it to the right column
-.project-page__aside {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.project-page__main {
-  grid-column: 1;
-  grid-row: 1;
 }
 
 .project-page__text {
@@ -72,6 +53,25 @@
   & + & {
     margin-top: 1rem;
   }
+}
+
+// The result gets a cyan rule so it reads as the payoff, not one more paragraph
+.project-page__outcome {
+  max-width: 65ch;
+  margin-top: 2.5rem;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 3px solid $color__light-green;
+}
+
+.project-page__outcome-label {
+  @include typography-subtitle2;
+  margin-bottom: 0.25rem;
+  color: $color__light-green;
+}
+
+.project-page__outcome-text {
+  @include typography-h6;
+  font-weight: 400;
 }
 
 .project-page__section {
@@ -85,16 +85,15 @@
   font-weight: 500;
 }
 
+.project-page__highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
 @media screen and (max-width: $breakpoints__md) {
-  .project-page__layout {
+  .project-page__highlights {
     grid-template-columns: minmax(0, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  .project-page__aside,
-  .project-page__main {
-    grid-column: 1;
-    grid-row: auto;
   }
 }
 

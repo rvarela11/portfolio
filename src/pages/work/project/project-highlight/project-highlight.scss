@@ -2,12 +2,17 @@
 @import 'styles/colors.scss';
 @import 'styles/typography.scss';
 
-.project-highlight + .project-highlight {
-  margin-top: 2rem;
+.project-highlight--wide {
+  grid-column: 1 / -1;
+}
+
+.project-highlight__body {
+  padding: 1.25rem 1.5rem;
 }
 
 .project-highlight__title {
-  @include typography-h5;
+  @include typography-h6;
+  font-weight: 400;
   color: $color__dark-pink;
 }
 
@@ -18,11 +23,10 @@
 }
 
 .project-highlight__image {
-  max-width: 1100px;
   margin-top: 1rem;
-}
 
-.project-highlight__image .image {
-  display: block;
-  width: 100%;
+  .image {
+    display: block;
+    width: 100%;
+  }
 }

@@ -1,12 +1,30 @@
 /* @styles */
+@import 'styles/breakpoints.scss';
 @import 'styles/colors.scss';
 @import 'styles/typography.scss';
 
 .project-facts {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.project-facts__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem 3rem;
+  align-items: start;
+  padding: 1.25rem 1.5rem;
+}
+
+.project-facts__list {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 1.25rem 3rem;
   margin: 0;
+}
+
+// Tech gets its own row so a long team line or a long stack never squeezes the other
+.project-facts__tech {
+  grid-column: 1 / -1;
 }
 
 .project-facts__label {
@@ -18,4 +36,16 @@
 .project-facts__value {
   @include typography-body1;
   margin: 0;
+}
+
+@media screen and (max-width: $breakpoints__md) {
+  .project-facts__body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media screen and (max-width: $breakpoints__sm) {
+  .project-facts__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

@@ -10,7 +10,6 @@ import Page from '@/src/components/shared/page';
 import { SITE_URL } from '@/src/components/shared/SEO';
 import { ProjectFacts } from './project-facts';
 import { ProjectHighlight } from './project-highlight';
-import { ProjectLinks } from './project-links';
 import { ProjectPhases } from './project-phases';
 
 // @constants
@@ -45,36 +44,35 @@ export const Project = ({ slug = '' }) => {
 
   return (
     <Page className='project-page' SEOProps={seoProps}>
-      <Link className='project-page__back' href={ROUTES.work}>
-        <IconChevronLeft aria-hidden size={18} />
-        All work
-      </Link>
-      <Title className='page-title project-page__title' order={1}>{title}</Title>
-      <Text className='project-page__summary'>{summary}</Text>
-      <div className='project-page__screenshot'>
-        <Image alt={`Screenshot of the ${title} site`} height={1207} src={images.site ?? ''} width={2180} />
-      </div>
-      <div className='project-page__layout'>
-        <aside className='project-page__aside'>
-          <ProjectFacts role={role} team={team} tech={tech} />
-          <ProjectLinks links={links} />
-        </aside>
-        <div className='project-page__main'>
+      <div className='project-page__container'>
+        <Link className='project-page__back' href={ROUTES.work}>
+          <IconChevronLeft aria-hidden size={18} />
+          All work
+        </Link>
+        <Title className='page-title project-page__title' order={1}>{title}</Title>
+        <Text className='project-page__summary'>{summary}</Text>
+        <ProjectFacts links={links} role={role} team={team} tech={tech} />
+        <div className='project-page__screenshot'>
+          <Image alt={`Screenshot of the ${title} site`} height={1207} src={images.site ?? ''} width={2180} />
+        </div>
+        <div className='project-page__description'>
           {description.map((paragraph) => (
             <Text key={paragraph} className='project-page__text'>{paragraph}</Text>
           ))}
-          <section className='project-page__section'>
-            <Title className='project-page__heading' order={2}>Outcome</Title>
-            <Text className='project-page__text'>{outcome}</Text>
-          </section>
-          {phases.length > 0 && <ProjectPhases phases={phases} />}
-          <section className='project-page__section'>
-            <Title className='project-page__heading' order={2}>Highlights</Title>
+        </div>
+        <section className='project-page__outcome'>
+          <Title className='project-page__outcome-label' order={2}>Outcome</Title>
+          <Text className='project-page__outcome-text'>{outcome}</Text>
+        </section>
+        {phases.length > 0 && <ProjectPhases phases={phases} />}
+        <section className='project-page__section'>
+          <Title className='project-page__heading' order={2}>Highlights</Title>
+          <div className='project-page__highlights'>
             {highlights.map((highlight) => (
               <ProjectHighlight key={highlight.title} projectTitle={title} {...highlight} />
             ))}
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </Page>
   );

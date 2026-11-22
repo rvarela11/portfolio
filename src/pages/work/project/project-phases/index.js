@@ -11,15 +11,14 @@ export const ProjectPhases = ({ phases = [] }) => (
     <Title className='project-page__heading' order={2}>Phases</Title>
     <ol className='project-phases'>
       {phases.map(({ status, title }) => (
-        <li key={title} className='project-phases__item'>
+        <li
+          key={title}
+          className={classnames('project-phases__step', {
+            'project-phases__step--active': status === PHASE_STATUS.inProgress,
+          })}
+        >
           <span className='project-phases__title'>{title}</span>
-          <span
-            className={classnames('project-phases__status', {
-              'project-phases__status--active': status === PHASE_STATUS.inProgress,
-            })}
-          >
-            {status}
-          </span>
+          <span className='project-phases__status'>{status}</span>
         </li>
       ))}
     </ol>
