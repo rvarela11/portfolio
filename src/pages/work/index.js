@@ -4,7 +4,7 @@ import { Title } from '@mantine/core';
 
 // @components
 import Page from '@/src/components/shared/page';
-import { WorkRow } from './work-row';
+import { WorkCard } from './work-card';
 
 // @constants
 import { PROJECTS } from './constants';
@@ -19,10 +19,10 @@ const Work = () => (
   <Page SEOProps={SEO_PROPS}>
     <div className='work-page__container'>
       <Title className='page-title' order={1}>Work</Title>
-      <ul className='work-page-list'>
+      <ul className='work-page-grid'>
         {PROJECTS.map((project) => (
           <li key={project.slug}>
-            <WorkRow {...project} />
+            <WorkCard {...project} />
           </li>
         ))}
       </ul>

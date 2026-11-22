@@ -1,0 +1,67 @@
+/* @styles */
+@import 'styles/colors.scss';
+@import 'styles/typography.scss';
+
+// The card carries the link's focus ring: the HUD frame's clip-path would cut off a ring drawn on the frame or the link
+.work-card {
+  position: relative;
+  height: 100%;
+
+  &:has(.work-card__link:focus-visible) {
+    outline: 2px dashed $color__light-green;
+    outline-offset: 4px;
+  }
+
+  .hud-frame {
+    height: 100%;
+  }
+}
+
+.work-card__image {
+  aspect-ratio: 7 / 6;
+  overflow: hidden;
+  background-color: $color__black;
+
+  .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease;
+  }
+}
+
+.work-card__title {
+  @include typography-h6;
+  padding: 1rem 1.25rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+}
+
+.work-card__link {
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .work-card:hover .work-card__image .image {
+    transform: scale(1.05);
+  }
+  .work-card:hover .work-card__title {
+    color: $color__dark-pink;
+  }
+}
+
+// No zoom on hover when motion is reduced
+@media (prefers-reduced-motion: reduce) {
+  .work-card:hover .work-card__image .image {
+    transform: none;
+  }
+}

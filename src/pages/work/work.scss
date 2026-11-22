@@ -1,7 +1,8 @@
 /* @styles */
+@import 'styles/breakpoints.scss';
 @import './project/project.scss';
+@import './work-card/work-card.scss';
 @import './work-modal-card/work-modal-card.scss';
-@import './work-row/work-row.scss';
 
 // Same centered width as the project pages, so the list and its pages line up
 .work-page__container {
@@ -9,11 +10,18 @@
   margin: 0 auto;
 }
 
-.work-page-list {
-  display: flex;
-  flex-direction: column;
+// A list of cards, two per row, one on narrow screens
+.work-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media screen and (max-width: $breakpoints__sm) {
+  .work-page-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
