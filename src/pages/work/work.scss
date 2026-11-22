@@ -10,14 +10,20 @@
   margin: 0 auto;
 }
 
-// A list of cards, two per row, one on narrow screens
+// A list of cards: four across on wide screens, two on medium, one on narrow
 .work-page-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media screen and (max-width: $breakpoints__lg) {
+  .work-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media screen and (max-width: $breakpoints__sm) {
