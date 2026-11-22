@@ -31,11 +31,22 @@
   }
 }
 
+.work-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 1.25rem 1.25rem;
+}
+
 .work-card__title {
   @include typography-h6;
-  padding: 1rem 1.25rem;
   font-family: 'Orbitron', sans-serif;
   font-weight: 500;
+}
+
+.work-card__summary {
+  @include typography-body1;
+  text-wrap: balance;
 }
 
 .work-card__link {
