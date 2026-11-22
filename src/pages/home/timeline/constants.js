@@ -1,3 +1,6 @@
+// @utils
+import { ROUTES } from '@/src/utils/routes';
+
 const SKILL = {
   apolloGraphQL: 'Apollo GraphQL',
   cypress: 'Cypress',
@@ -109,6 +112,10 @@ export const PROJECTS = [
     ],
     employer: 'Metav3rse',
     image: '/logos/metav3rse_logo.jpeg',
+    link: {
+      href: `${ROUTES.work}/mv3`,
+      project: 'MV3',
+    },
     skills: [
       SKILL.javaScript,
       SKILL.next,
@@ -125,6 +132,10 @@ export const PROJECTS = [
     ],
     employer: 'Camp Cosmos',
     image: '/logos/camp_cosmos_logo.jpeg',
+    link: {
+      href: `${ROUTES.work}/camp-cosmos`,
+      project: 'Camp Cosmos',
+    },
     skills: [
       SKILL.javaScript,
       SKILL.next,
