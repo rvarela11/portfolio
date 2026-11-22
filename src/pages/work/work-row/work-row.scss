@@ -15,7 +15,8 @@
 
 .work-row__body {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  // A fixed image column keeps every row the same height (about 275px) whatever the screen width
+  grid-template-columns: 320px minmax(0, 1fr);
 }
 
 // The column takes its height from the 7:6 ratio, or from the text when that runs taller; the image covers either

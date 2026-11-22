@@ -3,6 +3,12 @@
 @import './work-modal-card/work-modal-card.scss';
 @import './work-row/work-row.scss';
 
+// Same centered width as the project pages, so the list and its pages line up
+.work-page__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .work-page-list {
   display: flex;
   flex-direction: column;

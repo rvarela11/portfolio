@@ -1,5 +1,6 @@
 // @vendors
 import React from 'react';
+import { Title } from '@mantine/core';
 
 // @components
 import Page from '@/src/components/shared/page';
@@ -15,14 +16,17 @@ const SEO_PROPS = {
 };
 
 const Work = () => (
-  <Page SEOProps={SEO_PROPS} title='Work'>
-    <ul className='work-page-list'>
-      {PROJECTS.map((project) => (
-        <li key={project.slug}>
-          <WorkRow {...project} />
-        </li>
-      ))}
-    </ul>
+  <Page SEOProps={SEO_PROPS}>
+    <div className='work-page__container'>
+      <Title className='page-title' order={1}>Work</Title>
+      <ul className='work-page-list'>
+        {PROJECTS.map((project) => (
+          <li key={project.slug}>
+            <WorkRow {...project} />
+          </li>
+        ))}
+      </ul>
+    </div>
   </Page>
 );
 
