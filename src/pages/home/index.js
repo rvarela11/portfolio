@@ -1,6 +1,7 @@
 // @vendors
 import React from 'react';
-import { Text } from '@mantine/core';
+import Link from 'next/link';
+import { Button, Text } from '@mantine/core';
 
 // @components
 import Page from '@/src/components/shared/page';
@@ -9,6 +10,9 @@ import Timeline from './timeline';
 
 // @constants
 import { EXPERIENCES, PROJECTS } from './timeline/constants';
+
+// @utils
+import { ROUTES } from '@/src/utils/routes';
 
 const Home = () => (
   <Page className='home-page'>
@@ -24,6 +28,9 @@ const Home = () => (
           to accelerate development and innovation.
         </Text>
       </div>
+      <Button className='home-page-content__work' component={Link} href={ROUTES.work}>
+        See my work
+      </Button>
     </div>
     <Timeline elements={EXPERIENCES} title='Experience' />
     <Timeline elements={PROJECTS} title='Projects' />
