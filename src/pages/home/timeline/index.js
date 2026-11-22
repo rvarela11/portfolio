@@ -52,7 +52,10 @@ const Timeline = ({ elements = [], title = '' }) => (
               </ul>
               <SkillChips skills={element.skills} />
               {element.link && (
-                <Link className='timeline-card__link' href={element.link.href}>{element.link.text}</Link>
+                // The label starts with the visible text, so voice commands that say "See project" still match
+                <Link aria-label={`See project: ${element.link.project}`} className='timeline-card__link' href={element.link.href}>
+                  See project
+                </Link>
               )}
             </div>
           </HudFrame>

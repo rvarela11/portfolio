@@ -114,7 +114,7 @@ export const PROJECTS = [
     image: '/logos/metav3rse_logo.jpeg',
     link: {
       href: `${ROUTES.work}/mv3`,
-      text: 'See the MV3 project',
+      project: 'MV3',
     },
     skills: [
       SKILL.javaScript,
@@ -134,7 +134,7 @@ export const PROJECTS = [
     image: '/logos/camp_cosmos_logo.jpeg',
     link: {
       href: `${ROUTES.work}/camp-cosmos`,
-      text: 'See the Camp Cosmos project',
+      project: 'Camp Cosmos',
     },
     skills: [
       SKILL.javaScript,
