@@ -11,14 +11,11 @@ const TECH = {
   metaMask: 'MetaMask',
   next: 'Next.js',
   react: 'React',
-  reactHookForm: 'React Hook Form',
-  reactRouter: 'React Router',
   redux: 'Redux',
   sass: 'Sass',
   typeScript: 'TypeScript',
   vite: 'Vite',
   vitest: 'Vitest',
-  yup: 'Yup',
 };
 
 export const PROJECTS = [
@@ -63,16 +60,7 @@ export const PROJECTS = [
     slug: 'pay-my-lawyer',
     summary: 'Payment processing, invoicing and client records for law firms.',
     team: 'Solo',
-    tech: [
-      TECH.vite,
-      TECH.react,
-      TECH.typeScript,
-      TECH.materialUI,
-      TECH.reactRouter,
-      TECH.reactHookForm,
-      TECH.yup,
-      TECH.vitest,
-    ],
+    tech: [TECH.vite, TECH.react, TECH.typeScript, TECH.materialUI, TECH.vitest],
     title: 'Pay My Lawyer',
   },
   {
