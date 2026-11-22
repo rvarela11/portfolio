@@ -1,6 +1,6 @@
 // @vendors
 import React from 'react';
-import { Button } from '@mantine/core';
+import { Button, Group } from '@mantine/core';
 import { IconExternalLink } from '@tabler/icons-react';
 
 // What each link opens, for its accessible name; the visible text stays CODE / SITE
@@ -17,7 +17,7 @@ export const ProjectLinks = ({ links = {}, projectTitle = '' }) => {
   }
 
   return (
-    <div className='project-links'>
+    <Group gap='0.5rem'>
       {entries.map(([label, link]) => (
         <Button
           key={label}
@@ -33,6 +33,6 @@ export const ProjectLinks = ({ links = {}, projectTitle = '' }) => {
           {label}
         </Button>
       ))}
-    </div>
+    </Group>
   );
 };

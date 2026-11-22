@@ -3,12 +3,6 @@
 
 $project-links__cut: 8px;
 
-.project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
 // Pink outline with a clipped top-right corner: the pink background shows through as the border around the panel-colored ::after
 .project-links__action {
   position: relative;
