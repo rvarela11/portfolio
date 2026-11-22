@@ -15,6 +15,12 @@
   .hud-frame {
     height: 100%;
   }
+
+  // The text area fills the rest of the card so the chips can sit at its bottom edge
+  .hud-frame__panel {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 // A wide crop keeps the cards short; the image covers the strip, centered
@@ -33,6 +39,7 @@
 }
 
 .work-card__content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -50,8 +57,10 @@
   text-wrap: balance;
 }
 
+// Pushed to the bottom, so the chips line up across a row whatever the summary's length
 .work-card__tech {
-  margin-top: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
 }
 
 .work-card__link {
