@@ -104,10 +104,6 @@ export const PROJECTS = [
         text: 'The reveal flow. Collectors pick which Singularities to reveal, see the results, and save a summary image to share.',
         title: 'Singularity',
       },
-      {
-        text: 'A soulbound token collectors mint straight from their wallet. It unlocks Hub features.',
-        title: 'Collector Pass',
-      },
     ],
     images: {
       project: '/images/MV3/projects/gallery.png',
