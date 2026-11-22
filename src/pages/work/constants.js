@@ -64,9 +64,9 @@ export const PROJECTS = [
     summary: 'Payment processing, invoicing and client records for law firms.',
     team: 'Solo',
     tech: [
+      TECH.vite,
       TECH.react,
       TECH.typeScript,
-      TECH.vite,
       TECH.materialUI,
       TECH.reactRouter,
       TECH.reactHookForm,
