@@ -79,8 +79,7 @@
 }
 
 .project-page__outcome-text {
-  @include typography-h6;
-  font-weight: 400;
+  @include typography-body1;
 }
 
 .project-page__section {
