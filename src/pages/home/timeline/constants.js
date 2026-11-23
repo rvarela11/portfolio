@@ -1,3 +1,6 @@
+// @constants
+import { PROJECTS as WORK_PROJECTS } from '@/src/pages/work/constants';
+
 // @utils
 import { ROUTES } from '@/src/utils/routes';
 
@@ -6,15 +9,14 @@ const SKILL = {
   cypress: 'Cypress',
   graphQL: 'GraphQL',
   javaScript: 'JavaScript',
-  materialUI: 'Material UI',
-  next: 'Next.js',
   react: 'React',
   redux: 'Redux',
   responsiveWebDesign: 'Responsive Web Design',
   typeScript: 'TypeScript',
-  vite: 'Vite',
-  vitest: 'Vitest',
 };
+
+// Each project's tech comes from its work page data, so the timeline and the project page always list the same stack
+const getWorkTech = (slug) => WORK_PROJECTS.find((project) => project.slug === slug)?.tech ?? [];
 
 // NOTE: Data from https://www.linkedin.com/in/rvarela11
 export const EXPERIENCES = [
@@ -119,13 +121,7 @@ export const PROJECTS = [
       href: `${ROUTES.work}/pay-my-lawyer`,
       project: 'Pay My Lawyer',
     },
-    skills: [
-      SKILL.vite,
-      SKILL.react,
-      SKILL.typeScript,
-      SKILL.materialUI,
-      SKILL.vitest,
-    ],
+    skills: getWorkTech('pay-my-lawyer'),
     title: 'Lead Engineer',
   },
   {
@@ -139,13 +135,7 @@ export const PROJECTS = [
       href: `${ROUTES.work}/mv3`,
       project: 'MV3',
     },
-    skills: [
-      SKILL.javaScript,
-      SKILL.next,
-      SKILL.react,
-      SKILL.redux,
-      SKILL.responsiveWebDesign,
-    ],
+    skills: getWorkTech('mv3'),
     title: 'Senior Front-End Engineer',
   },
   {
@@ -159,12 +149,7 @@ export const PROJECTS = [
       href: `${ROUTES.work}/camp-cosmos`,
       project: 'Camp Cosmos',
     },
-    skills: [
-      SKILL.javaScript,
-      SKILL.next,
-      SKILL.react,
-      SKILL.responsiveWebDesign,
-    ],
+    skills: getWorkTech('camp-cosmos'),
     title: 'Senior Front-End Engineer',
   },
 ];
