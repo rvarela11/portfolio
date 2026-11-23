@@ -48,7 +48,7 @@ export const PROJECTS = [
     },
     links: {
       code: 'https://github.com/rvarela11/pay-my-lawyer',
-      site: 'https://rvarela11.github.io/pay-my-lawyer/',
+      demo: 'https://rvarela11.github.io/pay-my-lawyer/',
     },
     outcome: 'Redesigning it for Pizaña Law Firm, an immigration practice in Brownsville, Texas.',
     phases: [
@@ -137,7 +137,7 @@ export const PROJECTS = [
     },
     links: {
       code: 'https://github.com/rvarela11/camp-cosmos',
-      site: 'https://camp-cosmos.vercel.app',
+      demo: 'https://camp-cosmos.vercel.app',
     },
     outcome: 'Delivered the full site in four months, mint flow included, and handed it off to the team connecting the contract, as scoped.',
     role: 'Senior Front-End Engineer',
