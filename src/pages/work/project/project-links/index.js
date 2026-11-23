@@ -6,6 +6,7 @@ import { IconExternalLink } from '@tabler/icons-react';
 // What each link opens, for its accessible name; the visible text stays CODE / SITE
 const LINK_NAMES = {
   code: 'code on GitHub',
+  demo: 'demo',
   site: 'live site',
 };
 
