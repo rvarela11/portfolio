@@ -2,7 +2,7 @@
 
 ## About
 
-This website is built with `Next.js` and uses `yarn` and `Node.js`. You'll need `Node.js` 20.9 or later ([install it from here](https://nodejs.org/en/)) and Yarn 4, which runs through Corepack. Node 25 and later no longer bundle Corepack, so install and enable it once: `npm install -g corepack && corepack enable`. After that, `yarn` uses the version pinned in `package.json` (`packageManager`).
+This website is built with `Next.js` and uses `yarn` and `Node.js`. You'll need `Node.js` 20.9 or later ([install it from here](https://nodejs.org/en/)) and Yarn 4, which runs through Corepack. If you installed Yarn 1 globally with npm, remove it first: `npm uninstall -g yarn`. On Node 25 and later, install Corepack with `npm install -g corepack` (Node 20.9 to 24 already bundle it). Then run `corepack enable` once, and `yarn` uses the version pinned in `package.json` (`packageManager`).
 
 ## Quick Start
 

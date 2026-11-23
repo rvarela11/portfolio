@@ -3891,6 +3891,9 @@ __metadata:
     react-vertical-timeline-component: "npm:^4.0.0"
     sass: "npm:^1.58.0"
     typescript: "npm:~6.0.0"
+  dependenciesMeta:
+    "@tsparticles/engine":
+      built: false
   languageName: unknown
   linkType: soft
 
