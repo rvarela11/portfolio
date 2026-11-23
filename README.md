@@ -2,7 +2,17 @@
 
 ## About
 
-This website is built with `Next.js` and uses `yarn` and `Node.js`. You'll need `Node.js` 20.9 or later ([install it from here](https://nodejs.org/en/)) and Yarn 1 (Classic), since the lockfile is in Yarn 1 format: `npm install -g yarn`.
+This website is built with `Next.js` and uses `yarn` and `Node.js`.
+
+## Requirements
+
+- `Node.js` 20.9 or later ([install it from here](https://nodejs.org/en/))
+- Yarn 4, through Corepack. `yarn` uses the version pinned in `package.json` (`packageManager`). One-time setup:
+
+```bash
+npm install -g corepack   # Node 25 and later only; Node 20.9 to 24 bundle it
+corepack enable
+```
 
 ## Quick Start
 
