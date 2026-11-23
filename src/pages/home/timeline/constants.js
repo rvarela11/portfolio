@@ -6,11 +6,14 @@ const SKILL = {
   cypress: 'Cypress',
   graphQL: 'GraphQL',
   javaScript: 'JavaScript',
+  materialUI: 'Material UI',
   next: 'Next.js',
   react: 'React',
   redux: 'Redux',
   responsiveWebDesign: 'Responsive Web Design',
   typeScript: 'TypeScript',
+  vite: 'Vite',
+  vitest: 'Vitest',
 };
 
 // NOTE: Data from https://www.linkedin.com/in/rvarela11
@@ -105,6 +108,26 @@ export const EXPERIENCES = [
 
 // NOTE: Data from https://www.linkedin.com/in/rvarela11
 export const PROJECTS = [
+  {
+    date: '11/2026 - Present',
+    description: [
+      'Designing and building Pay My Lawyer solo, a payments platform for law firms that another team built but never launched. Designed and rebuilt the website and enrollment flow in React and TypeScript, with a separate setup path for each payment provider (Dwolla and Usio), per-screen validation, and CI that lints, tests and builds every pull request.',
+    ],
+    employer: 'Pay My Lawyer',
+    image: '/logos/pay_my_lawyer_logo.png',
+    link: {
+      href: `${ROUTES.work}/pay-my-lawyer`,
+      project: 'Pay My Lawyer',
+    },
+    skills: [
+      SKILL.vite,
+      SKILL.react,
+      SKILL.typeScript,
+      SKILL.materialUI,
+      SKILL.vitest,
+    ],
+    title: 'Lead Engineer',
+  },
   {
     date: '03/2022 - 03/2023',
     description: [
