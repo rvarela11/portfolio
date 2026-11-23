@@ -17,7 +17,7 @@ Verify changes with `yarn lint && yarn build`. There are no tests and no CI.
 
 ## Architecture Overview
 
-This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website using JavaScript (JSX), Mantine components, and SCSS for styling. Requires Node 20.9+ (`engines` in package.json).
+This is a Next.js 16 (Pages Router, Turbopack) and React 19 portfolio website using JavaScript (JSX), Mantine components, and SCSS for styling. Requires Node 20.9+ (`engines` in package.json). The package manager is Yarn 4, pinned by `packageManager` in package.json and run through Corepack, with the `node_modules` linker set in `.yarnrc.yml`.
 
 ### Directory Structure
 
